@@ -4,12 +4,28 @@
     <meta charset="UTF-8">
     <title>JPerturb</title>
     <script type="text/javascript" src="scripts/task.js"></script>
+    <script type="text/javascript" src="scripts/quicksort.js"></script>
+    <script type="text/javascript" src="scripts/perturbation.js"></script>
+    <script type="text/javascript" src="scripts/oracle.js"></script>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
 <body>
-    MyJPerturb Web Page
-    <p><input id="generateTask100" type="button" value="gen100" onclick="generateTask(0, 100)"/></p>
-    <p><input id="generateTask5" type="button" value="gen5" onclick="generateTask(0, 5)"/></p>
-    <p><div id="value"></div></p>
+    <p id="success">success rate: NaN%</p>
+    <p id="nbPerturbation">nb perturbation: 0</p>
+    <p id="nbPerturbationPerExecution">nb perturbation per execution: 0</p>
+    <p><input id="psortNumerical" type="button" value="run" onclick="run()"/></p>
+    <div id="labelProbability">0.05 %</div><input id="probability" type="range" value="5" min="0" max="1000" step="5" onchange="updateValueProba()">
+    <div id="labelNumber">nb array: 40</div><input id="number" type="range" value="40" min="5" max="1000" step="10" onchange="updateValueNumber()">
+    <div id="labelSize">size array: 100</div><input id="size" type="range" value="100" min="5" max="1000" step="50" onchange="updateValueSize()">
+    <div>
+        <input type="checkbox" id="Antifragile" value="checkbox1" checked>Antifragile
+        <input type="checkbox" id="Robust" value="checkbox2">Robust
+        <input type="checkbox" id="Fragile" value="checkbox3">Fragile
+    </div>
+    <div>
+        <input type="checkbox" id="Integer" value="checkbox1"checked>Integer(+1)
+        <input type="checkbox" id="Boolean" value="checkbox2">Boolean(!)
+    </div>
 </body>
 
 </html>
