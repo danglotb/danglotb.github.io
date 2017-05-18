@@ -14,9 +14,10 @@ async function run() {
             nbSuccess += psort(size, bound) ? 1 : 0;
         }
         //display
-        document.getElementById("success").innerHTML = "success rate: " + ((nbSuccess / number) * 100).toFixed(2) + " %";
-        document.getElementById("nbPerturbation").innerHTML = "nb perturbation: " + perturbationCount + " for " + number +" array";
-        document.getElementById("nbPerturbationPerExecution").innerHTML = "nb perturbation per execution: " + ((perturbationCount / number)).toFixed(2);
+        document.getElementById("success").innerHTML = ((nbSuccess / number) * 100).toFixed(2);
+        document.getElementById("nbPerturbation").innerHTML = perturbationCount;
+        document.getElementById("numberSpan").innerHTML = number;
+        document.getElementById("nbPerturbationPerExecution").innerHTML = ((perturbationCount / number)).toFixed(2);
         drawWithInputValue(nbSuccess, number);
         await sleep(100);
     } while (document.getElementById("runContinuously").checked);
@@ -53,15 +54,29 @@ function generateTask(size, bound) {
 
 function updateValueProba() {
      var probability = document.getElementById("probability").value;
-     document.getElementById("labelProbability").innerHTML = (probability / 1000 +" %");
+     document.getElementById("labelProbability").innerHTML = (probability / 1000);
 }
 
 function updateValueSize() {
      var size = document.getElementById("size").value;
-     document.getElementById("labelSize").innerHTML = ("size array: "+ size);
+     document.getElementById("labelSize").innerHTML = size;
 }
 
 function updateValueNumber() {
      var number = document.getElementById("number").value;
-     document.getElementById("labelNumber").innerHTML = ("nb array: "+ number);
+     document.getElementById("labelNumber").innerHTML = number;
 }
+
+function init() {
+    draw(0);
+    updateValueProba();
+    updateValueNumber();
+    updateValueSize();
+}
+
+// Without JQuery
+var slider = new Slider('#ex1', {
+	formatter: function(value) {
+		return 'Current value: ' + value;
+	}
+});
