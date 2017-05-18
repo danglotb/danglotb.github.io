@@ -1,26 +1,36 @@
-function run() {
-    // initialize
-    perturbationCount = 0;
-    var number = document.getElementById("number").value;
-    var nbSuccess = 0;
-    initPerturbationPoint();
-    //run
-    for (var i = 0 ; i < number; i++) {
-        nbSuccess += psort() ? 1 : 0;
-    }
-    //display
-    document.getElementById("success").innerHTML = "success rate: " + ((nbSuccess / number) * 100).toFixed(2) + " %";
-    document.getElementById("nbPerturbation").innerHTML = "nb perturbation: " + perturbationCount;
-    document.getElementById("nbPerturbationPerExecution").innerHTML = "nb perturbation per execution: " + ((perturbationCount / number)).toFixed(2);
+async function run() {
+    do {
+        // initialize
+        perturbationCount = 0;
+        var number = document.getElementById("number").value;
+        var nbSuccess = 0;
+        var bound = Number.MAX_SAFE_INTEGER;
+        var size = document.getElementById("size").value;
+        probability = document.getElementById("probability").value / 1000;
+        initPerturbationPoint();
+
+        //run
+        for (var i = 0 ; i < number; i++) {
+            nbSuccess += psort(size, bound) ? 1 : 0;
+        }
+        //display
+        document.getElementById("success").innerHTML = "success rate: " + ((nbSuccess / number) * 100).toFixed(2) + " %";
+        document.getElementById("nbPerturbation").innerHTML = "nb perturbation: " + perturbationCount + " for " + number +" array";
+        document.getElementById("nbPerturbationPerExecution").innerHTML = "nb perturbation per execution: " + ((perturbationCount / number)).toFixed(2);
+        drawWithInputValue(nbSuccess, number);
+        await sleep(100);
+    } while (document.getElementById("runContinuously").checked);
 }
 
-function psort() {
-    probability = document.getElementById("probability").value / 1000;
-    var bound = 100;
-    var size = document.getElementById("size").value;
+function psort(size, bound) {
     var input = generateTask(size, bound);
     var output = quicksort(input.slice(), 0, input.length - 1);
-    return oracle(input, output);
+    var sorted = oracle(input, output);
+    return sorted;
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 function initPerturbationPoint() {
