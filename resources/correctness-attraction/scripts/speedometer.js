@@ -70,8 +70,8 @@ function drawOuterMetallicArc(options) {
 	options.ctx.arc(options.center.X,
 		options.center.Y,
 		options.radius,
-		0,
-		Math.PI,
+		Math.PI * 0.02,
+		Math.PI - (Math.PI * 0.02),
 		true);
 
 	// Fill the last object
@@ -92,8 +92,8 @@ function drawInnerMetallicArc(options) {
 	options.ctx.arc(options.center.X,
 					options.center.Y,
 					(options.radius / 100) * 90,
-					0,
-					Math.PI,
+		Math.PI * 0.02,
+		Math.PI - (Math.PI * 0.02),
 					true);
 
 	options.ctx.fill();
@@ -126,8 +126,8 @@ function drawBackground(options) {
 		options.ctx.arc(options.center.X,
 			options.center.Y,
 			i,
-			0,
-			Math.PI,
+			Math.PI * 0.02,
+            Math.PI - (Math.PI * 0.02),
 			true);
 
 		options.ctx.fill();
@@ -168,7 +168,7 @@ function drawSmallTickMarks(options) {
 	applyDefaultContextSettings(options);
 
 	// Tick every 20 degrees (small ticks)
-	for (iTick = 10; iTick < 180; iTick += 20) {
+	for (iTick = 0; iTick < 198; iTick += 18) {
 
 		iTickRad = degToRad(iTick);
 
@@ -223,7 +223,7 @@ function drawLargeTickMarks(options) {
 	tickvalue = options.levelRadius - 2;
 
 	// 10 units (major ticks)
-	for (iTick = 20; iTick < 180; iTick += 20) {
+	for (iTick = 9; iTick < 180; iTick += 18) {
 
 		iTickRad = degToRad(iTick);
 
@@ -270,7 +270,7 @@ function drawTextMarkers(options) {
 	    innerTickY = 0,
         iTick = 0,
         gaugeOptions = options.gaugeOptions,
-        iTickToPrint = 20;
+        iTickToPrint = 0;
 
 	applyDefaultContextSettings(options);
 
@@ -281,7 +281,7 @@ function drawTextMarkers(options) {
 	options.ctx.beginPath();
 
 	// Tick every 20 (small ticks)
-	for (iTick = 10; iTick < 200; iTick += 20) {
+	for (iTick = 0; iTick < 200; iTick += 18) {
 
 		innerTickX = gaugeOptions.radius - (Math.cos(degToRad(iTick)) * gaugeOptions.radius);
 		innerTickY = gaugeOptions.radius - (Math.sin(degToRad(iTick)) * gaugeOptions.radius);
@@ -309,7 +309,6 @@ function drawTextMarkers(options) {
 
 		// MPH increase by 10 every 20 degrees
 		iTickToPrint += 10;
-		console.log(iTickToPrint);
 	}
 
     options.ctx.stroke();
@@ -330,7 +329,7 @@ function drawSpeedometerPart(options, alphaValue, strokeStyle, startPos) {
 		options.center.Y,
 		options.levelRadius,
 		Math.PI + (Math.PI / 360 * startPos),
-		0 - (Math.PI / 360 * 10),
+		0 - (Math.PI / 360),
 		false);
 
 	options.ctx.stroke();
@@ -343,13 +342,13 @@ function drawSpeedometerColourArc(options) {
 	 * TODO: Gradient possible?
 	 */
 
-	var startOfGreen = 10,
-	    endOfGreen = 200,
+	var startOfGreen = 0,
+	    endOfGreen = 180,
 	    endOfOrange = 280;
 
-	drawSpeedometerPart(options, 1.0, "rgb(82, 240, 55)", startOfGreen);
+	drawSpeedometerPart(options, 1.0, "rgb(255, 0, 0)" , startOfGreen);
 	drawSpeedometerPart(options, 0.9, "rgb(198, 111, 0)", endOfGreen);
-	drawSpeedometerPart(options, 0.9, "rgb(255, 0, 0)", endOfOrange);
+	drawSpeedometerPart(options, 0.9, "rgb(82, 240, 55)", endOfOrange);
 
 }
 
@@ -369,10 +368,10 @@ function drawNeedleDial(options, alphaValue, strokeStyle, fillStyle) {
 
 		options.ctx.beginPath();
 		options.ctx.arc(options.center.X,
-			options.center.Y,
+			options.center.Y + 10,
 			i,
-			0,
-			Math.PI,
+	        Math.PI * 0.02,
+		    Math.PI - (Math.PI * 0.02),
 			true);
 
 		options.ctx.fill();
@@ -384,8 +383,12 @@ function convertSpeedToAngle(options) {
 	/* Helper function to convert a speed to the
 	* equivelant angle.
 	*/
-	var iSpeed = (options.speed / 10),
-	    iSpeedAsAngle = ((iSpeed * 20) + 10) % 180;
+	var iSpeedAsAngle = 0;
+	if (options.speed == 100) {
+	    iSpeedAsAngle = 180;
+	} else {
+        iSpeedAsAngle = ((options.speed / 10) * 18) % 180;
+	}
 
 	// Ensure the angle is within range
 	if (iSpeedAsAngle > 180) {
@@ -393,7 +396,6 @@ function convertSpeedToAngle(options) {
     } else if (iSpeedAsAngle < 0) {
         iSpeedAsAngle = iSpeedAsAngle + 180;
     }
-
 	return iSpeedAsAngle;
 }
 
@@ -463,9 +465,6 @@ function draw() {
 	* If canvas is not support alert the user.
 	*/
 
-	console.log('Target: ' + iTargetSpeed);
-	console.log('Current: ' + iCurrentSpeed);
-
 	var canvas = document.getElementById('tutorial'),
 	    options = null;
 
@@ -532,7 +531,7 @@ function drawWithInputValue(success, total) {
 	    iTargetSpeed = 0;
 	}
 
-    iTargetSpeed = (iTargetSpeed / 100) * 80;
+    //iTargetSpeed = (iTargetSpeed / 100) * 80;
 
     job = setTimeout("draw()", 5);
 

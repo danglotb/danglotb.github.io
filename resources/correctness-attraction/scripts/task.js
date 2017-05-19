@@ -1,26 +1,33 @@
+var running = false;
 async function run() {
-    do {
-        // initialize
-        perturbationCount = 0;
-        var number = document.getElementById("number").value;
-        var nbSuccess = 0;
-        var bound = Number.MAX_SAFE_INTEGER;
-        var size = document.getElementById("size").value;
-        probability = document.getElementById("probability").value / 1000;
-        initPerturbationPoint();
+    document.getElementById("run").value = running ? "Run" : "Stop";
+    running = !running;
+    if (running) {
+        do {
+                // initialize
+                perturbationCount = 0;
+                var number = document.getElementById("number").value;
+                var nbSuccess = 0;
+                var bound = Number.MAX_SAFE_INTEGER;
+                var size = document.getElementById("size").value;
+                probability = document.getElementById("probability").value / 1000;
+                initPerturbationPoint();
 
-        //run
-        for (var i = 0 ; i < number; i++) {
-            nbSuccess += psort(size, bound) ? 1 : 0;
-        }
-        //display
-        document.getElementById("success").innerHTML = ((nbSuccess / number) * 100).toFixed(2);
-        document.getElementById("nbPerturbation").innerHTML = perturbationCount;
-        document.getElementById("numberSpan").innerHTML = number;
-        document.getElementById("nbPerturbationPerExecution").innerHTML = ((perturbationCount / number)).toFixed(2);
-        drawWithInputValue(nbSuccess, number);
-        await sleep(100);
-    } while (document.getElementById("runContinuously").checked);
+                //run
+                for (var i = 0 ; i < number; i++) {
+                    nbSuccess += psort(size, bound) ? 1 : 0;
+                }
+                //display
+                document.getElementById("success").innerHTML = ((nbSuccess / number) * 100).toFixed(2);
+                document.getElementById("nbPerturbationPerExecution").innerHTML = ((perturbationCount / number)).toFixed(2);
+                drawWithInputValue(nbSuccess, number);
+                await sleep(100);
+            } while (running);
+    } else {
+        document.getElementById("success").innerHTML = "NaN";
+        document.getElementById("nbPerturbationPerExecution").innerHTML = "0.0"
+        drawWithInputValue(0, number);
+    }
 }
 
 function psort(size, bound) {
@@ -69,14 +76,8 @@ function updateValueNumber() {
 
 function init() {
     draw(0);
+    drawWithInputValue(0, number);
     updateValueProba();
     updateValueNumber();
     updateValueSize();
 }
-
-// Without JQuery
-var slider = new Slider('#ex1', {
-	formatter: function(value) {
-		return 'Current value: ' + value;
-	}
-});

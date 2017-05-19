@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JPerturb</title>
+
+    <script type="text/javascript" src="scripts/task.js"></script>
+    <script type="text/javascript" src="scripts/quicksort.js"></script>
+    <script type="text/javascript" src="scripts/perturbation.js"></script>
+    <script type="text/javascript" src="scripts/oracle.js"></script>
+    <script type="text/javascript" src="scripts/speedometer.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="style/css/bootstrap.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="style/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="style/css/theme.css" rel="stylesheet">
+    <!-- Bootstrap slider css-->
+    <link href="style/css/bootstrap-slider.min.css" rel="stylesheet">
+    <!-- Collapse -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body onload='init()'>
+
+<div class="container theme-showcase" role="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <h1 class="panel-title">Correctness Attraction: Live-Demo</h1>
+        <p>TODO</p>
+    </div>
+
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Correctness Attraction</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h3>
+                                <span class="label label-default">Correctness meter</span>
+                                <input id="run" class="btn btn-lg btn-default" type="button" value="Run"
+                                       onclick="run()"/>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-6 col-centered">
+                            <canvas class="well" id="tutorial" width="440" height="230">
+                                Canvas not available.
+                            </canvas>
+                        </div>
+                        <div class="col-sm-3"></div>
+                    </div>
+
+                    <div class="col-sm-12">
+                        <h3>
+                            <span class="label label-default">Success rate:</span>
+                            <span id="success">NaN</span>
+                            <span> %</span>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <h3>
+                    <span class="label label-default">Number perturbation / execution:</span>
+                    <span id="nbPerturbationPerExecution">0.0</span>
+                </h3>
+            </div>
+            <div class="col-sm-6">
+                <h3>
+                    <span class="label label-default">probability:</span>
+                    <span id="labelProbability">0.05</span>
+                </h3>
+                <input id="probability" type="range" value="5" min="0" max="1000" step="5"
+                       onchange="updateValueProba()">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Advanced<input src="style/images/thin-arrowheads-pointing-down.svg"
+                                                           style="width: 20px; height: 10px"
+                                                           type="image" data-toggle="collapse" data-target="#demo"/>
+                    </h3>
+                </div>
+                <div id="demo" class="collapse">
+                    <div class="panel-body">
+                        <table class="table table-condensed">
+                            <thead>
+                            <tr>
+                            <tr>
+                                <th class="col-sm-12">
+                                    <span class="label label-default">nb array:</span><span
+                                        id="labelNumber">40</span>
+                                    <input id="number" type="range" value="40" min="5" max="100" step="1"
+                                           onchange="updateValueNumber()">
+                                </th>
+                            </tr>
+                            <tr>
+                                <th class="col-sm-12">
+                                    <span class="label label-default">size array:</span>
+                                    <span id="labelSize">100</span>
+                                    <input id="size" type="range" value="100" min="5" max="200" step="5"
+                                           onchange="updateValueSize()">
+                                </th>
+                            </tr>
+                            <tr class="col-sm-12">
+                                <th>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" id="Antifragile" value="checkbox1"
+                                                      checked>Antifragile</label>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" id="Robust" value="checkbox2">Robust</label>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" id="Fragile" value="checkbox3">Fragile</label>
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr class="col-sm-12">
+                                <th>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" id="Integer" value="checkbox1"
+                                                      checked>Integer(+1)</label>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" id="Boolean"
+                                                      value="checkbox2">Boolean(!)</label>
+                                    </div>
+                                </th>
+                            </tr>
+                            </thead>
+                        </table>
+                        <div class="checkbox">
+                            <!-- <input id="psortNumerical" class="btn btn-lg btn-default" type="button" value="run"
+                                    onclick="run()"/>-->
+                            <label><input type="checkbox" id="runContinuously" value="" checked>loop</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+</body>
+
+</html>
