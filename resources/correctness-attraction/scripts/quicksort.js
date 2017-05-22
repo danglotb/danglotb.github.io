@@ -1,7 +1,7 @@
 /*
     original quicksort function
 */
-function sort(array, beg, end) {
+function quicksort(array, beg, end) {
 
         var left = beg;
         var right = end;
