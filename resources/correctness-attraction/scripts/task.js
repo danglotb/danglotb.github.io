@@ -24,7 +24,7 @@ async function run() {
                 await sleep(100);
             } while (running);
     } else {
-        document.getElementById("success").innerHTML = "NaN";
+        document.getElementById("success").innerHTML = "0.0";
         document.getElementById("nbPerturbationPerExecution").innerHTML = "0.0"
         drawWithInputValue(0, number);
     }
@@ -32,7 +32,7 @@ async function run() {
 
 function psort(size, bound) {
     var input = generateTask(size, bound);
-    var output = quicksort(input.slice(), 0, input.length - 1);
+    var output = quicksort(input.slice(), 0, input.length - 1)
     var sorted = oracle(input, output);
     return sorted;
 }

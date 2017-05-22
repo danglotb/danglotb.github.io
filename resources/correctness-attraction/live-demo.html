@@ -5,7 +5,7 @@
     <title>JPerturb</title>
 
     <script type="text/javascript" src="scripts/task.js"></script>
-    <script type="text/javascript" src="scripts/quicksort.js"></script>
+    <script type="text/javascript" src="scripts/quicksortinstr.js"></script>
     <script type="text/javascript" src="scripts/perturbation.js"></script>
     <script type="text/javascript" src="scripts/oracle.js"></script>
     <script type="text/javascript" src="scripts/speedometer.js"></script>
@@ -25,12 +25,91 @@
 </head>
 <body onload='init()'>
 
+<!-- Fixed navbar -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Correctness Attraction</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a
+                        href="http://danglotb.github.io/resources/correctness-attraction/live-demo.html"><span
+                        class="glyphicon glyphicon-home"></span></a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">About<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="https://danglotb.github.io/">Me (Benjamin Danglot)</a>
+                        </li>
+                        <li>
+                            <a href="http://www.grappa.univ-lille3.fr/~ppreux/index-us.php">Philippe Preux</a>
+                        </li>
+                        <li>
+                            <a href="https://people.rennes.inria.fr/Benoit.Baudry/">Benoit Baudry</a>
+                        </li>
+                        <li>
+                            <a href="http://www.monperrus.net/martin/">Martin Monperrus</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Sources<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="http://danglotb.github.io/resources/correctness-attraction/scripts/quicksort.js">Quicksort</a>
+                        </li>
+                        <li>
+                            <a href="http://danglotb.github.io/resources/correctness-attraction/scripts/quicksortinstr.js">QuicksortInstr</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Implementation<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://github.com/Spirals-Team/jPerturb">JPerturb</a></li>
+                        <li><a href="https://github.com/Spirals-Team/jPerturb-experiments">JPerturb-experiments</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Publications<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://arxiv.org/abs/1611.09187">Correctness Attraction
+                            (arXiv)</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="https://danglotb.github.io/resources/correctness_attraction_report.pdf">Internship
+                            Report</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
 <div class="container theme-showcase" role="main">
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
         <h1 class="panel-title">Correctness Attraction: Live-Demo</h1>
-        <p>TODO</p>
+        <p>
+            Correctness attraction is the phenomenon that a system is able to recover from changes injected into
+            its state, which is called perturbations, and yet produce a correct output.
+            Here, you can apply our protocol to an implementation of a quicksort algorithm.
+            For every integer (literals and expressions), a perturbation consists to add 1 with a given probability.
+            In the other, it does the same for boolean literals and expressions by negating them.
+
+        </p>
     </div>
 
     <div class="col-sm-12">
@@ -50,19 +129,46 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-3"></div>
-                        <div class="col-sm-6 col-centered">
-                            <canvas class="well" id="tutorial" width="440" height="230">
-                                Canvas not available.
-                            </canvas>
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-10">
+                            <div class="col-sm-6">
+                                <canvas id="tutorial" width="440" height="230">
+                                    Canvas not available.
+                                </canvas>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="well">
+                                    <p>
+                                        By pressing the Run button, arrays of random integers will be sorted in continue
+                                        with an instrumented implementation of quicksort.
+                                        The instrumentation allows to perturb the internal state of the algorihtm by
+                                        adding
+                                        1 to the integer and negate boolean expression.
+                                        In the center of the page, there is the correctness meter, that is displaying
+                                        the
+                                        rate of the well sorted arrays while perturbations occurs.
+                                        You can change the probability that a perturbation occurs by using the slider at
+                                        the
+                                        bottom-left of the page. The probability is limited to 0.5. <input
+                                            src="style/images/question-circular-button.svg"
+                                            style="width: 20px; height: 20px"
+                                            type="image" data-toggle="tooltip"
+                                            title="Because a higher probability will create more recursion and javascript cannot handle a lot of them."/>
+                                        In the bottom-right, you have the number of perturbation per execution of the
+                                        algorithm (in average).
+                                        Several perturbation can occur during a single execution.
+                                        See the advanced panel to have more configuration options.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-sm-3"></div>
+                        <div class="col-sm-1"></div>
                     </div>
 
                     <div class="col-sm-12">
                         <h3>
                             <span class="label label-default">Success rate:</span>
-                            <span id="success">NaN</span>
+                            <span id="success">0.0</span>
                             <span> %</span>
                         </h3>
                     </div>
@@ -70,19 +176,18 @@
             </div>
             <div class="col-sm-6">
                 <h3>
+                    <span class="label label-default">Probability:</span>
+                    <span id="labelProbability">0.005</span>
+                </h3>
+                <input id="probability" type="range" value="5" min="0" max="500" step="5"
+                       onchange="updateValueProba()">
+            </div>
+            <div class="col-sm-6">
+                <h3>
                     <span class="label label-default">Number perturbation / execution:</span>
                     <span id="nbPerturbationPerExecution">0.0</span>
                 </h3>
             </div>
-            <div class="col-sm-6">
-                <h3>
-                    <span class="label label-default">probability:</span>
-                    <span id="labelProbability">0.05</span>
-                </h3>
-                <input id="probability" type="range" value="5" min="0" max="1000" step="5"
-                       onchange="updateValueProba()">
-            </div>
-
         </div>
     </div>
 
@@ -97,66 +202,83 @@
                 </div>
                 <div id="demo" class="collapse">
                     <div class="panel-body">
-                        <table class="table table-condensed">
-                            <thead>
-                            <tr>
-                            <tr>
-                                <th class="col-sm-12">
-                                    <span class="label label-default">nb array:</span><span
-                                        id="labelNumber">40</span>
-                                    <input id="number" type="range" value="40" min="5" max="100" step="1"
-                                           onchange="updateValueNumber()">
-                                </th>
-                            </tr>
-                            <tr>
-                                <th class="col-sm-12">
-                                    <span class="label label-default">size array:</span>
-                                    <span id="labelSize">100</span>
-                                    <input id="size" type="range" value="100" min="5" max="200" step="5"
-                                           onchange="updateValueSize()">
-                                </th>
-                            </tr>
-                            <tr class="col-sm-12">
-                                <th>
-                                    <div class="checkbox">
-                                        <label><input type="checkbox" id="Antifragile" value="checkbox1"
-                                                      checked>Antifragile</label>
-                                    </div>
-                                </th>
-                                <th>
-                                    <div class="checkbox">
-                                        <label><input type="checkbox" id="Robust" value="checkbox2">Robust</label>
-                                    </div>
-                                </th>
-                                <th>
-                                    <div class="checkbox">
-                                        <label><input type="checkbox" id="Fragile" value="checkbox3">Fragile</label>
-                                    </div>
-                                </th>
-                            </tr>
-                            <tr class="col-sm-12">
-                                <th>
-                                    <div class="checkbox">
-                                        <label><input type="checkbox" id="Integer" value="checkbox1"
-                                                      checked>Integer(+1)</label>
-                                    </div>
-                                </th>
-                                <th>
-                                    <div class="checkbox">
-                                        <label><input type="checkbox" id="Boolean"
-                                                      value="checkbox2">Boolean(!)</label>
-                                    </div>
-                                </th>
-                            </tr>
-                            </thead>
-                        </table>
-                        <div class="checkbox">
-                            <!-- <input id="psortNumerical" class="btn btn-lg btn-default" type="button" value="run"
-                                    onclick="run()"/>-->
-                            <label><input type="checkbox" id="runContinuously" value="" checked>loop</label>
+                        <div class="col-sm-6">
+                            <table class="table table-condensed">
+                                <thead>
+                                <tr>
+                                <tr>
+                                    <th class="col-sm-12">
+                                        <span class="label label-default">Number of array to be sorted</span><span
+                                            id="labelNumber">40</span>
+                                        <input id="number" type="range" value="40" min="1" max="40" step="1"
+                                               onchange="updateValueNumber()">
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th class="col-sm-12">
+                                        <span class="label label-default">Number of element per array: </span>
+                                        <span id="labelSize">100</span>
+                                        <input id="size" type="range" value="100" min="5" max="200" step="5"
+                                               onchange="updateValueSize()">
+                                    </th>
+                                </tr>
+                                <tr class="col-sm-12">
+                                    <th>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" id="Integer" name="pointType"
+                                                          value="checkbox1"
+                                                          checked>Integer(+1)</label>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" id="Boolean" name="pointType"
+                                                          value="checkbox2">Boolean(!)</label>
+                                        </div>
+                                    </th>
+                                </tr>
+                                <tr class="col-sm-12">
+                                    <th>
+                                        <div class="checkbox">
+                                            <label><input type="radio" id="Antifragile" name="pointTypeFragility"
+                                                          value="checkbox1"
+                                                          checked>Antifragile</label>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="checkbox">
+                                            <label><input type="radio" id="Robust" name="pointTypeFragility"
+                                                          value="checkbox2">Robust</label>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="checkbox">
+                                            <label><input type="radio" id="Fragile" name="pointTypeFragility"
+                                                          value="checkbox3">Fragile</label>
+                                        </div>
+                                    </th>
+                                </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="well">
+                                In the advanced panel, you can customize the number of array to be sorted using the
+                                first slider. The success rate is computed for this number of array. The second slider
+                                allows you to change the number of element per array. Then, you can change which type of
+                                perturbation will be used: Integer or Boolean. You can activate both.
+                                The last configuration element is the type of the perturbation point. Antifragile are
+                                perturbation that have a very good correctness attraction: +75%, Robust are point with
+                                a success rate between 75% and 50% and Fragile are points that can not stand a little
+                                change with less than 50% of correctness ratio. This classification of point is based on
+                                the
+                                results of the related paper: <a href="https://hal.archives-ouvertes.fr/hal-01378523">Correctness
+                                Attraction: A Study of Stability of Software Behavior Under Runtime Perturbation.</a>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
