@@ -1,4 +1,4 @@
-var probability = 0.05;
+var probability = 0.005;
 var perturbationCount = 0;
 var activePerturbationPoints = [];
 var typesToPerturb = [];
