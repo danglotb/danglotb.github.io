@@ -1,4 +1,9 @@
+
+var perturbationPerExecution = 0;
+var successRate = 0;
 var running = false;
+var probabilityToGraph = 0.005;
+
 async function run() {
     running = !running;
     if (running) {
@@ -17,8 +22,13 @@ async function run() {
                     nbSuccess += psort(size, bound) ? 1 : 0;
                 }
                 //display
-                document.getElementById("success").innerHTML = ((nbSuccess / number) * 100).toFixed(2);
-                document.getElementById("nbPerturbationPerExecution").innerHTML = ((perturbationCount / number)).toFixed(2);
+                successRate = ((nbSuccess / number) * 100).toFixed(2);
+                probabilityToGraph = probability;
+                perturbationPerExecution = ((perturbationCount / number)).toFixed(2);
+                document.getElementById("success").innerHTML = successRate;
+                document.getElementById("nbPerturbationPerExecution").innerHTML = perturbationPerExecution;
+                perturbationPerExecution = Math.floor(perturbationPerExecution);
+                successRate = Math.floor(successRate);
                 drawWithInputValue(nbSuccess, number);
                 await sleep(100);
             } while (running);
@@ -26,100 +36,8 @@ async function run() {
         document.getElementById("success").innerHTML = "0.0";
         document.getElementById("nbPerturbationPerExecution").innerHTML = "0.0"
         drawWithInputValue(0, number);
-    }
-}
-
-function psort(size, bound) {
-    var input = generateTask(size, bound);
-    var output = input.slice();
-    quicksort_instr(output, 0, input.length - 1)
-    var sorted = oracle(input, output);
-    return sorted;
-}
-
-function runCustom() {
-     if (document.getElementById("run").value == "Stop") {
-            document.getElementById("run").value = "Run";
-            run();
-        } else {
-            stopOthers();
-            updateValueProba();
-            updateValueSize();
-            updateValueNumber();
-            document.getElementById("run").value = "Stop";
-            run();
-        }
-}
-
-function demo3() {
-    if (document.getElementById("demo3").value == "Stop") {
-        document.getElementById("demo3").value = "Demo3";
-        run();
-    } else {
-        stopOthers();
-        document.getElementById("number").value = 40;
-        document.getElementById("size").value = 100;
-        document.getElementById("probability").value = 500;
-        document.getElementById("Antifragile").checked = true;
-        document.getElementById("Integer").checked = true;
-        document.getElementById("Boolean").checked = false;
-        updateValueProba();
-        updateValueSize();
-        updateValueNumber();
-        document.getElementById("demo3").value = "Stop";
-        run();
-    }
-}
-
-function demo2() {
-    if (document.getElementById("demo2").value == "Stop") {
-        document.getElementById("demo2").value = "Demo2";
-        run();
-    } else {
-        stopOthers();
-        document.getElementById("number").value = 40;
-        document.getElementById("size").value = 200;
-        document.getElementById("probability").value = 50;
-        document.getElementById("Antifragile").checked = true;
-        document.getElementById("Integer").checked = true;
-        document.getElementById("Boolean").checked = true;
-        updateValueProba();
-        updateValueSize();
-        updateValueNumber();
-        document.getElementById("demo2").value = "Stop";
-        run();
-    }
-}
-
-function demo1() {
-    if (document.getElementById("demo1").value == "Stop") {
-        document.getElementById("demo1").value = "Demo1";
-        run();
-    } else {
-        stopOthers();
-        document.getElementById("number").value = 40;
-        document.getElementById("size").value = 100;
-        document.getElementById("probability").value = 50;
-        document.getElementById("Antifragile").checked = true;
-        document.getElementById("Integer").checked = true;
-        document.getElementById("Boolean").checked = false;
-        updateValueProba();
-        updateValueSize();
-        updateValueNumber();
-        document.getElementById("demo1").value = "Stop";
-        run();
-    }
-}
-
-function stopOthers() {
-    if (document.getElementById("demo1").value == "Stop") {
-        demo1();
-    } else if (document.getElementById("demo2").value == "Stop") {
-        demo2();
-    } else if (document.getElementById("demo3").value == "Stop") {
-        demo3();
-    } else if (document.getElementById("run").value == "Stop") {
-        runCustom();
+        perturbationPerExecution = 0;
+        successRate = 0;
     }
 }
 
@@ -127,27 +45,10 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-function initPerturbationPoint() {
-    activePerturbationPoints = [];
-    activePerturbationPoints = activePerturbationPoints.concat(document.getElementById("Antifragile").checked ? antiFragile : []);
-    activePerturbationPoints = activePerturbationPoints.concat(document.getElementById("Robust").checked ? robust : []);
-    activePerturbationPoints = activePerturbationPoints.concat(document.getElementById("Fragile").checked ? fragile : []);
-    typesToPerturb = [];
-    typesToPerturb = typesToPerturb.concat(document.getElementById("Integer").checked ? "number" : []);
-    typesToPerturb = typesToPerturb.concat(document.getElementById("Boolean").checked ? "boolean" : []);
-}
-
-function generateTask(size, bound) {
-    var task = []
-    for (i = 0 ; i < size ; ++i) {
-        task[i] = Math.floor(Math.random() * bound + 1);
-    }
-    return task;
-}
-
 function updateValueProba() {
-     var probability = document.getElementById("probability").value;
+     probability = document.getElementById("probability").value;
      document.getElementById("labelProbability").innerHTML = (probability / 1000);
+     probabilityToGraph = probability / 1000;
 }
 
 function updateValueSize() {
@@ -161,6 +62,7 @@ function updateValueNumber() {
 }
 
 function init() {
+    graph();
     draw(0);
     drawWithInputValue(0, number);
     updateValueProba();

@@ -9,6 +9,11 @@
     <script type="text/javascript" src="scripts/perturbation.js"></script>
     <script type="text/javascript" src="scripts/oracle.js"></script>
     <script type="text/javascript" src="scripts/speedometer.js"></script>
+    <script type="text/javascript" src="scripts/model.js"></script>
+    <script type="text/javascript" src="scripts/demo.js"></script>
+
+    <script type="text/javascript" src="style/js/canvasjs.min.js"></script>
+    <script type="text/javascript" src="scripts/graph.js"></script>
 
     <!-- Bootstrap core CSS -->
     <link href="style/css/bootstrap.css" rel="stylesheet">
@@ -112,52 +117,57 @@
                     <h3 class="panel-title">Correctness Attraction</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="col-sm-1"></div>
-                    <div class="col-sm-5">
-                        <div class="row">
-                            <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-5">
                                 <canvas id="tutorial" width="440" height="230">
                                     Canvas not available.
                                 </canvas>
                             </div>
-                        </div>
-                        <div class="row">
-
-                            <div class="col-sm-12">
-                                <h3>
-                                    <span class="label label-default">Success rate:</span>
-                                    <span id="success">0.0</span>
-                                    <span> %</span>
-                                </h3>
+                            <div class="col-sm-5">
+                                <div id="chartContainer" style="height: 300px; width:100%;"></div>
                             </div>
+                            <div class="col-sm-1"></div>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <h3>
-                                    <span class="label label-default">Number perturbation / execution:</span>
-                                    <span id="nbPerturbationPerExecution">0.0</span>
-                                </h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h3>
+                                <span class="label label-default">Success rate:</span>
+                                <span id="success">0.0</span>
+                                <span> %</span>
+                            </h3>
+                        </div>
+                        <div class="col-sm-6">
+                            <h3>
+                                <span class="label label-default">Probability:</span>
+                                <span id="labelProbability">0.005</span>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h3>
+                                <span class="label label-default">Number perturbation / execution:</span>
+                                <span id="nbPerturbationPerExecution">0.0</span>
+                            </h3>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="col-sm-10">
+                                <input id="probability" type="range" value="5" min="0" max="500" step="5"
+                                       onchange="updateValueProba()">
+                            </div>
+                            <div class="col-sm-2">
+                                <input
+                                        src="style/images/question-circular-button.svg"
+                                        style="width: 20px; height: 20px"
+                                        type="image" data-toggle="tooltip"
+                                        title="Probability is limited to 0.5 because a higher probability will create more recursion than the browser can accept."/>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-5">
-                        <div class="well">
-                            <h4>
-                                <p class="text-justify">
-                                    The screen is is organized as follow:
-                                <ul>
-                                    <li>The Correctness meter which displays the success rate.</li>
-                                    <li>The success rate in percentage: well sorted arrays.</li>
-                                    <li>The number of perturbation per execution(sorting one array).</li>
-                                    <li>Pre-selected experiments.</li>
-                                </ul>
-                                </p>
-                            </h4>
-                        </div>
-                    </div>
-                    <div class="col-sm-1"></div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -176,7 +186,8 @@
                         </div>
                         <div class="col-sm-11">
                             <h5>
-                                <p>Run quicksort on 40 arrays of 100 with 0.05 (5%) of probability to perturb an integer
+                                <p>Run quicksort on 40 arrays of 100 integers with 0.05 (5%) of probability to perturb
+                                    an integer
                                     point. It results with 100% of correctness ratio and between 170 and 180
                                     perturbation per execution.
                             </h5>
@@ -190,9 +201,10 @@
                         </div>
                         <div class="col-sm-11">
                             <h5>
-                                <p>Run quicksort on 40 arrays of 200 with 0.05 (5%) of probability to perturb an integer
-                                    AND
-                                    boolean point. It results with a correctness ratio between 95% and 100%. The number
+                                <p>Run quicksort on 40 arrays of 200 integers with 0.05 (5%) of probability to perturb
+                                    an integer
+                                    AND boolean point. It results with a correctness ratio between 95% and 100%. The
+                                    number
                                     of perturbation ranges from 1500 and 1700.
                             </h5>
                         </div>
@@ -205,7 +217,8 @@
                         </div>
                         <div class="col-sm-11">
                             <h5>
-                                <p>Run quicksort on 40 arrays of 100 with 0.5 (50%) of probability to perturb an integer
+                                <p>Run quicksort on 40 arrays of 100 integers with 0.5 (50%) of probability to perturb
+                                    an integer
                                     point. The results correctness ranges from 25% to 40%. The number of perturbation
                                     per execution is between 10000 and 11000.
                             </h5>
@@ -224,27 +237,6 @@
                     <h3 class="panel-title">Options</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <h3>
-                                <span class="label label-default">Probability:</span>
-                                <span id="labelProbability">0.005</span>
-                            </h3>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <input id="probability" type="range" value="5" min="0" max="500" step="5"
-                                   onchange="updateValueProba()">
-                        </div>
-                        <div class="col-sm-1">
-                            <input
-                                    src="style/images/question-circular-button.svg"
-                                    style="width: 20px; height: 20px"
-                                    type="image" data-toggle="tooltip"
-                                    title="Probability is limited to 0.5 because a higher probability will create more recursion than the browser can accept."/>
-                        </div>
-                    </div>
                     <div class="row">
                         <div class="col-sm-1">
                             <input id="run" class="btn btn-lg btn-default" type="button" value="Run"
@@ -346,7 +338,9 @@
                                     <li>The number of array to be sorted.</li>
                                     <li>The number of element per array.</li>
                                     <li>The type (Integer or Boolean) of the expression to perturb.</li>
-                                    <li>The <i>class</i> of the perturbation point. (see <a href="sources.html">sources</a> for more information)</li>
+                                    <li>The <i>class</i> of the perturbation point. (see <a
+                                            href="sources.html">sources</a> for more information)
+                                    </li>
                                 </ul>
                             </div>
                         </div>
