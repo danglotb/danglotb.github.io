@@ -3,19 +3,19 @@
 
 <div class="sidebar-wrapper">
     <div class="profile-container">
-        <img class="profile"
+        <a href="{{site.baseurl}}/index.html" ><img class="profile"
              src="{{site.baseurl}}/assets/images/{% if site.pic %}{{ site.pic }}{% else %}profile.png{% endif %}"
-             alt="profile picture"/>
+             alt="profile picture"/></a>
         <h1 class="name">{{site.name}}</h1>
         <h3 class="tagline">{{site.tagline}}</h3>
     </div><!--//profile-container-->
 
     <div class="contact-container container-block">
         <ul class="list-unstyled contact-list">
-            <li class="email"><i class="fa fa-envelope"></i><a href="mailto: {{site.email}}">{{site.email}}</a></li>
+            <li class="email"><i class="fa fa-envelope"></i><a href="mailto:{{site.email}}">{{site.email}}</a></li>
             <!--<li class="phone"><i class="fa fa-phone"></i><a href="tel:{{site.phone}}">{{site.phone}}</a></li>-->
             <li class="github"><i class="fa fa-github"></i><a href="http://github.com/{{site.github}}" target="_blank">github.com/{{site.github}}</a></li>
-            <!--<li class="twitter"><i class="fa fa-twitter"></i><a href="https://twitter.com/{{site.twitter}}" target="_blank">{{site.twitter}}</a></li>-->
+            <li class="twitter"><i class="fa fa-twitter"></i><a href="https://twitter.com/{{site.twitter}}" target="_blank">{{site.twitter}}</a></li>
         </ul>
     </div><!--//contact-container-->
     {% include education.html %}
