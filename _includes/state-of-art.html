@@ -34,12 +34,46 @@
     <div class="item">
         <span class="project-title"><h4>Constraint-Based Automatic Test Data Generation <a
                 href="http://dl.acm.org/citation.cfm?id=126269#"><i class="fa fa-link"
-                                                                       aria-hidden="true"></i></a></h4></span>
-        <p></p>
+                                                                    aria-hidden="true"></i></a></h4></span>
+        <p>
+            DeMillo <i>et al.</i> proposed a first attempt to automatically generate test to meet the fault-based
+            testing
+            criteria. The fault-based testing criteria is to use mutation analysis, <i>i.e. </i> inject seeded fault
+            into a program, then exercise the tests. If the tests fails, it kills the mutants and detects the fault. If
+            not, there is a potential lack of test data input in the test suite. This lead the testers to produce this
+            new test data input. However, this task is tedious and time-consumption, that why, authors proposed a
+            technique to generate them.
+        </p>
+        <p>
+            Their techniques is base on a representation algebraic constraints to kill mutants, and then use this
+            representation to generate data to kill it. They called their techniques <i>Constraint-based Testing</i>
+            (CBT). In order to kill mutants, Generated test data input must makes a difference in the behavior of the
+            mutant. They define necessity constraints templates based on mutation operators used, in Mothra. They
+            overcome mutant equivalent program, they add constraints on predicate to force mutant programs to have
+            different value than original program.
+        </p>
+        <p>
+            In their techniques, constraints are composed by algebraic expression, <i>i.e.</i> variables, parentheses
+            and programming language operators. A constraint is a pair of algebraic expression related with one
+            conditional operator. A clause is a conjunctive or disjunctive list of constraints. A constraint is a clause
+            that represent one test case.
+        </p>
+        <p>
+            The global workflow of their approach is to successively substitute value for a variable in constraints that
+            remains consistent with the rest of the clauses. At the begin, all the values are assigned to a domain that
+            contains all the possible values. The reduction aims at eliminate expression in the constraints, and reduce
+            the domain of each values by substitute variables by values. At each steps they take the variables with the
+            smallest domain.
+        </p>
+        <p>
+            They implemented CBT for Fortran 77 programs in a tool named Godzilla. They use the widely use triangle
+            classification program TRITYP. They compare generated test by Godzilla to manually written-test cases (in 30
+            hours). Godzilla achieve a better mutation score: 99% against 95 for the manually-written test.
+        </p>
     </div>
 
     <div class="item">
-        <span class="project-title"><h4>An Approach to Test Test Data Generation for Killing Multiple Mutants <a
+        <span class="project-title"><h4>An Approach to Test Data Generation for Killing Multiple Mutants <a
                 href="http://ieeexplore.ieee.org/document/4021328/"><i class="fa fa-link"
                                                                        aria-hidden="true"></i></a></h4>
         </span>
