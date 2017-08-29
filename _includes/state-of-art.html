@@ -119,4 +119,73 @@
         </p>
     </div>
 
+    <div class="item">
+        <span class="project-title"><h4>The care and feeding of wild-caught mutants <a
+                href="http://dl.acm.org/citation.cfm?doid=3106237.3106280"><i class="fa fa-link"
+                                                                              aria-hidden="true"></i></a></h4>
+        </span>
+        <p>
+            Brown <i>et al.</i> highlight the fact that mutants (changes in source code) in mutation analysis do not
+            necessarily reflect errors made by developers. They propose an approach named <b>wild-caught mutants</b> to
+            generate mutants that reflect errors introduce by developers instead of classic changes.
+        </p>
+
+        <p>
+            To create those new mutation operators, they use revision of software. They take the reverse (backward) of
+            what is likely to be a correction in the revision history. They have 4 research axes: 1) Does the technique
+            find existing mutations operators? 2) Does the technique find new mutation operations? 3) In what way new
+            mutation operators are different from existing? 4) Does the forward generation is different from the
+            backward generation?
+        </p>
+
+        <p>
+            Their approach is devised with two tools: <i>mutgen</i> and <i>mutins</i>. The former is responsible to
+            extract new mutation operators from a set of code diffs. Then, the latter apply this new mutation operators
+            to a new code base. Both tools also use a language definition.
+        </p>
+
+        <p>
+            <i>Mutgen</i> extract candidate mutation operators by analyzing diff between two version of program. It is
+            isolating changes into small block that are contiguous. Each of this block are treated separately. To
+            identify a candidate, changes must not require any synthesise to run its "after" state into "before"
+            state. After the extraction they filter the candidate using diverse criteria: length of the sequence,
+            candidate that contains repeated specific characters such as "*" or "/", unbalanced bracket... During this
+            process, they also collect identifier-shift, which are mutation operators that solely change an identifier
+            by another.
+        </p>
+        <p>
+            <i>Mutins</i> attempts to insert mutation operator into another codebase. To do so, it try to match the
+            operators to the token stream. Then, among the matches, it insert the mutants into the code (selected
+            randomly
+            or specified by the user).
+        </p>
+
+        <p>
+            To evaluate the approach, they use project on github and their history. They used the full revision of the
+            top 50 project, order by the number of forks. They use <i>Mutgen</i> on the 50 projects to create the set of
+            mutation operators.
+        </p>
+
+        <p>
+            For <i>Mutins</i>, they targeted the program Space(Filippos I. Vokolos and Phyllis G. Frankl. 1998.
+            Empirical Evaluation of the Textual Differencing Regression Testing Technique.). For this program, they
+            generated 5,000 100-cases test-suite. They then compute the number of compiled mutants, and the number of
+            mutant that have been killed.
+        </p>
+
+        <p>
+            Their approach allows to reproduce four common operators. They identified three stronger mutation operators
+            and two new mutation operators. The wild-caught mutants are as hard to detect that existing (0.81
+            sampl-based mutation-detection ratio against 0.75 for classical operator). The compatibility is lower 14%
+            against 92% reported by Andrews <i>et al.</i> (J. H. Andrews, L. C. Briand, and Y. Labiche. 2005. Is
+            Mutation an Appropriate Tool for Testing Experiments?).
+        </p>
+
+        <p>
+            The difference between backward and forward generation is in the number of patches found by the techniques:
+            6,359 for forward and 5.860 for backward. For the 38 bugs of Space, 7 faults would be reintroduced by
+            backward patches, against only one by both. Five other bugs could be reproduce using the identifier-shift.
+        </p>
+    </div>
+
 </section><!--//section-->
