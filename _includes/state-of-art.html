@@ -32,7 +32,7 @@
     </div>--><!--//item-->
 
     <div class="item">
-        <span class="project-title"><h4>Constraint-Based Automatic Test Data Generation <a
+        <span id="ref1" class="project-title"><h4>Constraint-Based Automatic Test Data Generation<a
                 href="http://dl.acm.org/citation.cfm?id=126269#"><i class="fa fa-link"
                                                                     aria-hidden="true"></i></a></h4></span>
         <p>
@@ -73,7 +73,7 @@
     </div>
 
     <div class="item">
-        <span class="project-title"><h4>An Approach to Test Data Generation for Killing Multiple Mutants <a
+        <span id="ref2" class="project-title"><h4>An Approach to Test Data Generation for Killing Multiple Mutants <a
                 href="http://ieeexplore.ieee.org/document/4021328/"><i class="fa fa-link"
                                                                        aria-hidden="true"></i></a></h4>
         </span>
@@ -120,7 +120,7 @@
     </div>
 
     <div class="item">
-        <span class="project-title"><h4>The care and feeding of wild-caught mutants <a
+        <span id="ref3" class="project-title"><h4>The care and feeding of wild-caught mutants <a
                 href="http://dl.acm.org/citation.cfm?doid=3106237.3106280"><i class="fa fa-link"
                                                                               aria-hidden="true"></i></a></h4>
         </span>
@@ -189,6 +189,58 @@
     </div>
 
     <div class="item">
+        <span id="ref4" class="project-title"><h4>Saying ’Hi!’ Is Not Enough:Mining Inputs for Effective Test Generation<a
+                href="https://www.conference-publishing.com/list.php?Event=ASE17"><i class="fa fa-link"
+                                                                                     aria-hidden="true"></i></a></h4>
+        </span>
+        <p>
+            Generators of tests fails to reproduce a majority of bugs (see [<a href="#ref5">5</a>]). This is explained by the fact that generator tends at using wrong inputs. For instance, most of generator use random generated values or values from a predefined pool. But this techniques do not obtain good results because programs use domain-specific data formats. Usually, generated inputs tends to not trigger deep codes because they do not pass the sanity-check from the domain. Toffola <i>et al. </i> presents <b>TestMiner</b>, a novel techniques to address this issue. Their technique is to exploit the knowledge inside existing tests (amplification) to generate proper input. This approach is devised into two steps: 1) It extracts existing literals from tests and index them for a quick retrieval;  2) the test generator queries this index for a given method call.
+        </p>
+
+        <p>
+            The approach first analyze statically the program. It extracts from this analysis input values associated with a context. A context might be anything that can be represented as a bag of words. In their approach, they choose to use the full qualified name of methods. For each literals, the analysis returns a set of call site tuples <i>Sc</i>. A call site tuples is three elements: the qualified names of the type that defines the method called, the name of the method called and the literals used as input. From Sc, they build a bag of word that summarizes the context. They put context into an HashMap.   They assign a specific weigh to each word of bags, because some of them are more relevant than others. For instance, we have the following context: ({org, sql, parser}; "SELECT x FROM y"). The word <i>sql</i> contains more information about the context than the word <i>org</i>, which is a common package. To leverage this, they compute the <i>term frequency-inverse document frequency</i> for each words. They use a specific Hash function for the indexing: Simhashing, which allows <b>TestMiner</b> to assign similar hash to similar values.
+        </p>
+
+        <p>
+          <b>TestMiner</b> retrieves string values for a test generator. First, it assign a weight to the query. The used weight function is prioritizing uncommon words. The search algorithm used is the presented by <i>TODO et al. </i> [<a href="#ref6">6</a>]. Named searchSimhash, the algorithm returns a mapping between string and a list of integers. The algorithm selects multiple indices. This is allow to have all indices of string values that differ of a given number of bits from the querried hash. The more this value is high, the more the algorithm returns values.
+        </p>
+
+        <p>
+            They implement <b>TestMiner</b> in Randoop, a state-of-the-art generator of test in Java [<a href="#ref7">7</a>]. Their implementation is a web server, that allows to modify only one hundred lines of code in Randoop. They learned data from 3,601 Java projects from the Maven Central Repository, which results with 263,276 string values in 37,821 different contexts. They used 40 classes from 18 Java projects to evaluate the effectiveness of tests generated with the help of <b>TestMiner</b>. Then, they generated 10 test suites using only Randoop and Random enhanced with <b>TestMiner</b>, and compare the branch coverage obtained, computed with JaCoCo.
+        </p>
+
+        <p>
+            It results that using <b>TestMiner</b> with Randoop increase the coverage for thirty classes and decreases it for two classes. On average, the relative improvement is 21%.
+        </p>
+
+        <p>
+            <b>TestMiner</b> provides results examples that fit real contract such as IBAN, SQL, Network address, or E-mail. <b>TestMiner</b> has an overhead of 55% in time consumption.
+        </p>
+
+    </div>
+
+
+    <div id="ref5" class="item">
+        <span class="project-title"><h4>Do automatically generated unit tests find real faults? an empirical study of effectiveness and challenges<a
+                href="http://dl.acm.org/citation.cfm?id=2916250"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
+        </span>
+    </div>
+
+    <div id="ref6" class="item">
+        <span class="project-title"><h4>Detecting near-duplicates for web crawling.<a
+                href="http://dl.acm.org/citation.cfm?id=1242592"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
+        </span>
+    </div>
+
+    <div id="ref7" class="item">
+        <span class="project-title"><h4>Feedback-directed random test generation<a
+                href="http://dl.acm.org/citation.cfm?id=1248841"><i class="fa fa-link"
+                           aria-hidden="true"></i></a></h4>
+        </span>
+    </div>
+
+
+    <div class="item">
         <span class="project-title"><h4>Are mutants a valid substitute for real faults in software testing?<a
                 href="http://dl.acm.org/citation.cfm?doid=2635868.2635929"><i class="fa fa-link"
                                                                               aria-hidden="true"></i></a></h4>
@@ -218,17 +270,13 @@
     </div>
 
     <div class="item">
-        <span class="project-title"><h4>BDCI: Behavioral Driven Conflict Identification.<a
-                href="http://arxiv.org/abs/1708.01650"><i class="fa fa-link"
-                                                          aria-hidden="true"></i></a></h4>
-        </span>
-    </div>
-
-    <div class="item">
         <span class="project-title"><h4>Are mutants a valid substitute for real faults in software testing?<a
                 href="http://dl.acm.org/citation.cfm?doid=2635868.2635929"><i class="fa fa-link"
                                                                               aria-hidden="true"></i></a></h4>
         </span>
     </div>
+
+
+
 
 </section><!--//section-->
