@@ -194,27 +194,57 @@
                                                                                      aria-hidden="true"></i></a></h4>
         </span>
         <p>
-            Generators of tests fails to reproduce a majority of bugs (see [<a href="#ref5">5</a>]). This is explained by the fact that generator tends at using wrong inputs. For instance, most of generator use random generated values or values from a predefined pool. But this techniques do not obtain good results because programs use domain-specific data formats. Usually, generated inputs tends to not trigger deep codes because they do not pass the sanity-check from the domain. Toffola <i>et al. </i> presents <b>TestMiner</b>, a novel techniques to address this issue. Their technique is to exploit the knowledge inside existing tests (amplification) to generate proper input. This approach is devised into two steps: 1) It extracts existing literals from tests and index them for a quick retrieval;  2) the test generator queries this index for a given method call.
+            Generators of tests fails to reproduce a majority of bugs (see [<a href="#ref5">5</a>]). This is explained
+            by the fact that generator tends at using wrong inputs. For instance, most of generator use random generated
+            values or values from a predefined pool. But this techniques do not obtain good results because programs use
+            domain-specific data formats. Usually, generated inputs tends to not trigger deep codes because they do not
+            pass the sanity-check from the domain. Toffola <i>et al. </i> presents <b>TestMiner</b>, a novel techniques
+            to address this issue. Their technique is to exploit the knowledge inside existing tests (amplification) to
+            generate proper input. This approach is devised into two steps: 1) It extracts existing literals from tests
+            and index them for a quick retrieval; 2) the test generator queries this index for a given method call.
         </p>
 
         <p>
-            The approach first analyze statically the program. It extracts from this analysis input values associated with a context. A context might be anything that can be represented as a bag of words. In their approach, they choose to use the full qualified name of methods. For each literals, the analysis returns a set of call site tuples <i>Sc</i>. A call site tuples is three elements: the qualified names of the type that defines the method called, the name of the method called and the literals used as input. From Sc, they build a bag of word that summarizes the context. They put context into an HashMap.   They assign a specific weigh to each word of bags, because some of them are more relevant than others. For instance, we have the following context: ({org, sql, parser}; "SELECT x FROM y"). The word <i>sql</i> contains more information about the context than the word <i>org</i>, which is a common package. To leverage this, they compute the <i>term frequency-inverse document frequency</i> for each words. They use a specific Hash function for the indexing: Simhashing, which allows <b>TestMiner</b> to assign similar hash to similar values.
+            The approach first analyze statically the program. It extracts from this analysis input values associated
+            with a context. A context might be anything that can be represented as a bag of words. In their approach,
+            they choose to use the full qualified name of methods. For each literals, the analysis returns a set of call
+            site tuples <i>Sc</i>. A call site tuples is three elements: the qualified names of the type that defines
+            the method called, the name of the method called and the literals used as input. From Sc, they build a bag
+            of word that summarizes the context. They put context into an HashMap. They assign a specific weigh to each
+            word of bags, because some of them are more relevant than others. For instance, we have the following
+            context: ({org, sql, parser}; "SELECT x FROM y"). The word <i>sql</i> contains more information about the
+            context than the word <i>org</i>, which is a common package. To leverage this, they compute the <i>term
+            frequency-inverse document frequency</i> for each words. They use a specific Hash function for the indexing:
+            Simhashing, which allows <b>TestMiner</b> to assign similar hash to similar values.
         </p>
 
         <p>
-          <b>TestMiner</b> retrieves string values for a test generator. First, it assign a weight to the query. The used weight function is prioritizing uncommon words. The search algorithm used is the presented by <i>TODO et al. </i> [<a href="#ref6">6</a>]. Named searchSimhash, the algorithm returns a mapping between string and a list of integers. The algorithm selects multiple indices. This is allow to have all indices of string values that differ of a given number of bits from the querried hash. The more this value is high, the more the algorithm returns values.
+            <b>TestMiner</b> retrieves string values for a test generator. First, it assign a weight to the query. The
+            used weight function is prioritizing uncommon words. The search algorithm used is the presented by <i>TODO
+            et al. </i> [<a href="#ref6">6</a>]. Named searchSimhash, the algorithm returns a mapping between string and
+            a list of integers. The algorithm selects multiple indices. This is allow to have all indices of string
+            values that differ of a given number of bits from the querried hash. The more this value is high, the more
+            the algorithm returns values.
         </p>
 
         <p>
-            They implement <b>TestMiner</b> in Randoop, a state-of-the-art generator of test in Java [<a href="#ref7">7</a>]. Their implementation is a web server, that allows to modify only one hundred lines of code in Randoop. They learned data from 3,601 Java projects from the Maven Central Repository, which results with 263,276 string values in 37,821 different contexts. They used 40 classes from 18 Java projects to evaluate the effectiveness of tests generated with the help of <b>TestMiner</b>. Then, they generated 10 test suites using only Randoop and Random enhanced with <b>TestMiner</b>, and compare the branch coverage obtained, computed with JaCoCo.
+            They implement <b>TestMiner</b> in Randoop, a state-of-the-art generator of test in Java [<a
+                href="#ref7">7</a>]. Their implementation is a web server, that allows to modify only one hundred lines
+            of code in Randoop. They learned data from 3,601 Java projects from the Maven Central Repository, which
+            results with 263,276 string values in 37,821 different contexts. They used 40 classes from 18 Java projects
+            to evaluate the effectiveness of tests generated with the help of <b>TestMiner</b>. Then, they generated 10
+            test suites using only Randoop and Random enhanced with <b>TestMiner</b>, and compare the branch coverage
+            obtained, computed with JaCoCo.
         </p>
 
         <p>
-            It results that using <b>TestMiner</b> with Randoop increase the coverage for thirty classes and decreases it for two classes. On average, the relative improvement is 21%.
+            It results that using <b>TestMiner</b> with Randoop increase the coverage for thirty classes and decreases
+            it for two classes. On average, the relative improvement is 21%.
         </p>
 
         <p>
-            <b>TestMiner</b> provides results examples that fit real contract such as IBAN, SQL, Network address, or E-mail. <b>TestMiner</b> has an overhead of 55% in time consumption.
+            <b>TestMiner</b> provides results examples that fit real contract such as IBAN, SQL, Network address, or
+            E-mail. <b>TestMiner</b> has an overhead of 55% in time consumption.
         </p>
 
     </div>
@@ -224,7 +254,24 @@
         <span class="project-title"><h4>Do automatically generated unit tests find real faults? an empirical study of effectiveness and challenges<a
                 href="http://dl.acm.org/citation.cfm?id=2916250"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
         </span>
+        <p>
+            Automatic generated unit tests performs well according to the code coverage. However, covering code does not imply to detect fault. This is why, using mutation analysis to measure the ability of tests to detect faults is more appropriate. But killing a lot of mutants, that are seeded and artificial faults, do not necessarily means that test are able to detect fault done by developers. This is why, Shamshiri <i>et al. </i> studied empirically the effectiveness of generated tests to detect real faults.
+        </p>
+
+        <p>
+            To do this, they use three state-of-the-art generators of tests for Java: <b>Randoop</b>, <b>EvoSuite</b>, and <b>Agitar-One</b>. They used Defects4j, a well-known dataset of real bugs. Their contributions show a large-scale experiments, a detailed analysis of the performance for generator of tests, and new paths of worthwhile investigation for the improvement of tests generations.
+        </p>
+
+        <p>
+            Their experimental procedure is as follows: For the test generation, <b>Randoop</b> and <b>EvoSuite</b> are not deterministic. To take in account this randomness, they generate ten test suites for each tools. For <b>Agitar-One</b>, it needs manual effort to generate tests. They generate only one test suite. Then, they removed all non-compilable tests. They also remove flaky tests, <i>i.e.</i> test that are unstable, by running them fives time. In the test suites, some tests might be false positive, <i>i.e.</i> failing but not because of the fault. To leverage this issue, they compare the error message with the original one, <i>i.e.</i> the one that are provided by <b>defects4j</b>. If the error message, the exception stack trace or the failing assertion's message, is the same than the generated test's message, then the test is failing because of the fault, otherwise it is another reason, such as calling calling private method using reflection. They then, run tests to detect the failure. During this execution, they compute the statement coverage to study how it is related to fault detection.
+        </p>
+
+        <p>
+            <b>EvoSuite</b> and <b>Randoop</b> generated 3.4% and 8.3% non-compilable test suites on average. Moreover, on average, 21% of <b>Randoop</b>’s tests were flaky, and 46% of <b>AgitarOne</b>’s failing tests were false positives. Automated test generation tools found 55.7% of the bugs considered, but no tool alone found more than 40.6%.
+        </p>
     </div>
+
+
 
     <div id="ref6" class="item">
         <span class="project-title"><h4>Detecting near-duplicates for web crawling.<a
@@ -235,7 +282,13 @@
     <div id="ref7" class="item">
         <span class="project-title"><h4>Feedback-directed random test generation<a
                 href="http://dl.acm.org/citation.cfm?id=1248841"><i class="fa fa-link"
-                           aria-hidden="true"></i></a></h4>
+                                                                    aria-hidden="true"></i></a></h4>
+        </span>
+    </div>
+
+    <div id="ref8" class="item">
+        <span class="project-title"><h4>Is mutation an appropriate tool for testing experiments?<a
+                href="http://dl.acm.org/citation.cfm?id=1062530"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
         </span>
     </div>
 
@@ -250,33 +303,23 @@
     <div class="item">
         <span class="project-title"><h4>Does choice of mutation tool matter?<a
                 href="http://link.springer.com/10.1007/s11219-016-9317-7"><i class="fa fa-link"
-                                                                              aria-hidden="true"></i></a></h4>
+                                                                             aria-hidden="true"></i></a></h4>
         </span>
     </div>
 
     <div class="item">
         <span class="project-title"><h4>VART: A Tool for the Automatic Detection of Regression Faults.<a
-                href="http://arxiv.org/abs/1708.02052
-"><i class="fa fa-link"
-                                                                              aria-hidden="true"></i></a></h4>
+                href="http://arxiv.org/abs/1708.02052"><i class="fa fa-link"
+     aria-hidden="true"></i></a></h4>
         </span>
     </div>
 
     <div class="item">
         <span class="project-title"><h4>BDCI: Behavioral Driven Conflict Identification.<a
                 href="http://arxiv.org/abs/1708.01650"><i class="fa fa-link"
-                                                                              aria-hidden="true"></i></a></h4>
+                                                          aria-hidden="true"></i></a></h4>
         </span>
     </div>
-
-    <div class="item">
-        <span class="project-title"><h4>Are mutants a valid substitute for real faults in software testing?<a
-                href="http://dl.acm.org/citation.cfm?doid=2635868.2635929"><i class="fa fa-link"
-                                                                              aria-hidden="true"></i></a></h4>
-        </span>
-    </div>
-
-
 
 
 </section><!--//section-->
