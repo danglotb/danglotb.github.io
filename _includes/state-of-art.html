@@ -220,7 +220,7 @@
 
         <p>
             <b>TestMiner</b> retrieves string values for a test generator. First, it assign a weight to the query. The
-            used weight function is prioritizing uncommon words. The search algorithm used is the presented by <i>TODO
+            used weight function is prioritizing uncommon words. The search algorithm used is the presented by Manku <i>
             et al. </i> [<a href="#ref6">6</a>]. Named searchSimhash, the algorithm returns a mapping between string and
             a list of integers. The algorithm selects multiple indices. This is allow to have all indices of string
             values that differ of a given number of bits from the querried hash. The more this value is high, the more
@@ -277,6 +277,27 @@
         <span class="project-title"><h4>Detecting near-duplicates for web crawling.<a
                 href="http://dl.acm.org/citation.cfm?id=1242592"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
         </span>
+        <p>
+            Identification of near-duplicate document in web crawling is a very difficult problem. Such documents, near-duplicate, are similar in term of content but differ in a small portion such as advertisements. Such page should crawled only one time a crawler, because different information is no relevant for web search. The most import issue is to scale on billion web pages. Manku <i>et al.</i> propose to use the hash function <b>simhash</b> to identify near-duplicate web pages and a technique for solving the Hamming Distance Problem (see below for more information).
+        </p>
+
+        <p>
+            <b>Simhash</b> maps large vectors to small fingerprints. It is applied as follows: split the web page into weighted features. These weighted features are a large vector, and it is convert into a small fingerprint by <b>simhash</b>. This conversion is done in three steps: First, it initializes all dimensions of a vector (of the size of the fingerprint) with zero; Second, it computes the hash of each features, unique to each feature; Third, for each hash, if the i-th bits is equals to one, it increments of the weight of the features, the i-th dimension of the vector, and decrement in case the i-th is equals to zero. The sign of each dimension determine the value of each bits of the fingerprint.
+        </p>
+
+        <p>
+            <b>Simhash</b> has two main advantages: the fingerprint of a document is a hash of its features, and similar document have similar hash. The latter property lead to the Hamming Distance Problem. In fact, how to find in the set of computed hashes, crawled web page that differ, of 3 bits for instance, in their hash?
+        </p>
+
+        <p>
+            There are two scenarios for the Hamming Distance Problem. In the online version, we have to find fingerprints that differ from the queried in milliseconds. In the batch version, we have a lot of queries, <i>e.g. </i> one million, and we have to solve them in one hundred seconds. In both case, they applied the same approach: They use a sorted table. Taking the <i>d</i> most significant bits, it brings the table a simple counter, and the less significant bits are just random. Now, take a <i>d'</i> such that <i>d' - d</i> is small. We know that the table is sorted, so a single probe is sufficient to find all fingerprints that match in <i>d'</i> most significant bit-positions. For each of them, we can easily checks if they differs from the original fingerprint in at most k bit-positions.
+        </p>
+
+
+        <p>
+            They experimented their approach on eight billions web pages. (Did not find explicit results about performance).
+        </p>
+
     </div>
 
     <div id="ref7" class="item">
@@ -292,6 +313,11 @@
         </span>
     </div>
 
+    <div id="ref9" class="item">
+        <span class="project-title"><h4>Similarity estimation techniques from rounding algorithms.<a
+                href="http://dl.acm.org/citation.cfm?id=509965"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
+        </span>
+    </div>
 
     <div class="item">
         <span class="project-title"><h4>Are mutants a valid substitute for real faults in software testing?<a
