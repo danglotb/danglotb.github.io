@@ -417,7 +417,9 @@
                                                                            aria-hidden="true"></i></a></h4>
         </span>
         <p>
-            Jackson <i>et al.</i> devised a method to find bug in a program. This method is able to provide a counterexample that encode the bug. Their approach use Alloy, a specification language. They also ensure that their techniques does not produce false positive, by compromising the completeness.
+            Jackson <i>et al.</i> devised a method to find bug in a program. This method is able to provide a
+            counterexample that encode the bug. Their approach use Alloy, a specification language. They also ensure
+            that their techniques does not produce false positive, by compromising the completeness.
         </p>
 
         <p></p>
@@ -437,16 +439,70 @@
                 href="http://arxiv.org/abs/1711.01661"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
         </span>
         <p>
-            Groce <i>et al.</i> present a new approach that allows developers to compute a "<b>provenance</b>" or a "<b>pseudo-provenance</b>" of automatically generated test cases. By "<b>provenance</b> they mean the seed test case that allowed the considered automated technique of test generation to construct this test. Their approach allows also the impact of seeded tests on future tests.
+            Groce <i>et al.</i> present a new approach that allows developers to compute a "<b>provenance</b>" or a "<b>pseudo-provenance</b>"
+            of automatically generated test cases. By "<b>provenance</b> they mean the seed test case that allowed the
+            considered automated technique of test generation to construct this test. Their approach allows also the
+            impact of seeded tests on future tests.
         </p>
 
         <p>
-            When the generation of test is done by adding statements, or modifying some literals for instance, the computation of its "<b>provenance</b>" is easy. By comparing bodies, one can retrieve this information. But in the case that the generation is mixin up existing test cases to build new ones, the provenance information is destroyed during the process.
+            When the generation of test is done by adding statements, or modifying some literals for instance, the
+            computation of its "<b>provenance</b>" is easy. By comparing bodies, one can retrieve this information. But
+            in the case that the generation is mixin up existing test cases to build new ones, the provenance
+            information is destroyed during the process.
         </p>
 
         <p>
-            To do this, they split the generated test case, the one that the "<b>provenance</b>" has been (partially) destroyed, into components. Then, they compute all positions possible of all component in all seed tests cases.
+            To do this, they split the generated test case, the one that the "<b>provenance</b>" has been (partially)
+            destroyed, into components. Then, they compute all positions possible of all component in all seed tests
+            cases.
         </p>
+    </div>
+
+    <div id="ref14" class="item">
+        <span class="project-title"><h4><a
+                href="https://dl.acm.org/citation.cfm?id=154246"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
+        </span>
+        <p>
+            Hamlet <i>et al.</i> proposes a new kind of reliability analysis. A method is better if it amplifies the
+            reliability measurements.
+        </p>
+
+        <p>
+            They state that the reliability cannot be measured directly because of the time that a such approach would
+            take. To establish a mean time to
+            failure (MTTF) with 90% confidence is at least twice that MTTF. There are about 107 sec in a work-year.
+        </p>
+
+        <p>
+            TODO
+        </p>
+
+    </div>
+
+    <div id="ref15" class="item">
+        <span class="project-title"><h4>Shadow Symbolic Execution with Java PathFinder</h4><a
+                href="https://dl.acm.org/citation.cfm?id=3149492"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
+        </span>
+
+        <!-- SUMMARY -->
+        <p>The authors aim at detecting regression bug. To This, the authors apply the <b>shadow symbolic execution</b>,
+            original from <i>Palikevera</i> with the <i>shadow<sub>KLEE</sub></i> for C program, on JAVA program. Shadow
+            symbolic execution generate test inputs that trigger the new program behavior. To this, it uses a merged
+            version of the both version of the same program, <i>i.e.</i> the previous version, so called old, and the
+            changed version, called new. This done by instrumenting the code with annotation as method calls
+            <b>change()</b>. The method <b>change()</b> takes two inputs: the old statement and the new one. Then, it
+            uses two steps: 1) the concoic phase. This step collects divergence points, <i>i.e.</i> conditional where
+            the old version and the new version does not take the same branch, <i>e.g. for a given conditional, the old
+                version takes the then branch and the new version takes the else branch</i>. Then the bounded symbolic
+            execution, <i>a.k.a.</i> <b>BSE</b>.
+        </p>
+
+        <!-- EVALUATION -->
+        <p>
+
+        </p>
+
     </div>
 
     <div class="item">
