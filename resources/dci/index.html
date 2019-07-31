@@ -4,14 +4,6 @@
     <meta charset="UTF-8">
     <title>DCI</title>
 
-    <script type="text/javascript" src="scripts/task.js"></script>
-    <script type="text/javascript" src="scripts/quicksortinstr.js"></script>
-    <script type="text/javascript" src="scripts/perturbation.js"></script>
-    <script type="text/javascript" src="scripts/oracle.js"></script>
-    <script type="text/javascript" src="scripts/speedometer.js"></script>
-    <script type="text/javascript" src="scripts/model.js"></script>
-    <script type="text/javascript" src="scripts/demo.js"></script>
-
     <script type="text/javascript" src="style/js/canvasjs.min.js"></script>
     <script type="text/javascript" src="scripts/graph.js"></script>
 
@@ -29,68 +21,170 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
+<!-- Fixed navbar -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">DCI</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+
+                <li class="active"><a
+                        href="index.html"><span
+                        class="glyphicon glyphicon-home"></span></a></li>
+
+                <li><a href="https://arxiv.org/abs/1902.08482">Pre-print</a></li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Implementation<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://github.com/STAMP-project/dspot">DCI</a></li>
+                        <li><a href="https://github.com/STAMP-project/dspot-experiments">DCI-experiments</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">About<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="https://danglotb.github.io/">Benjamin Danglot</a>
+                        </li>
+                        <li>
+                            <a href="http://www.monperrus.net/martin/">Martin Monperrus</a>
+                        </li>
+                        <li>
+                            <a href="https://rudametw.github.io/">Walter Rudametkin</a>
+                        </li>
+                        <li>
+                            <a href="https://people.rennes.inria.fr/Benoit.Baudry/">Benoit Baudry</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
 <div class="container theme-showcase" role="main">
-    <table>
 
-        <!-- Commons Io -->
-        <tr>
-            <td>
-                <script src="https://gist.github.com/danglotb/09a7e91582b01ca2bdbb7f83f8366bf0.js"></script>
-            </td>
-            <td>
-                <script src="https://gist.github.com/danglotb/fe26cb7849876f2d2c760a663dfed204.js"></script>
-            </td>
-        </tr>
+    <div class="jumbotron">
+        <h1 class="panel-title"></h1>
+        <p class="text-justify">
+           TODO
+        </p>
+    </div>
 
-        <!-- Commons Lang -->
-        <tr>
-            <td>
-                <script src="https://gist.github.com/danglotb/371f6cf18087b5d46c4033b243b55690.js"></script>
-            </td>
-            <td>
-                <script src="https://gist.github.com/danglotb/b5e440dcc539ac5f4802ca14bbe119d2.js"></script>
-            </td>
-        </tr>
+    <!-- Commons Io -->
+    <div class="col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Commons Io</h3>
+            </div>
+            <div class="panel-body">
+                <div class="col-sm-6">
+                    <script src="https://gist.github.com/danglotb/09a7e91582b01ca2bdbb7f83f8366bf0.js"></script>
+                </div>
+                <div class="col-sm-6">
+                    <script src="https://gist.github.com/danglotb/fe26cb7849876f2d2c760a663dfed204.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <!-- Gson -->
-        <tr>
-            <td>
-                <script src="https://gist.github.com/danglotb/fa5cd1932ea24615f95687a30a92ac36.js"></script>
-            </td>
-            <td>
-                <script src="https://gist.github.com/danglotb/57cbc702df674be7dcc3d6a9b830522f.js"></script>
-            </td>
-        </tr>
+    <!-- Commons Lang -->
+    <div class="col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Commons Lang</h3>
+            </div>
+            <div class="panel-body">
+                <div class="col-sm-6">
+                    <script src="https://gist.github.com/danglotb/371f6cf18087b5d46c4033b243b55690.js"></script>
+                </div>
+                <div class="col-sm-6">
+                    <script src="https://gist.github.com/danglotb/b5e440dcc539ac5f4802ca14bbe119d2.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <!-- Jsoup -->
-        <tr>
-            <td>
-                <script src="https://gist.github.com/danglotb/c60fda3b48e796d3ef2a4f9345a425e0.js"></script>
-            </td>
-            <td>
-                <script src="https://gist.github.com/danglotb/55999a6a7bdb0623069449f52b2d1070.js"></script>
-            </td>
-        </tr>
+    <!-- Gson -->
+    <div class="col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Gson</h3>
+            </div>
+            <div class="panel-body">
+                <div class="col-sm-6">
+                    <script src="https://gist.github.com/danglotb/fa5cd1932ea24615f95687a30a92ac36.js"></script>
+                </div>
+                <div class="col-sm-6">
+                    <script src="https://gist.github.com/danglotb/57cbc702df674be7dcc3d6a9b830522f.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <!-- Mustache -->
-        <tr>
-            <td>
-                <script src="https://gist.github.com/danglotb/2e0732d0f3d357975507e5b1c57e33a3.js"></script>
-            </td>
-            <td>
-                <script src="https://gist.github.com/danglotb/3e90bbd49e53467168b688ac1b6ff958.js"></script>
-            </td>
-        </tr>
+    <!-- Jsoup -->
+    <div class="col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">jsoup</h3>
+            </div>
+            <div class="panel-body">
+                <div class="col-sm-6">
+                    <script src="https://gist.github.com/danglotb/c60fda3b48e796d3ef2a4f9345a425e0.js"></script>
+                </div>
+                <div class="col-sm-6">
+                    <script src="https://gist.github.com/danglotb/55999a6a7bdb0623069449f52b2d1070.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <!-- Xwiki -->
-        <tr>
-            <td>
-                <script src="https://gist.github.com/danglotb/2fb2267e8ba28806dbdf4804d7f33568.js"></script>
-            </td>
-            <td>
-                <script src="https://gist.github.com/danglotb/5c01a33fbec1fbb614a627fb241e3979.js"></script>
-            </td>
-        </tr>
+    <!-- Mustache -->
+    <div class="col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Mustache.java</h3>
+            </div>
+            <div class="panel-body">
+                <div class="col-sm-6">
+                    <script src="https://gist.github.com/danglotb/2e0732d0f3d357975507e5b1c57e33a3.js"></script>
+                </div>
+                <div class="col-sm-6">
+                    <script src="https://gist.github.com/danglotb/3e90bbd49e53467168b688ac1b6ff958.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Xwiki -->
+    <div class="col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">XWiki-commons</h3>
+            </div>
+            <div class="panel-body">
+                <div class="col-sm-6">
+                    <script src="https://gist.github.com/danglotb/2fb2267e8ba28806dbdf4804d7f33568.js"></script>
+                </div>
+                <div class="col-sm-6">
+                    <script src="https://gist.github.com/danglotb/5c01a33fbec1fbb614a627fb241e3979.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
 
     </table>
 </div>
