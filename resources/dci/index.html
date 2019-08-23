@@ -80,7 +80,17 @@
     <div class="jumbotron">
         <h1 class="panel-title"></h1>
         <p class="text-justify">
-           TODO
+            When a developer change the behavior a program, he should provide a new test method (or modify an existing one) that specify the new behavior.
+            However, developers do not always provide such test method because lack of time, expertise or discipline.
+        </p>
+        <p class="text-justify">
+            In the context of the article &ldquo;<i>An Approach and Benchmark to Detect Behavioral Changes of Commits in Continuous Integration</i>&rdquo;, we devised a technique that produces automatically a test method that specify the new behavior.
+            This technique is called <a href="https://github.com/STAMP-project/dspot">DCI</a>.
+        </p>
+        <p class="text-justify">
+            We conduct an experimentation on 6 projects from GitHub using real commits introducing behavioral changes.
+            The whole experiment data are avalaible <a href="https://github.com/STAMP-project/dspot-experiments">here</a>(april-2019).
+            On this webpage, you can find side-by-side an amplified test method (on the left) and the manual test method (on the right).
         </p>
     </div>
 
@@ -92,9 +102,11 @@
             </div>
             <div class="panel-body">
                 <div class="col-sm-6">
+                    <h5><a href="https://github.com/STAMP-project/dspot-experiments/blob/master/results/april-2019/commons-io/commit_7_81210eb/input_amplification/3/org/apache/commons/io/input/AmplBoundedReaderTest.java#L114">link</a></h5>
                     <script src="https://gist.github.com/danglotb/09a7e91582b01ca2bdbb7f83f8366bf0.js"></script>
                 </div>
                 <div class="col-sm-6">
+                    <h5><a href="https://github.com/apache/commons-io/commit/81210eb">link</a></h5>
                     <script src="https://gist.github.com/danglotb/fe26cb7849876f2d2c760a663dfed204.js"></script>
                 </div>
             </div>
@@ -109,9 +121,11 @@
             </div>
             <div class="panel-body">
                 <div class="col-sm-6">
+                    <h5><a href="https://github.com/STAMP-project/dspot-experiments/blob/master/results/april-2019/commons-lang/commit_4_e7d16c2/input_amplification/3/org/apache/commons/lang3/builder/AmplJsonToStringStyleTest.java#L24">link</a></h5>
                     <script src="https://gist.github.com/danglotb/371f6cf18087b5d46c4033b243b55690.js"></script>
                 </div>
                 <div class="col-sm-6">
+                    <h5><a href="https://github.com/apache/commons-lang/commit/e7d16c2">link</a></h5>
                     <script src="https://gist.github.com/danglotb/b5e440dcc539ac5f4802ca14bbe119d2.js"></script>
                 </div>
             </div>
@@ -126,9 +140,11 @@
             </div>
             <div class="panel-body">
                 <div class="col-sm-6">
+                    <h5><a href="https://github.com/STAMP-project/dspot-experiments/blob/master/results/april-2019/gson/commit_8_44cad04/input_amplification/3/com/google/gson/functional/AmplPrimitiveTest.java#L18">link</a></h5>
                     <script src="https://gist.github.com/danglotb/fa5cd1932ea24615f95687a30a92ac36.js"></script>
                 </div>
                 <div class="col-sm-6">
+                    <h5><a href="https://github.com/google/gson/commit/44cad04">link</a></h5>
                     <script src="https://gist.github.com/danglotb/57cbc702df674be7dcc3d6a9b830522f.js"></script>
                 </div>
             </div>
@@ -143,9 +159,11 @@
             </div>
             <div class="panel-body">
                 <div class="col-sm-6">
+                    <h5><a href="https://github.com/STAMP-project/dspot-experiments/blob/master/results/april-2019/jsoup/commit_9_3676b13/input_amplification_14_16/3/org/jsoup/parser/AmplAttributeParseTest.java#L15">link</a></h5>
                     <script src="https://gist.github.com/danglotb/c60fda3b48e796d3ef2a4f9345a425e0.js"></script>
                 </div>
                 <div class="col-sm-6">
+                    <h5><a href="https://github.com/jhy/jsoup/commit/3676b13">link</a></h5>
                     <script src="https://gist.github.com/danglotb/55999a6a7bdb0623069449f52b2d1070.js"></script>
                 </div>
             </div>
@@ -160,9 +178,11 @@
             </div>
             <div class="panel-body">
                 <div class="col-sm-6">
+                    <h5><a href="https://github.com/STAMP-project/dspot-experiments/blob/master/results/april-2019/mustache.java/commit_5_774ae7a/input_amplification/3/com/github/mustachejava/resolver/AmplClasspathResolverTest.java#L227">link</a></h5>
                     <script src="https://gist.github.com/danglotb/2e0732d0f3d357975507e5b1c57e33a3.js"></script>
                 </div>
                 <div class="col-sm-6">
+                    <h5><a href="https://github.com/spullara/mustache.java/commit/774ae7a">link</a></h5>
                     <script src="https://gist.github.com/danglotb/3e90bbd49e53467168b688ac1b6ff958.js"></script>
                 </div>
             </div>
@@ -177,9 +197,11 @@
             </div>
             <div class="panel-body">
                 <div class="col-sm-6">
+                    <h5><a href="https://github.com/STAMP-project/dspot-experiments/blob/master/results/april-2019/xwiki-commons/commit_5_d3101ae/input_amplification/3/org/xwiki/diff/internal/AmplDefaultDiffManagerTest.java#L40">link</a></h5>
                     <script src="https://gist.github.com/danglotb/2fb2267e8ba28806dbdf4804d7f33568.js"></script>
                 </div>
                 <div class="col-sm-6">
+                    <h5><a href="https://github.com/xwiki/xwiki-commons/commit/d3101ae">link</a></h5>
                     <script src="https://gist.github.com/danglotb/5c01a33fbec1fbb614a627fb241e3979.js"></script>
                 </div>
             </div>
