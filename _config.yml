@@ -15,8 +15,8 @@ style: styles-6
 
 
 #Profile information
-name: Benjamin Danglot
-tagline: PhD candidate
+name: Dr Benjamin Danglot
+tagline: PhD from University of Lille
 pic: profile.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
 #sidebar links
