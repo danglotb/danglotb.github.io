@@ -1,0 +1,260 @@
+<html>
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>
+            D&amp;D
+        </title>
+    </head>
+    <body>
+        <div>
+            <h2>
+                Franomis
+            </h2>
+            <div>
+                <h3>
+                    Monk
+                </h3>
+                <div>
+                    <span>
+                        Level 1
+                    </span>
+                    <div class="tooltip">
+                        <span class="tooltiptext">
+                            0/1000
+                        </span>
+                        <progress value="0" max="1000">
+                        </progress>
+                    </div>
+                </div>
+            </div>
+            <table>
+                <tr>
+                    <td>
+                        Strength
+                    </td>
+                    <td>
+                        3
+                    </td>
+                    <td>
+                        Attack
+                    </td>
+                    <td>
+                        <div class="tooltip">
+                            <span class="tooltiptext">
+                                2 x 3 Strength and 2 x 3 Agility = 6 + 6 = 12 Attack.
+                            </span>
+                            12
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Stamina
+                    </td>
+                    <td>
+                        9
+                    </td>
+                    <td>
+                        Health
+                    </td>
+                    <td>
+                        <div class="tooltip">
+                            <span class="tooltiptext">
+                                10 x 9 Stamina = 90 Health.
+                            </span>
+                            90
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Intelligence
+                    </td>
+                    <td>
+                        7
+                    </td>
+                    <td>
+                        Mana
+                    </td>
+                    <td>
+                        <div class="tooltip">
+                            <span class="tooltiptext">
+                                10 x 7 Intelligence = 70 Mana.
+                            </span>
+                            70
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Agility
+                    </td>
+                    <td>
+                        3
+                    </td>
+                    <td>
+                        Movement
+                    </td>
+                    <td>
+                        <div class="tooltip">
+                            <span class="tooltiptext">
+                                4 + (3 Agility / 2 ) = 5 Movement.
+                            </span>
+                            5
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Luck
+                    </td>
+                    <td>
+                        3
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        <span class="tooltip">
+                            <span class="tooltiptext">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <b>
+                                            Explosive Palm
+                                        </b>
+                                    </div>
+                                    <div class="col-3" style="color: blue;">
+                                        Mana: 15
+                                    </div>
+                                    <div class="col-3">
+                                        Range: 1
+                                    </div>
+                                </div>
+                                <div class="row col-12">
+                                    <span>
+                                        <span>
+                                            Use a secret technique to strike an enemy dealing 2 x 
+                                        </span>
+                                        <span style="color: yellow;">
+                                            Strength
+                                        </span>
+                                        <span>
+                                             + 2 x
+                                        </span>
+                                        <span style="color: yellow;">
+                                            Agility
+                                        </span>
+                                        <span>
+                                             + d10
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="row col-12">
+                                    <span>
+                                        <span>
+                                            Deal to an enemy 
+                                        </span>
+                                        <span style="color: red;">
+                                            12
+                                        </span>
+                                        <span>
+                                            (2 x 3 + 2 x 3) + d10
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="row col-12">
+                                    <span>
+                                        <span>
+                                            Apply 
+                                        </span>
+                                        <b>
+                                            incapacitate
+                                        </b>
+                                        <span>
+                                             for 1 turn(s)
+                                        </span>
+                                    </span>
+                                </div>
+                            </span>
+                            <b>
+                                Explosive Palm
+                            </b>
+                        </span>
+                    </td>
+                    <td>
+                        <button onClick="var copyText = document.getElementById('macroRoll20Explosive Palm');
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand('copy');
+  ">
+                            Copy
+                        </button>
+                        <input value="/me rolls a [[1d10+2*@{selected|Strength}+2*@{selected|Agility}]] for Explosive Palm" type="text" id="macroRoll20Explosive Palm">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="tooltip">
+                            <span class="tooltiptext">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <b>
+                                            Soothing Brew
+                                        </b>
+                                    </div>
+                                    <div class="col-3" style="color: blue;">
+                                        Mana: 15
+                                    </div>
+                                    <div class="col-3">
+                                        Range: 2
+                                    </div>
+                                </div>
+                                <div class="row col-12">
+                                    <span>
+                                        <span>
+                                            Explode a brew on the ground to cure poison and heal ally for 2 x 
+                                        </span>
+                                        <span style="color: yellow;">
+                                            Intelligence
+                                        </span>
+                                        <span>
+                                             + d6
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="row col-12">
+                                    <span>
+                                        <span>
+                                            Heal all allies in a radius of 2 for  
+                                        </span>
+                                        <span style="color: green;">
+                                            14
+                                        </span>
+                                        <span>
+                                            (2 x 7) + d6
+                                        </span>
+                                    </span>
+                                </div>
+                            </span>
+                            <b>
+                                Soothing Brew
+                            </b>
+                        </span>
+                    </td>
+                    <td>
+                        <button onClick="var copyText = document.getElementById('macroRoll20Soothing Brew');
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand('copy');
+  ">
+                            Copy
+                        </button>
+                        <input value="/me rolls a [[1d6+2*@{selected|Intelligence}]] for Soothing Brew" type="text" id="macroRoll20Soothing Brew">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

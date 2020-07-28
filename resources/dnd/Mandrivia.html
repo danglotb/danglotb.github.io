@@ -1,0 +1,335 @@
+<html>
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>
+            D&amp;D
+        </title>
+    </head>
+    <body>
+        <div>
+            <h2>
+                Mandrivia
+            </h2>
+            <div>
+                <h3>
+                    Paladin
+                </h3>
+                <div>
+                    <span>
+                        Level 1
+                    </span>
+                    <div class="tooltip">
+                        <span class="tooltiptext">
+                            0/1000
+                        </span>
+                        <progress value="0" max="1000">
+                        </progress>
+                    </div>
+                </div>
+            </div>
+            <table>
+                <tr>
+                    <td>
+                        Strength
+                    </td>
+                    <td>
+                        4
+                    </td>
+                    <td>
+                        Attack
+                    </td>
+                    <td>
+                        <div class="tooltip">
+                            <span class="tooltiptext">
+                                2 x 4 Strength = 8 Attack.
+                            </span>
+                            8
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Stamina
+                    </td>
+                    <td>
+                        14
+                    </td>
+                    <td>
+                        Health
+                    </td>
+                    <td>
+                        <div class="tooltip">
+                            <span class="tooltiptext">
+                                10 x 14 Stamina = 140 Health.
+                            </span>
+                            140
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Intelligence
+                    </td>
+                    <td>
+                        5
+                    </td>
+                    <td>
+                        Mana
+                    </td>
+                    <td>
+                        <div class="tooltip">
+                            <span class="tooltiptext">
+                                10 x 5 Intelligence = 50 Mana.
+                            </span>
+                            50
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Agility
+                    </td>
+                    <td>
+                        1
+                    </td>
+                    <td>
+                        Movement
+                    </td>
+                    <td>
+                        <div class="tooltip">
+                            <span class="tooltiptext">
+                                4 + (1 Agility / 2 ) = 4 Movement.
+                            </span>
+                            4
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Luck
+                    </td>
+                    <td>
+                        1
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        <span class="tooltip">
+                            <span class="tooltiptext">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <b>
+                                            Sacred Fire (Heal)
+                                        </b>
+                                    </div>
+                                    <div class="col-3" style="color: blue;">
+                                        Mana: 10
+                                    </div>
+                                    <div class="col-3">
+                                        Range: 3
+                                    </div>
+                                </div>
+                                <div class="row col-12">
+                                    <span>
+                                        <span>
+                                            Summon the light to heal an ally for 3 x 
+                                        </span>
+                                        <span style="color: yellow;">
+                                            Intelligence
+                                        </span>
+                                        <span>
+                                             + d10
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="row col-12">
+                                    <span>
+                                        <span>
+                                            Heal an ally for 
+                                        </span>
+                                        <span style="color: green;">
+                                            15
+                                        </span>
+                                        <span>
+                                            (3 x 5) + d10
+                                        </span>
+                                    </span>
+                                </div>
+                            </span>
+                            <b>
+                                Sacred Fire (Heal)
+                            </b>
+                        </span>
+                    </td>
+                    <td>
+                        <button onClick="var copyText = document.getElementById('macroRoll20Sacred Fire (Heal)');
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand('copy');
+  ">
+                            Copy
+                        </button>
+                        <input value="/me rolls a [[1d10+3*@{selected|Intelligence}]] for Sacred Fire (Heal)" type="text" id="macroRoll20Sacred Fire (Heal)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="tooltip">
+                            <span class="tooltiptext">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <b>
+                                            Sacred Fire (Attack)
+                                        </b>
+                                    </div>
+                                    <div class="col-3" style="color: blue;">
+                                        Mana: 10
+                                    </div>
+                                    <div class="col-3">
+                                        Range: 3
+                                    </div>
+                                </div>
+                                <div class="row col-12">
+                                    <span>
+                                        <span>
+                                            Summon the light to attack an undead enemy for 2 x 
+                                        </span>
+                                        <span style="color: yellow;">
+                                            Intelligence
+                                        </span>
+                                        <span>
+                                             + d10
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="row col-12">
+                                    <span>
+                                        <span>
+                                            Attack an undead enemy for 
+                                        </span>
+                                        <span style="color: red;">
+                                            10
+                                        </span>
+                                        <span>
+                                            (2 x 5) + d10
+                                        </span>
+                                    </span>
+                                </div>
+                            </span>
+                            <b>
+                                Sacred Fire (Attack)
+                            </b>
+                        </span>
+                    </td>
+                    <td>
+                        <button onClick="var copyText = document.getElementById('macroRoll20Sacred Fire (Attack)');
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand('copy');
+  ">
+                            Copy
+                        </button>
+                        <input value="/me rolls a [[1d10+2*@{selected|Intelligence}]] for Sacred Fire (Attack)" type="text" id="macroRoll20Sacred Fire (Attack)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="tooltip">
+                            <span class="tooltiptext">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <b>
+                                            Avenger Shield
+                                        </b>
+                                    </div>
+                                    <div class="col-3" style="color: blue;">
+                                        Mana: 20
+                                    </div>
+                                    <div class="col-3">
+                                        Range: 1
+                                    </div>
+                                </div>
+                                <div class="row col-12">
+                                    <span>
+                                        <span>
+                                            Strike with the shield charged with light, avenging from past wounds dealing 2 x 
+                                        </span>
+                                        <span style="color: yellow;">
+                                            Strength
+                                        </span>
+                                        <span>
+                                             + ((
+                                        </span>
+                                        <span style="color: yellow;">
+                                            maxHealth
+                                        </span>
+                                        <span>
+                                             - 
+                                        </span>
+                                        <span style="color: yellow;">
+                                            currentHealth
+                                        </span>
+                                        <span>
+                                             / 10 )
+                                        </span>
+                                        <span>
+                                             + d10
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="row col-12">
+                                    <span>
+                                        <span>
+                                            Attack an enemy for 
+                                        </span>
+                                        <span style="color: red;">
+                                            8
+                                        </span>
+                                        <span>
+                                            (2 x 4) + (
+                                        </span>
+                                        <span style="color: red;">
+                                            140 - currentHealth / 10 
+                                        </span>
+                                        <span>
+                                            ) + d10
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="row col-12">
+                                    <span>
+                                        <span>
+                                            Apply 
+                                        </span>
+                                        <b>
+                                            provoke
+                                        </b>
+                                        <span>
+                                             for 3 turn(s)
+                                        </span>
+                                    </span>
+                                </div>
+                            </span>
+                            <b>
+                                Avenger Shield
+                            </b>
+                        </span>
+                    </td>
+                    <td>
+                        <button onClick="var copyText = document.getElementById('macroRoll20Avenger Shield');
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand('copy');
+  ">
+                            Copy
+                        </button>
+                        <input value="/me rolls a [[1d10+2*@{selected|Strength}+(10*@{selected|Stamina}-@{selected|Health})/10]] for Avenger Shield" type="text" id="macroRoll20Avenger Shield">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

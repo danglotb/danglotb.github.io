@@ -1,0 +1,241 @@
+<html>
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>
+            D&amp;D
+        </title>
+    </head>
+    <body>
+        <div>
+            <h2>
+                Pierfale
+            </h2>
+            <div>
+                <h3>
+                    Sorcerer
+                </h3>
+                <div>
+                    <span>
+                        Level 1
+                    </span>
+                    <div class="tooltip">
+                        <span class="tooltiptext">
+                            0/1000
+                        </span>
+                        <progress value="0" max="1000">
+                        </progress>
+                    </div>
+                </div>
+            </div>
+            <table>
+                <tr>
+                    <td>
+                        Strength
+                    </td>
+                    <td>
+                        1
+                    </td>
+                    <td>
+                        Attack
+                    </td>
+                    <td>
+                        <div class="tooltip">
+                            <span class="tooltiptext">
+                                2 x 1 Strength = 2 Attack.
+                            </span>
+                            2
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Stamina
+                    </td>
+                    <td>
+                        7
+                    </td>
+                    <td>
+                        Health
+                    </td>
+                    <td>
+                        <div class="tooltip">
+                            <span class="tooltiptext">
+                                10 x 7 Stamina = 70 Health.
+                            </span>
+                            70
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Intelligence
+                    </td>
+                    <td>
+                        12
+                    </td>
+                    <td>
+                        Mana
+                    </td>
+                    <td>
+                        <div class="tooltip">
+                            <span class="tooltiptext">
+                                10 x 12 Intelligence = 120 Mana.
+                            </span>
+                            120
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Agility
+                    </td>
+                    <td>
+                        1
+                    </td>
+                    <td>
+                        Movement
+                    </td>
+                    <td>
+                        <div class="tooltip">
+                            <span class="tooltiptext">
+                                4 + (1 Agility / 2 ) = 4 Movement.
+                            </span>
+                            4
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Luck
+                    </td>
+                    <td>
+                        4
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        <span class="tooltip">
+                            <span class="tooltiptext">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <b>
+                                            Fireball
+                                        </b>
+                                    </div>
+                                    <div class="col-3" style="color: blue;">
+                                        Mana: 15
+                                    </div>
+                                    <div class="col-3">
+                                        Range: 5
+                                    </div>
+                                </div>
+                                <div class="row col-12">
+                                    <span>
+                                        <span>
+                                            Throw a fireball to the enemy and deal 2 x 
+                                        </span>
+                                        <span style="color: yellow;">
+                                            Intelligence
+                                        </span>
+                                        <span>
+                                             + 2 d8
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="row col-12">
+                                    <span>
+                                        <span>
+                                            Deal to an enemy 
+                                        </span>
+                                        <span style="color: red;">
+                                            24
+                                        </span>
+                                        <span>
+                                            (2 x 12) + 2d8
+                                        </span>
+                                    </span>
+                                </div>
+                            </span>
+                            <b>
+                                Fireball
+                            </b>
+                        </span>
+                    </td>
+                    <td>
+                        <button onClick="var copyText = document.getElementById('macroRoll20Fireball');
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand('copy');
+  ">
+                            Copy
+                        </button>
+                        <input value="/me rolls a [[2d8++2*@{selected|Intelligence}]] for Fireball" type="text" id="macroRoll20Fireball">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="tooltip">
+                            <span class="tooltiptext">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <b>
+                                            Storm
+                                        </b>
+                                    </div>
+                                    <div class="col-3" style="color: blue;">
+                                        Mana: 10
+                                    </div>
+                                    <div class="col-3">
+                                        Range: 5
+                                    </div>
+                                </div>
+                                <div class="row col-12">
+                                    <span>
+                                        <span>
+                                            Summon a storm on a zone and 
+                                        </span>
+                                        <span style="color: yellow;">
+                                            Intelligence
+                                        </span>
+                                        <span>
+                                             + d6
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="row col-12">
+                                    <span>
+                                        <span>
+                                            Deal to enemies in a radius of 2 
+                                        </span>
+                                        <span style="color: red;">
+                                            12
+                                        </span>
+                                        <span>
+                                             + d6
+                                        </span>
+                                    </span>
+                                </div>
+                            </span>
+                            <b>
+                                Storm
+                            </b>
+                        </span>
+                    </td>
+                    <td>
+                        <button onClick="var copyText = document.getElementById('macroRoll20Storm');
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand('copy');
+  ">
+                            Copy
+                        </button>
+                        <input value="/me rolls a [[1d6++1*@{selected|Intelligence}]] for Storm" type="text" id="macroRoll20Storm">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
