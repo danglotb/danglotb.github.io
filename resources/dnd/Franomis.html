@@ -36,35 +36,51 @@
                     <td>
                         Mental
                     </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="tooltip">
+                            <span class="tooltiptext" style="text-align: center; width: 115px; min-width: 75px; max-width: 255px;">
+                                Physical 8%
+                            </span>
+                            <progress value="8" max="100">
+                            </progress>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tooltip">
+                            <span class="tooltiptext" style="text-align: center; width: 115px; min-width: 75px; max-width: 255px;">
+                                Mental 33%
+                            </span>
+                            <progress value="33" max="100">
+                            </progress>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
                     <td>
                         Subtlety
+                    </td>
+                    <td>
+                        Social
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <div class="tooltip">
                             <span class="tooltiptext" style="text-align: center; width: 115px; min-width: 75px; max-width: 255px;">
-                                Physical 23%
+                                Subtlety 50%
                             </span>
-                            <progress value="23" max="100">
+                            <progress value="50" max="100">
                             </progress>
                         </div>
                     </td>
                     <td>
                         <div class="tooltip">
                             <span class="tooltiptext" style="text-align: center; width: 115px; min-width: 75px; max-width: 255px;">
-                                Mental 53%
+                                Social 8%
                             </span>
-                            <progress value="53" max="100">
-                            </progress>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="tooltip">
-                            <span class="tooltiptext" style="text-align: center; width: 115px; min-width: 75px; max-width: 255px;">
-                                Subtlety 23%
-                            </span>
-                            <progress value="23" max="100">
+                            <progress value="8" max="100">
                             </progress>
                         </div>
                     </td>
@@ -76,7 +92,7 @@
                         Strength
                     </td>
                     <td>
-                        3
+                        1
                     </td>
                     <td>
                         Attack
@@ -84,7 +100,7 @@
                     <td>
                         <div class="tooltip">
                             <span class="tooltiptext">
-                                2 x 3 Strength and 2 x 3 Agility = 6 + 6 = 12 Attack.
+                                2 x 6 Agility = 12 Attack.
                             </span>
                             12
                         </div>
@@ -95,7 +111,7 @@
                         Stamina
                     </td>
                     <td>
-                        9
+                        5
                     </td>
                     <td>
                         Health
@@ -103,9 +119,9 @@
                     <td>
                         <div class="tooltip">
                             <span class="tooltiptext">
-                                10 x 9 Stamina = 90 Health.
+                                10 x 5 Stamina = 50 Health.
                             </span>
-                            90
+                            50
                         </div>
                     </td>
                 </tr>
@@ -114,7 +130,7 @@
                         Intelligence
                     </td>
                     <td>
-                        7
+                        4
                     </td>
                     <td>
                         Mana
@@ -122,9 +138,9 @@
                     <td>
                         <div class="tooltip">
                             <span class="tooltiptext">
-                                10 x 7 Intelligence = 70 Mana.
+                                10 x 4 Intelligence = 40 Mana.
                             </span>
-                            70
+                            40
                         </div>
                     </td>
                 </tr>
@@ -133,7 +149,7 @@
                         Agility
                     </td>
                     <td>
-                        3
+                        6
                     </td>
                     <td>
                         Movement
@@ -141,9 +157,9 @@
                     <td>
                         <div class="tooltip">
                             <span class="tooltiptext">
-                                4 + (3 Agility / 2 ) = 5 Movement.
+                                4 + (6 Agility / 2 ) = 7 Movement.
                             </span>
-                            5
+                            7
                         </div>
                     </td>
                 </tr>
@@ -153,6 +169,12 @@
                     </td>
                     <td>
                         3
+                    </td>
+                    <td>
+                        Charisma
+                    </td>
+                    <td>
+                        1
                     </td>
                 </tr>
             </table>
@@ -180,12 +202,6 @@
                                             Use a secret technique to strike an enemy dealing 2 x 
                                         </span>
                                         <span style="color: yellow;">
-                                            Strength
-                                        </span>
-                                        <span>
-                                             + 2 x
-                                        </span>
-                                        <span style="color: yellow;">
                                             Agility
                                         </span>
                                         <span>
@@ -202,7 +218,7 @@
                                             12
                                         </span>
                                         <span>
-                                            (2 x 3 + 2 x 3) + d10
+                                            (2 x 6) + d10
                                         </span>
                                     </span>
                                 </div>
@@ -233,7 +249,7 @@
   ">
                             Copy
                         </button>
-                        <input value="/me rolls a [[1d10+2*@{selected|Strength}+2*@{selected|Agility}]] for Explosive Palm" type="text" id="macroRoll20Explosive Palm">
+                        <input value="/me rolls a [[1d10++2*@{selected|Agility}]] for Explosive Palm" type="text" id="macroRoll20Explosive Palm">
                     </td>
                 </tr>
                 <tr>
@@ -272,10 +288,10 @@
                                             Heal all allies in a radius of 2 for  
                                         </span>
                                         <span style="color: green;">
-                                            14
+                                            8
                                         </span>
                                         <span>
-                                            (2 x 7) + d6
+                                            (2 x 4) + d6
                                         </span>
                                     </span>
                                 </div>
