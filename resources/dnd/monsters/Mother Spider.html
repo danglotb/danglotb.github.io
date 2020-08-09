@@ -10,14 +10,14 @@
     <body>
         <div>
             <h2>
-                FuretBicephale
+                Mother Spider
             </h2>
             <div>
                 <h3>
-                    Pirate
+                    Mother Spider
                 </h3>
                 <div>
-                    Pirates are fast and devious. They use saber and flintlock guns.
+                    A large and old spider
                 </div>
                 <div>
                     <span>
@@ -54,9 +54,9 @@
                     <td>
                         <div class="tooltip">
                             <span class="tooltiptext" style="text-align: center; width: 115px; min-width: 75px; max-width: 255px;">
-                                Mental 25%
+                                Mental 0%
                             </span>
-                            <progress value="25" max="100">
+                            <progress value="0" max="100">
                             </progress>
                         </div>
                     </td>
@@ -73,9 +73,9 @@
                     <td>
                         <div class="tooltip">
                             <span class="tooltiptext" style="text-align: center; width: 115px; min-width: 75px; max-width: 255px;">
-                                Subtlety 75%
+                                Subtlety 100%
                             </span>
-                            <progress value="75" max="100">
+                            <progress value="100" max="100">
                             </progress>
                         </div>
                     </td>
@@ -104,9 +104,9 @@
                     <td>
                         <div class="tooltip">
                             <span class="tooltiptext">
-                                2 x 9 Agility = 18 Attack.
+                                2 x 6 Agility = 12 Attack.
                             </span>
-                            18
+                            12
                         </div>
                     </td>
                 </tr>
@@ -115,7 +115,7 @@
                         Stamina
                     </td>
                     <td>
-                        5
+                        11
                     </td>
                     <td>
                         Health
@@ -123,9 +123,9 @@
                     <td>
                         <div class="tooltip">
                             <span class="tooltiptext">
-                                10 x 5 Stamina = 50 Health.
+                                10 x 11 Stamina = 110 Health.
                             </span>
-                            50
+                            110
                         </div>
                     </td>
                 </tr>
@@ -134,7 +134,7 @@
                         Intelligence
                     </td>
                     <td>
-                        3
+                        0
                     </td>
                     <td>
                         Mana
@@ -142,9 +142,9 @@
                     <td>
                         <div class="tooltip">
                             <span class="tooltiptext">
-                                10 x 3 Intelligence = 30 Mana.
+                                10 x 0 Intelligence = 0 Mana.
                             </span>
-                            30
+                            0
                         </div>
                     </td>
                 </tr>
@@ -153,7 +153,7 @@
                         Agility
                     </td>
                     <td>
-                        9
+                        6
                     </td>
                     <td>
                         Movement
@@ -161,9 +161,9 @@
                     <td>
                         <div class="tooltip">
                             <span class="tooltiptext">
-                                4 + (9 Agility / 2 ) = 8 Movement.
+                                4 + (6 Agility / 2 ) = 7 Movement.
                             </span>
-                            8
+                            7
                         </div>
                     </td>
                 </tr>
@@ -190,39 +190,39 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <b>
-                                            Shoot
+                                            Venom
                                         </b>
                                     </div>
                                     <div class="col-3" style="color: blue;">
-                                        Mana: 15
+                                        Mana: 0
                                     </div>
                                     <div class="col-3">
-                                        Range: 3
+                                        Range: 1
                                     </div>
                                 </div>
                                 <div class="row col-12">
                                     <span>
                                         <span>
-                                            Shoot its flintlock gun on enemy and deal 2 x 
+                                            Bite an enemy with venomous claws and deal 2 x 
                                         </span>
                                         <span style="color: yellow;">
                                             Agility
                                         </span>
                                         <span>
-                                             + d10
+                                             + d4
                                         </span>
                                     </span>
                                 </div>
                                 <div class="row col-12">
                                     <span>
                                         <span>
-                                            Deal to an enemy 
+                                            Bite an enemy with venomous claws and deal 
                                         </span>
                                         <span style="color: red;">
-                                            18
+                                            12
                                         </span>
                                         <span>
-                                            (2 x 9) + d10
+                                            (2 x 6) + d4
                                         </span>
                                     </span>
                                 </div>
@@ -232,88 +232,28 @@
                                             Apply 
                                         </span>
                                         <b>
-                                            stun
+                                            poisoned
                                         </b>
                                         <span>
-                                             for 1 turn(s)
+                                             for 3 turn(s)
                                         </span>
                                     </span>
                                 </div>
                             </span>
                             <b>
-                                Shoot
+                                Venom
                             </b>
                         </span>
                     </td>
                     <td>
-                        <button onClick="var copyText = document.getElementById('macroRoll20Shoot');
+                        <button onClick="var copyText = document.getElementById('macroRoll20Venom');
   copyText.select();
   copyText.setSelectionRange(0, 99999)
   document.execCommand('copy');
   ">
                             Copy
                         </button>
-                        <input value="/me rolls a [[1d10++2*@{selected|Agility}]] for Shoot" type="text" id="macroRoll20Shoot">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span class="tooltip">
-                            <span class="tooltiptext">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <b>
-                                            Leap
-                                        </b>
-                                    </div>
-                                    <div class="col-3" style="color: blue;">
-                                        Mana: 10
-                                    </div>
-                                    <div class="col-3">
-                                        Range: 1
-                                    </div>
-                                </div>
-                                <div class="row col-12">
-                                    <span>
-                                        <span>
-                                            Jump above an enemy to get to his back and deal him 2 x 
-                                        </span>
-                                        <span style="color: yellow;">
-                                            Agility
-                                        </span>
-                                        <span>
-                                             + d10
-                                        </span>
-                                    </span>
-                                </div>
-                                <div class="row col-12">
-                                    <span>
-                                        <span>
-                                            Deal to an enemy 
-                                        </span>
-                                        <span style="color: red;">
-                                            18
-                                        </span>
-                                        <span>
-                                            (2 x 9) + d10
-                                        </span>
-                                    </span>
-                                </div>
-                            </span>
-                            <b>
-                                Leap
-                            </b>
-                        </span>
-                    </td>
-                    <td>
-                        <button onClick="var copyText = document.getElementById('macroRoll20Leap');
-  copyText.select();
-  copyText.setSelectionRange(0, 99999)
-  document.execCommand('copy');
-  ">
-                            Copy
-                        </button>
-                        <input value="/me rolls a [[1d10++2*@{selected|Agility}]] for Leap" type="text" id="macroRoll20Leap">
+                        <input value="/me rolls a [[1d4+2*@{selected|Agility}]] for Venom" type="text" id="macroRoll20Venom">
                     </td>
                 </tr>
             </table>
