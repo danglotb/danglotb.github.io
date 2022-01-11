@@ -1,0 +1,25 @@
+{{ if .Params.Authors }}
+<p class="mb-1"><span style="color: var(--primaryLinks)">Authors</span>: {{ .Params.Authors }} </p>
+{{ end }}
+{{ if .Params.Venue }}
+<p class="mb-1"><span style="color: var(--primaryLinks)">Venue</span>: {{ .Params.Venue }} </p>
+{{ end }}
+<p class="mb-1"><span style="color: var(--primaryLinks)">Publication date</span>: {{ .Date.Format "January 2, 2006" }}</p>
+{{ if .Params.Abstract }}
+<p class="mb-1"><span style="color: var(--primaryLinks)">Abstract</span>: {{ .Params.Abstract }} </p>
+{{ end }}
+{{ $params := .Params }} {{ range $name, $value := .Site.Taxonomies }}
+{{ if index $params $name }}
+<p class="metadata-value mb-1 taxa taxa-container-div list-{{- $name -}}">
+  {{ $name | humanize }}: {{ range index $params $name }}
+  <a
+    class="metadata-tags"
+    href="{{ $name | relURL }}/{{ . | urlize }}"
+    title="{{ $name }}"
+  >
+    {{- . -}}
+  </a>
+  {{ end }}
+</p>
+{{ end }}
+{{ end }}

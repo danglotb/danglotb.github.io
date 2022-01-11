@@ -1,0 +1,10 @@
+---
+title: "Suggestions on Test Suite Improvements with Automatic Infection and Propagation Analysis."
+date: 2019-09-10
+authors: "Oscar Luis Vera-Pérez, Benjamin Danglot, Martin Monperrus and Benoit Baudry"
+tags: ["Software testing", "test oracle", "test improvement", "reachability-infection-propagation", "extreme transformation"]
+abstract: "An extreme transformation removes the body of a method that is reached by one test case at least. If the test suite passes on the original program and still passes after the extreme transformation, the transformation is said to be undetected, and the test suite needs to be improved. In this work we propose a technique to automatically determine which of the following three reasons prevent the detection of the extreme transformation is : the test inputs are not sufficient to infect the state of the program; the infection does not propagate to the test cases; the test cases have a weak oracle that does not observe the infection. We have developed Reneri, a tool that observes the program under test and the test suite in order to determine runtime differences between test runs on the original and the transformed method. The observations gathered during the analysis are processed by Reneri to suggest possible improvements to the developers. We evaluate Reneri on 15 projects and a total of 312 undetected extreme transformations. The tool is able to generate a suggestion for each each undetected transformation. For 63% of the cases, the existing test cases can infect the program state, meaning that undetected transformations are mostly due to observability and weak oracle issues. Interviews with developers confirm the relevance of the suggested improvements and experiments with state of the art automatic test generation tools indicate that no tool can improve the existing test suites to fix all undetected transformations."
+venue: "ArXiv preprint, https://arxiv.org/abs/1909.04770"
+draft: false
+link: "https://arxiv.org/abs/1909.04770"
+---
