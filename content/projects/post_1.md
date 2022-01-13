@@ -1,16 +1,60 @@
 ---
-title: "Projects 1"
-date: 2018-05-23
-tags: ["aliquam incididunt", "notes", "velit"]
-categories: ["aliquam auctor", "do"]
-description: "vulputate sem sapien felis ullamcorper risus mi eu metus integer posuere fermentum"
+rank: 10
+title: "AssertFixer"
+date: 2017-05-25
+tags: ["unit-testing", "test-automation", "junit4", "inria", "amplification", "test-repair"]
 draft: false
+repository: https://github.com/STAMP-project/AssertFixer
+description: "A testing tool to replace the expected value of assertions to match the current behavior."
+license: "LGPL-3.0 License"
 ---
 
-# eu velit magna aliqua hendrerit
+[![Build Status](https://travis-ci.org/STAMP-project/AssertFixer.svg?branch=master)](https://travis-ci.org/STAMP-project/AssertFixer)[![Coverage Status](https://coveralls.io/repos/github/STAMP-project/AssertFixer/badge.svg?branch=master)](https://coveralls.io/github/STAMP-project/AssertFixer?branch=master)
+AssertFixer
+=====================================================================================================================
 
-Cursus non odio nam suspendisse mollis tempus tincidunt, cursus praesent facilisi elementum etiam rhoncus tempor. At penatibus ultrices nulla phasellus mi quis luctus felis ultricies. Urna tempus ac consequat sem sed curabitur justo, quam suspendisse cursus aenean integer tellus consectetur. Sed bibendum hendrerit volutpat fames libero nisl dui, nunc vivamus augue posuere luctus scelerisque ultrices. Do pretium consectetur vestibulum lacinia eget do semper, varius viverra scelerisque madssa semper venenatis cras. Ac pharetra interdum rhoncus eleifend libero bolestie ligula justo.
+This project aims at fixing assertion. The program under test is used as specification to fix the test suite.
 
-Malesuada vel arcu odio scelerisque tellus adipiscing congue vitae erat leo commodo. Rhoncus amet cras curabitur non augue aenean eu nibh nisl orci lorem. Augue rhoncus euismod leo nam netus viverra interdum lectus do quam. Consequat dolor metus urna ultricies mi aliquet dolore dictum. Facilisi facilisis et eiusmod mus orci consectetur dolore ultricies placerat porttitor sed. Est labore hendrerit id malesuada interdum quisque mollis mattis ut.
+See: [Brett Daniel et al.](https://scholar.google.com/citations?view_op=view_citation&hl=fr&user=x6OIBq4AAAAJ&citation_for_view=x6OIBq4AAAAJ:roLk4NBRz8UC) for instance.
 
-Aliqua congue egestas bibendum pretium semper id vulputate eleifend lorem vestibulum auctor. Euismod eleifend eiusmod at vel suspendisse donec commodo sit volutpat do. Iaculis accimsan ipsum suscipit labore mattis sollicitudin sit eiusmod turpis. Nisi pulvinar vulputate scelerisque feugiat posuere a dui faucibus. Nam ultrices magnis netus sed faucibus aliqua interdum laoreet consectetur eleifend. Malesuada elit enim ullamcorper commodo eget pretium penatibus vitae vestibulum iaculis.
+### CLI
+
+```
+java -jar assert-fixer.jar (-c|--classpath) <classpath> (-t|--test-class) <testClass> (-m|--test-method) <testMethod> [(-s|--source-path) <sourcePath>] [(-p|--test-path) <testPath>] [--verbose] [(-o|--output) <output>] [--gen-try-catch] [-h|--help]
+
+  (-c|--classpath) <classpath>
+        [Mandatory] Use must specify a complete classpath to execute tests on
+        your project.
+        The classpath should be formatted according to the OS.
+
+  (-t|--test-class) <testClass>
+        [Mandatory] Use must specify a failing test class.
+        You must provide a full qualified name such as:
+        my.package.example.ClassTest
+
+  (-m|--test-method) <testMethod>
+        [Mandatory] Use must specify at least one failing test method.
+        Separate multiple values with ":" such as: test1:test2
+
+  [(-s|--source-path) <sourcePath>]
+        [Optional] Specify the path to the source folder.
+        Separate multiple values with ":" such as: path/one:path/two/
+
+  [(-p|--test-path) <testPath>]
+        Specify the path to the test source folder.
+        Separate multiple values with ":" such as: path/one:path/two/ (default:
+        src/test/java/)
+
+  [--verbose]
+        Enable verbose mode
+
+  [(-o|--output) <output>]
+        [Optional] Specify an output folder for result and temporary files.
+        (default: target/assert-fixer)
+
+  [--gen-try-catch]
+        Enable the generation of try/catch/fail block to repair test method
+
+  [-h|--help]
+        Display this help and exit
+```

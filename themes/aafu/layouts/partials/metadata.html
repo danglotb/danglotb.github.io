@@ -8,6 +8,15 @@
 {{ if .Params.Abstract }}
 <p class="mb-1"><span style="color: var(--primaryLinks)">Abstract</span>: {{ .Params.Abstract }} </p>
 {{ end }}
+{{ if .Params.description }}
+<p class="mb-1"><span style="color: var(--primaryLinks)">Description</span>: {{ .Params.description }} </p>
+{{ end }}
+{{ if .Params.repository }}
+<p class="mb-1"><span style="color: var(--primaryLinks)">Repository</span>: <a href="{{ .Params.repository }}">{{ .Params.repository }}</a></p>
+{{ end }}
+{{ if .Params.License }}
+<p class="mb-1"><span style="color: var(--primaryLinks)">License</span>: {{ .Params.License }} </p>
+{{ end }}
 {{ $params := .Params }} {{ range $name, $value := .Site.Taxonomies }}
 {{ if index $params $name }}
 <p class="metadata-value mb-1 taxa taxa-container-div list-{{- $name -}}">
