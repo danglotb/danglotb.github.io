@@ -1,21 +1,33 @@
 {{ if .Params.Authors }}
-<p class="mb-1"><span style="color: var(--primaryLinks)">Authors</span>: {{ .Params.Authors }} </p>
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Authors</span>: {{ .Params.Authors }} </p>
 {{ end }}
 {{ if .Params.Venue }}
-<p class="mb-1"><span style="color: var(--primaryLinks)">Venue</span>: {{ .Params.Venue }} </p>
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Venue</span>: {{ .Params.Venue }} </p>
 {{ end }}
-<p class="mb-1"><span style="color: var(--primaryLinks)">Publication date</span>: {{ .Date.Format "January 2, 2006" }}</p>
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Publication date</span>: {{ .Date.Format "January 2, 2006" }}</p>
 {{ if .Params.Abstract }}
-<p class="mb-1"><span style="color: var(--primaryLinks)">Abstract</span>: {{ .Params.Abstract }} </p>
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Abstract</span>: {{ .Params.Abstract }} </p>
 {{ end }}
 {{ if .Params.description }}
-<p class="mb-1"><span style="color: var(--primaryLinks)">Description</span>: {{ .Params.description }} </p>
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Description</span>: {{ .Params.description }} </p>
 {{ end }}
 {{ if .Params.repository }}
-<p class="mb-1"><span style="color: var(--primaryLinks)">Repository</span>: <a href="{{ .Params.repository }}">{{ .Params.repository }}</a></p>
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Repository</span>: <a href="{{ .Params.repository }}">{{ .Params.repository }}</a></p>
 {{ end }}
 {{ if .Params.License }}
-<p class="mb-1"><span style="color: var(--primaryLinks)">License</span>: {{ .Params.License }} </p>
+<p class="mb-1"><span style="color: var(--secondaryLinks)">License</span>: {{ .Params.License }} </p>
+{{ end }}
+{{ if .Params.Hours }}
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Hours</span>: {{ .Params.Hours }} </p>
+{{ end }}
+{{ if .Params.Students }}
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Students</span>: {{ .Params.Students }} </p>
+{{ end }}
+{{ if .Params.Institution }}
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Institution</span>: {{ .Params.Institution }} </p>
+{{ end }}
+{{ if .Params.Year }}
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Year</span>: {{ .Params.Year }} </p>
 {{ end }}
 {{ $params := .Params }} {{ range $name, $value := .Site.Taxonomies }}
 {{ if index $params $name }}

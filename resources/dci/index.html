@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DCI</title>
+
+    <script type="text/javascript" src="style/js/canvasjs.min.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="style/css/bootstrap.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="style/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="style/css/theme.css" rel="stylesheet">
+    <!-- Bootstrap slider css-->
+    <link href="style/css/bootstrap-slider.min.css" rel="stylesheet">
+    <!-- Collapse -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<!-- Fixed navbar -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">DCI</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+
+                <li class="active"><a
+                        href="index.html"><span
+                        class="glyphicon glyphicon-home"></span></a></li>
+
+                <li><a href="https://arxiv.org/abs/1902.08482">Pre-print</a></li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Implementation<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://github.com/STAMP-project/dspot">DCI</a></li>
+                        <li><a href="https://github.com/STAMP-project/dspot-experiments">DCI-experiments</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">About<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="https://danglotb.github.io/">Benjamin Danglot</a>
+                        </li>
+                        <li>
+                            <a href="http://www.monperrus.net/martin/">Martin Monperrus</a>
+                        </li>
+                        <li>
+                            <a href="https://rudametw.github.io/">Walter Rudametkin</a>
+                        </li>
+                        <li>
+                            <a href="https://people.rennes.inria.fr/Benoit.Baudry/">Benoit Baudry</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+<div class="container theme-showcase" role="main">
+
+    <div class="jumbotron">
+        <h1 class="panel-title"></h1>
+        <p class="text-justify">
+            When a developer change the behavior a program, he should provide a new test method (or modify an existing one) that specify the new behavior.
+            However, developers do not always provide such test method because lack of time, expertise or discipline.
+        </p>
+        <p class="text-justify">
+            In the context of the article &ldquo;<i>An Approach and Benchmark to Detect Behavioral Changes of Commits in Continuous Integration</i>&rdquo;, we devised a technique that produces automatically a test method that specify the new behavior.
+            This technique is called <a href="https://github.com/STAMP-project/dspot">DCI</a>.
+        </p>
+        <p class="text-justify">
+            We conduct an experimentation on 6 projects from GitHub using real commits introducing behavioral changes.
+            The whole experiment data are available <a href="https://github.com/STAMP-project/dspot-experiments">here</a>(april-2019).
+            On this webpage, you can find: first, the seed test method that we amplified; second, the amplified test method that detect the behavioral change; third, the manual test method provided by the developer with the commit, used as a ground truth.
+        </p>
+    </div>
+
+    <!-- Commons Io -->
+    <div class="col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Commons Io</h3>
+            </div>
+            <div class="panel-body">
+                <div class="col-sm-12">
+                    <h3><a href="https://github.com/apache/commons-io/blob/81210eb267181b766acaf201a424a80d96bb5bed/src/test/java/org/apache/commons/io/input/BoundedReaderTest.java#L58">Seed Test Method</a></h3>
+                    <script src="https://gist.github.com/danglotb/e709c53fa7fd49c48025e5a011d51baf.js"></script>
+                </div>
+                <div class="col-sm-12">
+                    <h3><a href="https://github.com/STAMP-project/dspot-experiments/blob/master/results/april-2019/commons-io/commit_7_81210eb/input_amplification/3/org/apache/commons/io/input/AmplBoundedReaderTest.java#L114">Amplified Test Method</a></h3>
+                    <script src="https://gist.github.com/danglotb/09a7e91582b01ca2bdbb7f83f8366bf0.js"></script>
+                </div>
+                <div class="col-sm-12">
+                    <h3><a href="https://github.com/apache/commons-io/commit/81210eb">Manual Test Method</a></h3>
+                    <script src="https://gist.github.com/danglotb/fe26cb7849876f2d2c760a663dfed204.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Commons Lang -->
+    <div class="col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Commons Lang</h3>
+            </div>
+            <div class="panel-body">
+                <div class="col-sm-12">
+                    <h3><a href="https://github.com/apache/commons-lang/blob/e7d16c27629722a93a9d36a0b5e0a3a793850544/src/test/java/org/apache/commons/lang3/builder/JsonToStringStyleTest.java#L61">Seed Test Method</a></h3>
+                    <script src="https://gist.github.com/danglotb/7e4a7d64c70184e45580f2c4b92e77d4.js"></script>
+                </div>
+                <div class="col-sm-12">
+                    <h3><a href="https://github.com/STAMP-project/dspot-experiments/blob/master/results/april-2019/commons-lang/commit_4_e7d16c2/input_amplification/3/org/apache/commons/lang3/builder/AmplJsonToStringStyleTest.java#L24">Amplified Test Method</a></h3>
+                    <script src="https://gist.github.com/danglotb/371f6cf18087b5d46c4033b243b55690.js"></script>
+                </div>
+                <div class="col-sm-12">
+                    <h3><a href="https://github.com/apache/commons-lang/commit/e7d16c2">Manual Test Method</a></h3>
+                    <script src="https://gist.github.com/danglotb/b5e440dcc539ac5f4802ca14bbe119d2.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gson -->
+    <div class="col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Gson</h3>
+            </div>
+            <div class="panel-body">
+                <div class="col-sm-12">
+                    <h3><a href="https://github.com/google/gson/blob/44cad04a639b3a53f4205f93acda37b3f7d10871/gson/src/test/java/com/google/gson/functional/PrimitiveTest.java#L145">Seed Test Method</a></h3>
+                    <script src="https://gist.github.com/danglotb/a90f3c63a02089390d00cec6bc9b3ab6.js"></script>
+                </div>
+                <div class="col-sm-12">
+                    <h3><a href="https://github.com/STAMP-project/dspot-experiments/blob/master/results/april-2019/gson/commit_8_44cad04/input_amplification/3/com/google/gson/functional/AmplPrimitiveTest.java#L18">Amplified Test Method</a></h3>
+                    <script src="https://gist.github.com/danglotb/fa5cd1932ea24615f95687a30a92ac36.js"></script>
+                </div>
+                <div class="col-sm-12">
+                    <h3><a href="https://github.com/google/gson/commit/44cad04">Manual Test Method</a></h3>
+                    <script src="https://gist.github.com/danglotb/57cbc702df674be7dcc3d6a9b830522f.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jsoup -->
+    <div class="col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">jsoup</h3>
+            </div>
+            <div class="panel-body">
+                <div class="col-sm-12">
+                    <h3><a href="https://github.com/jhy/jsoup/blob/3676b132429306c722304e94177172dca42c2dda/src/test/java/org/jsoup/parser/AttributeParseTest.java#L75">Seed Test Method</a></h3>
+                    <script src="https://gist.github.com/danglotb/c60fda3b48e796d3ef2a4f9345a425e0.js"></script>
+                </div>
+                <div class="col-sm-12">
+                    <h3><a href="https://github.com/STAMP-project/dspot-experiments/blob/master/results/april-2019/jsoup/commit_9_3676b13/input_amplification_14_16/3/org/jsoup/parser/AmplAttributeParseTest.java#L15">Amplified Test Method</a></h3>
+                    <script src="https://gist.github.com/danglotb/c60fda3b48e796d3ef2a4f9345a425e0.js"></script>
+                </div>
+                <div class="col-sm-12">
+                    <h3><a href="https://github.com/jhy/jsoup/commit/3676b13">Manual Test Method</a></h3>
+                    <script src="https://gist.github.com/danglotb/55999a6a7bdb0623069449f52b2d1070.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mustache -->
+    <div class="col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Mustache.java</h3>
+            </div>
+            <div class="panel-body">
+                <div class="col-sm-12">
+                    <h3><a href="https://github.com/spullara/mustache.java/blob/774ae7add1f6b3396e7d6554397a71f3ea1e2104/compiler/src/test/java/com/github/mustachejava/resolver/ClasspathResolverTest.java#L50">Seed Test Method</a></h3>
+                    <script src="https://gist.github.com/danglotb/7b3bdf8c1a39672e0c65f53d6e45be7d.js"></script>
+                </div>
+                <div class="col-sm-12">
+                    <h3><a href="https://github.com/STAMP-project/dspot-experiments/blob/master/results/april-2019/mustache.java/commit_5_774ae7a/input_amplification/3/com/github/mustachejava/resolver/AmplClasspathResolverTest.java#L227">Amplified Test Method</a></h3>
+                    <script src="https://gist.github.com/danglotb/2e0732d0f3d357975507e5b1c57e33a3.js"></script>
+                </div>
+                <div class="col-sm-6">
+                    <h3><a href="https://github.com/spullara/mustache.java/commit/774ae7a">Manual Test Method</a></h3>
+                    <script src="https://gist.github.com/danglotb/3e90bbd49e53467168b688ac1b6ff958.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Xwiki -->
+    <div class="col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">XWiki-commons</h3>
+            </div>
+            <div class="panel-body">
+                <div class="col-sm-12">
+                    <h3><a href="https://github.com/xwiki/xwiki-commons/blob/d3101aed5d0b3df40e9ac9cf1a40af74262d5f75/xwiki-commons-core/xwiki-commons-diff/xwiki-commons-diff-api/src/test/java/org/xwiki/diff/internal/DefaultDiffManagerTest.java#L182">Seed Test Method</a></h3>
+                    <script src="https://gist.github.com/danglotb/5b5c060d4833af4c94f434475789f82f.js"></script>
+                </div>
+                <div class="col-sm-12">
+                    <h3><a href="https://github.com/STAMP-project/dspot-experiments/blob/master/results/april-2019/xwiki-commons/commit_5_d3101ae/input_amplification/3/org/xwiki/diff/internal/AmplDefaultDiffManagerTest.java#L40">Amplified Test Method</a></h3>
+                    <script src="https://gist.github.com/danglotb/2fb2267e8ba28806dbdf4804d7f33568.js"></script>
+                </div>
+                <div class="col-sm-12">
+                    <h3><a href="https://github.com/xwiki/xwiki-commons/commit/d3101ae">Manual Test Method</a></h3>
+                    <script src="https://gist.github.com/danglotb/5c01a33fbec1fbb614a627fb241e3979.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </table>
+</div>
+</body>
+
+</html>

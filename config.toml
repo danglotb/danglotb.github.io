@@ -37,26 +37,27 @@ theme = "aafu"
     [params.social]
         title = "Links"
 
-        [[params.social.list]]
-            icon = "fab fa-linkedin-in"
-            url = "#"
-            title = "LinkedIn"		
+        
         [[params.social.list]]
             icon = "fab fa-github"
-            url = "#"
+            url = "https://github.com/danglotb"
             title = "GitHub"
         [[params.social.list]]
+            icon = "ai ai-google-scholar"
+            url = "https://scholar.google.com/citations?user=ZIj5dCgAAAAJ&hl=en"
+            title = "Google Scholar"
+        [[params.social.list]]
             icon = "fab fa-twitter"
-            url = "#"
+            url = "https://twitter.com/BdanglotDanglot"
             title = "Twitter"
         [[params.social.list]]
             icon = "fab fa-orcid"
-            url = "#"
+            url = " https://orcid.org/0000-0001-9483-5743 "
             title = "Orcid"
         [[params.social.list]]
-            icon = "ai ai-google-scholar"
-            url = "#"
-            title = "Google Scholar"
+            icon = "fab fa-linkedin-in"
+            url = "https://www.linkedin.com/in/benjamin-danglot-18a05752/"
+            title = "LinkedIn"		
 
     #Specify what is showin in the Accordion
     [[params.showInAccordion]]
