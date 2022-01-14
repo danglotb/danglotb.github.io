@@ -1,16 +1,7 @@
 ---
-title: "STOA"
-date: 2018-05-23
-tags: ["aliquam incididunt", "notes", "velit"]
-categories: ["aliquam auctor", "do"]
-description: "vulputate sem sapien felis ullamcorper risus mi eu metus integer posuere fermentum"
+title: "Constraint-Based Automatic Test Data Generation"
+date: 2022-01-14
+description: " DeMillo et al. proposed a first attempt to automatically generate test to meet the fault-based testing criteria. The fault-based testing criteria is to use mutation analysis, i.e. inject seeded fault into a program, then exercise the tests. If the tests fails, it kills the mutants and detects the fault. If not, there is a potential lack of test data input in the test suite. This lead the testers to produce this new test data input. However, this task is tedious and time-consumption, that why, authors proposed a technique to generate them. Their techniques is base on a representation algebraic constraints to kill mutants, and then use this representation to generate data to kill it. They called their techniques Constraint-based Testing (CBT). In order to kill mutants, Generated test data input must makes a difference in the behavior of the mutant. They define necessity constraints templates based on mutation operators used, in Mothra. They overcome mutant equivalent program, they add constraints on predicate to force mutant programs to have different value than original program. In their techniques, constraints are composed by algebraic expression, i.e. variables, parentheses and programming language operators. A constraint is a pair of algebraic expression related with one conditional operator. A clause is a conjunctive or disjunctive list of constraints. A constraint is a clause that represent one test case. The global workflow of their approach is to successively substitute value for a variable in constraints that remains consistent with the rest of the clauses. At the begin, all the values are assigned to a domain that contains all the possible values. The reduction aims at eliminate expression in the constraints, and reduce the domain of each values by substitute variables by values. At each steps they take the variables with the smallest domain. They implemented CBT for Fortran 77 programs in a tool named Godzilla. They use the widely use triangle classification program TRITYP. They compare generated test by Godzilla to manually written-test cases (in 30 hours). Godzilla achieve a better mutation score: 99% against 95 for the manually-written test."
 draft: false
+link: "https://dl.acm.org/doi/10.1109/32.92910"
 ---
-
-# eu velit magna aliqua hendrerit
-
-Cursus non odio nam suspendisse mollis tempus tincidunt, cursus praesent facilisi elementum etiam rhoncus tempor. At penatibus ultrices nulla phasellus mi quis luctus felis ultricies. Urna tempus ac consequat sem sed curabitur justo, quam suspendisse cursus aenean integer tellus consectetur. Sed bibendum hendrerit volutpat fames libero nisl dui, nunc vivamus augue posuere luctus scelerisque ultrices. Do pretium consectetur vestibulum lacinia eget do semper, varius viverra scelerisque madssa semper venenatis cras. Ac pharetra interdum rhoncus eleifend libero bolestie ligula justo.
-
-Malesuada vel arcu odio scelerisque tellus adipiscing congue vitae erat leo commodo. Rhoncus amet cras curabitur non augue aenean eu nibh nisl orci lorem. Augue rhoncus euismod leo nam netus viverra interdum lectus do quam. Consequat dolor metus urna ultricies mi aliquet dolore dictum. Facilisi facilisis et eiusmod mus orci consectetur dolore ultricies placerat porttitor sed. Est labore hendrerit id malesuada interdum quisque mollis mattis ut.
-
-Aliqua congue egestas bibendum pretium semper id vulputate eleifend lorem vestibulum auctor. Euismod eleifend eiusmod at vel suspendisse donec commodo sit volutpat do. Iaculis accimsan ipsum suscipit labore mattis sollicitudin sit eiusmod turpis. Nisi pulvinar vulputate scelerisque feugiat posuere a dui faucibus. Nam ultrices magnis netus sed faucibus aliqua interdum laoreet consectetur eleifend. Malesuada elit enim ullamcorper commodo eget pretium penatibus vitae vestibulum iaculis.
