@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Continuous Integration on </title>
+    <link>https://danglotb.github.io/tags/continuous-integration/</link>
+    <description>Recent content in Continuous Integration on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Sep 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://danglotb.github.io/tags/continuous-integration/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Can We Spot Energy Regressions using Developers Tests?</title>
+      <link>https://danglotb.github.io/publications/post_8/</link>
+      <pubDate>Wed, 29 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/publications/post_8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Diff-JJoules</title>
+      <link>https://danglotb.github.io/projects/post_5/</link>
+      <pubDate>Sun, 22 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/projects/post_5/</guid>
+      <description>Diff-JJoules ·    diff-jjoules is a tool to be integrated in your continuous integration in order to
+ measure the impact of commits on the energy consumption of the program break the build in case of an energy regression has been detected.  Install To use Diff-JJoules, you need to install JJoules and JUnit-JJoules.
+Then, you can install diff-jjoules:
+mvn clean install -DskipTest Usage The easiest way to use diff-jjoules, you need to clone your project twice: one for the version before applying the commit, and one for the version after applying the commit.</description>
+    </item>
+    
+    <item>
+      <title>An approach and benchmark to detect behavioral changes of commits in continuous integration.</title>
+      <link>https://danglotb.github.io/publications/post_7/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/publications/post_7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DCI Web page</title>
+      <link>https://danglotb.github.io/misc/post_2/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/misc/post_2/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications on </title>
+    <link>https://danglotb.github.io/publications/</link>
+    <description>Recent content in Publications on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 Dec 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://danglotb.github.io/publications/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Software Bot for Fault Localization</title>
+      <link>https://danglotb.github.io/publications/post_10/</link>
+      <pubDate>Mon, 13 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/publications/post_10/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>FLACOCO: Fault Localization for Java based on Industry-grade Coverage.</title>
+      <link>https://danglotb.github.io/publications/post_9/</link>
+      <pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/publications/post_9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Can We Spot Energy Regressions using Developers Tests?</title>
+      <link>https://danglotb.github.io/publications/post_8/</link>
+      <pubDate>Wed, 29 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/publications/post_8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>An approach and benchmark to detect behavioral changes of commits in continuous integration.</title>
+      <link>https://danglotb.github.io/publications/post_7/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/publications/post_7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A snowballing literature study on test amplification.</title>
+      <link>https://danglotb.github.io/publications/post_5/</link>
+      <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/publications/post_5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Suggestions on Test Suite Improvements with Automatic Infection and Propagation Analysis.</title>
+      <link>https://danglotb.github.io/publications/post_6/</link>
+      <pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/publications/post_6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Automatic test improvement with DSpot: a study with ten mature open-source projects.</title>
+      <link>https://danglotb.github.io/publications/post_4/</link>
+      <pubDate>Wed, 24 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/publications/post_4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A comprehensive study of pseudo-tested methods.</title>
+      <link>https://danglotb.github.io/publications/post_3/</link>
+      <pubDate>Wed, 19 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/publications/post_3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Alleviating patch overfitting with automatic test generation: a study of feasibility and effectiveness for the nopol repair system.</title>
+      <link>https://danglotb.github.io/publications/post_1/</link>
+      <pubDate>Sat, 12 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/publications/post_1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Correctness attraction: a study of stability of software behavior under runtime perturbation.</title>
+      <link>https://danglotb.github.io/publications/post_2/</link>
+      <pubDate>Thu, 21 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/publications/post_2/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

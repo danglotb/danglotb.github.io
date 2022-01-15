@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FullStack on </title>
+    <link>https://danglotb.github.io/tags/fullstack/</link>
+    <description>Recent content in FullStack on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Jul 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://danglotb.github.io/tags/fullstack/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Skillful Network: Internships</title>
+      <link>https://danglotb.github.io/teaching/post_4/</link>
+      <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/teaching/post_4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Skillful Network: Bootcamp fullstack developers</title>
+      <link>https://danglotb.github.io/teaching/post_3/</link>
+      <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/teaching/post_3/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

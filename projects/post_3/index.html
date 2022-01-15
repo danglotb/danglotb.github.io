@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en-us" style="max-width: 1000px; margin: auto"><head>
+  <title>Dr Benjamin Danglot</title>
+
+<meta name="theme-color" content="" />
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<meta name="description" content="Personal Website" />
+<meta name="author" content="Dr Benjamin Danglot" />
+<meta name="generator" content="aafu theme by Darshan in Hugo 0.68.3" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">        <link rel="manifest" href="/site.webmanifest">        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">        <link rel="shortcut icon" href="/favicon.ico">        
+
+  <link
+    rel="stylesheet"
+    href="/css/bootstrap/bootstrap.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+    integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="//fonts.googleapis.com/css?family=Didact+Gothic%7CRoboto:400%7CRoboto+Mono"
+  />
+  <link rel="stylesheet" href="/css/aafu_green.css" />
+  <link rel="stylesheet" href="/css/aafu.css" />
+
+  <script>
+    var themeColor = document.querySelector("meta[name=theme-color]");
+    window.onload = () => {
+      themeColor.content = getComputedStyle(document.body)["background-color"];
+      let defaultActivePanel = document.querySelector(".accordion.active");
+      if (defaultActivePanel) {
+        defaultActivePanel.nextElementSibling.style.maxHeight =
+          defaultActivePanel.nextElementSibling.scrollHeight + "px";
+      }
+    };
+    window.onresize = () => {
+      let defaultActivePanel = document.querySelector(".accordion.active");
+      if (defaultActivePanel) {
+        defaultActivePanel.nextElementSibling.style.maxHeight =
+          defaultActivePanel.nextElementSibling.scrollHeight + "px";
+      }
+    };
+  </script>
+</head>
+<body class="container">
+    <main style="min-height: calc(100vh - 60px)">
+      
+      <div class="d-flex flex-row row p-2">
+  <h3 class="mr-3">
+    <a class="nes-btn" href="https://danglotb.github.io/">Home</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/publications">Publications</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/projects">Projects</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/teaching">Teaching</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/misc">Misc.</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/stoa">State of the art</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/blog">Blog</a>
+  </h3>
+</div>
+
+      
+<div class="mb-3">
+  <h1 class="top-h1" style="font-size: 2.75em">DSpot</h1>
+  <p class="mb-1">February 7, 2016</p>
+  <p>&mdash;</p>
+</div>
+<div class="content"><h1 id="dspot-dspot-cihttpsgithubcomstamp-projectdspotactionsworkflowsmvn-build-dspot-actionymlbadgesvghttpsgithubcomstamp-projectdspotactionsworkflowsmvn-build-dspot-actionyml-codecovhttpscodecovioghstamp-projectdspotbranchmastergraphbadgesvgtokenbcxx5t0tn0httpscodecovioghstamp-projectdspot-maven-centralhttpsmaven-badgesherokuappcommaven-centraleustamp-projectdspotbadgesvghttpsmavenbadgesherokuappcommaven-centraleustamp-projectdspot">DSpot <a href="https://github.com/STAMP-project/dspot/actions/workflows/mvn-build-dspot-action.yml"><img src="https://github.com/STAMP-project/dspot/actions/workflows/mvn-build-dspot-action.yml/badge.svg" alt="DSpot CI"></a> <a href="https://codecov.io/gh/STAMP-project/dspot"><img src="https://codecov.io/gh/STAMP-project/dspot/branch/master/graph/badge.svg?token=BcXX5t0TN0" alt="codecov"></a> <a href="https://mavenbadges.herokuapp.com/maven-central/eu.stamp-project/dspot"><img src="https://maven-badges.herokuapp.com/maven-central/eu.stamp-project/dspot/badge.svg" alt="Maven Central"></a></h1>
+<p>DSpot is a tool that generates missing assertions in JUnit tests.
+DSpot takes as input a Java project with an existing test suite.
+DSpot generates new test cases from existing ones and write them on disk.
+DSpot supports Java projects built with Maven and Gradle (see the <code>--automatic-builder</code> option)</p>
+<p>DSpot ecosystem:</p>
+<ul>
+<li><a href="https://github.com/STAMP-project/dspot-jenkins-plugin">Jenkins plugin</a></li>
+<li><a href="https://github.com/STAMP-project/stamp-ide">Eclipse plugin</a></li>
+<li><a href="https://github.com/TestShiftProject/test-cube">IntelliJ plugin</a></li>
+</ul>
+<h2 id="getting-started">Getting started</h2>
+<h3 id="demo-site">Demo site</h3>
+<p>Meet our demonstration website at <a href="https://dspot-demo.stamp-project.eu/">https://dspot-demo.stamp-project.eu/</a>.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>You need Java and Maven. The environment variable JAVA_HOME must point to a valid JDK installation (and not a JRE). DSpot uses the environment variable MAVEN_HOME, ensure that this variable points to your maven installation. Example:</p>
+<pre><code>export MAVEN_HOME=path/to/maven/
+</code></pre><h3 id="releases">Releases</h3>
+<p>We advise you to start by downloading the latest release, see <a href="https://github.com/STAMP-project/dspot/releases">https://github.com/STAMP-project/dspot/releases</a>.</p>
+<h2 id="usage">Usage</h2>
+<h3 id="first-tutorial">First Tutorial</h3>
+<p>After having downloaded DSpot (see the previous section), you can run the provided example by running
+<code>eu.stamp_project.Main</code> from your IDE, or with</p>
+<pre><code>java -jar target/dspot-LATEST-jar-with-dependencies.jar --example
+</code></pre><p>replacing <code>LATEST</code> by the latest version of DSpot, <em>e.g.</em> <code>2.2.1</code> would give <code>dspot-2.2.1-jar-with-dependencies.jar</code></p>
+<p>Given a test case as input, with <code>--amplifiers=None</code>, DSpot only adds assertions in the test, for example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff"><span style="color:#75715e">@Test
+</span><span style="color:#75715e"></span>void test() {
+  Tacos tacos = new Tacos();
+  Benjamin benjamin = new Benjamin();
+  benjamin.eat(tacos);
+  assertFalse(benjamin.isHungry());
+<span style="color:#a6e22e">+  assertTrue(benjamin.isHappy());  // new assertion
+</span><span style="color:#a6e22e"></span>}
+</code></pre></div><p>With some amplifiers, eg <code>--amplifiers=AllAmplifiers</code>, DSpot modifies the setup of the input test and adds assertions in your code, for example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff"><span style="color:#75715e">@Test
+</span><span style="color:#75715e"></span>void test() {
+  Tacos tacos = new Tacos();
+  Benjamin benjamin = new Benjamin();
+<span style="color:#f92672">-  benjamin.eat(tacos); // removed method call
+</span><span style="color:#f92672">-  assertFalse(benjamin.isHungry());
+</span><span style="color:#f92672"></span><span style="color:#a6e22e">+  assertTrue(benjamin.isHungry());
+</span><span style="color:#a6e22e">+  assertFalse(benjamin.isHappy()); // new assertion
+</span><span style="color:#a6e22e"></span>}
+</code></pre></div><p>The modified test is lastly given to a selector, eg <code>--test-selector=PitMutantScoreSelector</code>, that determines if it improves the test suite and should be kept.</p>
+<p>The amplification process is illustrated in the figure below. Note that amplified tests are further modified by subsequent iterations determined by for example <code>--iteration=10</code>.</p>
+<p><img src="docs/application_loop.png" alt="Application loop"></p>
+<p>When an amplification is successful, DSpot outputs the improvement on the console and the result of the amplification (the new tests) are written to the output folder specified by configuration property <code>outputDirectory</code> (default to <code>./target/dspot/output/</code>).</p>
+<pre><code>Initial instruction coverage: 30 / 34
+88.24%
+Amplification results with 5 amplified tests.
+Amplified instruction coverage: 34 / 34
+100.00%
+</code></pre><p>Want to know more? Read the full articles:</p>
+<ul>
+<li><a href="https://hal.inria.fr/hal-01923575/document">Automatic Test Improvement with DSpot: a Study with Ten Mature Open-Source Projects</a> (<a href="https://doi.org/10.1007/s10664-019-09692-y">doi:10.1007/s10664-019-09692-y</a>)</li>
+<li><a href="https://arxiv.org/pdf/1902.08482">An Approach and Benchmark to Detect Behavioral Changes of Commits in Continuous Integration</a> (<a href="https://doi.org/10.1007/s10664-019-09794-7">doi:10.1007/s10664-019-09794-7</a>)</li>
+</ul>
+<h3 id="command-line-usage">Command Line Usage</h3>
+<p>You can then execute DSpot by using:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -jar /path/to/dspot-LATEST-jar-with-dependencies.jar --absolute-path-to-project-root &lt;path&gt;
+</code></pre></div><p>Amplify a specific test class</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -jar /path/to/dspot-*-jar-with-dependencies.jar eu.stamp_project.Main --absolute-path-to-project-root &lt;path&gt; --test my.package.TestClass
+</code></pre></div><p>Amplify specific test classes according to a regex</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -jar /path/to/dspot-LATEST-jar-with-dependencies.jar --absolute-path-to-project-root &lt;path&gt; --test my.package.*
+java -jar /path/to/dspot-LATEST-jar-with-dependencies.jar --absolute-path-to-project-root &lt;path&gt; --test my.package.Example*
+</code></pre></div><p>Amplify a specific test method from a specific test class</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -jar /path/to/dspot-LATEST-jar-with-dependencies.jar --absolute-path-to-project-root &lt;path&gt; --test my.package.TestClass --cases testMethod
+</code></pre></div><h3 id="command-line-options">Command line options</h3>
+<!-- raw HTML omitted -->
+<pre><code>Usage: eu.stamp_project.Main [-hvV] [--allow-path-in-assertions] [--clean] [--dev-friendly] [--example]
+                             [--execute-test-parallel] [--generate-new-test-class] [--gregor-mode]
+                             [--keep-original-test-methods] [--only-input-amplification] [--restful] [--smtp-auth]
+                             [--target-one-test-class] [--use-maven-to-exe-test] [--use-working-directory]
+                             [--absolute-path-to-project-root=&lt;absolutePathToProjectRoot&gt;]
+                             [--absolute-path-to-second-version=&lt;absolutePathToSecondVersionProjectRoot&gt;]
+                             [--automatic-builder=&lt;automaticBuilder&gt;] [--cache-size=&lt;cacheSize&gt;]
+                             [--collector=&lt;collector&gt;] [--delta=&lt;delta&gt;] [--descartes-mutators=&lt;descartesMutators&gt;]
+                             [--descartes-version=&lt;descartesVersion&gt;] [--excluded-classes=&lt;excludedClasses&gt;]
+                             [--excluded-test-cases=&lt;excludedTestCases&gt;] [--full-classpath=&lt;dependencies&gt;]
+                             [-i=&lt;nbIteration&gt;] [--input-ampl-distributor=&lt;inputAmplDistributor&gt;]
+                             [--jvm-args=&lt;JVMArgs&gt;] [--maven-home=&lt;mavenHome&gt;]
+                             [--maven-pre-goals-test-execution=&lt;preGoalsTestExecution&gt;]
+                             [--max-test-amplified=&lt;maxTestAmplified&gt;] [--mongo-colname=&lt;mongoColName&gt;]
+                             [--mongo-dbname=&lt;mongoDbName&gt;] [--mongo-url=&lt;mongoUrl&gt;]
+                             [--nb-parallel-exe-processors=&lt;numberParallelExecutionProcessors&gt;]
+                             [--output-path=&lt;outputDirectory&gt;] [--path-pit-result=&lt;pathPitResult&gt;]
+                             [--path-to-additional-classpath-elements=&lt;additionalClasspathElements&gt;]
+                             [--path-to-test-list-csv=&lt;pathToTestListCSV&gt;] [--pit-filter-classes-to-keep=&lt;filter&gt;]
+                             [--pit-output-format=&lt;pitOutputFormat&gt;] [--pit-version=&lt;pitVersion&gt;]
+                             [--random-seed=&lt;seed&gt;] [--relative-path-to-classes=&lt;pathToClasses&gt;]
+                             [--relative-path-to-source-code=&lt;pathToSourceCode&gt;]
+                             [--relative-path-to-test-classes=&lt;pathToTestClasses&gt;]
+                             [--relative-path-to-test-code=&lt;pathToTestSourceCode&gt;] [--repo-branch=&lt;repoBranch&gt;]
+                             [--repo-slug=&lt;repoSlug&gt;] [-s=&lt;selector&gt;] [--smtp-host=&lt;smtpHost&gt;]
+                             [--smtp-password=&lt;smtpPassword&gt;] [--smtp-port=&lt;smtpPort&gt;] [--smtp-tls=&lt;smtpTls&gt;]
+                             [--smtp-username=&lt;smtpUsername&gt;] [--system-properties=&lt;systemProperties&gt;]
+                             [--target-module=&lt;targetModule&gt;] [--time-out=&lt;timeOutInMs&gt;] [--with-comment=&lt;withComment&gt;]
+                             [-a=&lt;amplifiers&gt;[,&lt;amplifiers&gt;...]]... [-c=&lt;testCases&gt;[,&lt;testCases&gt;...]]...
+                             [-t=&lt;testClasses&gt;[,&lt;testClasses&gt;...]]...
+  -a, --amplifiers=&lt;amplifiers&gt;[,&lt;amplifiers&gt;...]
+                             Specify the list of amplifiers to use. By default, DSpot does not use any amplifiers
+                               (None) and applies only assertion amplification. Valid values:
+                               MethodDuplicationAmplifier, MethodRemove, FastLiteralAmplifier,
+                               MethodAdderOnExistingObjectsAmplifier, ReturnValueAmplifier, StringLiteralAmplifier,
+                               NumberLiteralAmplifier, BooleanLiteralAmplifier, CharLiteralAmplifier,
+                               AllLiteralAmplifiers, NullifierAmplifier, ArrayAmplifier, None Default value: None
+      --absolute-path-to-project-root=&lt;absolutePathToProjectRoot&gt;
+                             Specify the path to the root of the project. This path must be absolute.We consider as
+                               root of the project folder that contain the top-most parent in a multi-module project.
+      --absolute-path-to-second-version=&lt;absolutePathToSecondVersionProjectRoot&gt;
+                             When using the ChangeDetectorSelector, you must specify this option. It should have for
+                               value the path to the root of the second version of the project. It is recommended to
+                               give an absolute path
+      --allow-path-in-assertions
+                             If enabled, DSpot will generate assertions for values that seems like to be paths. Default
+                               value: false
+      --automatic-builder=&lt;automaticBuilder&gt;
+                             Specify the automatic builder to be used. Valid values: Maven, Gradle Default value: Maven
+  -c, --cases, --test-cases, --test-methods=&lt;testCases&gt;[,&lt;testCases&gt;...]
+                             Specify the test cases to amplify.By default, DSpot selects all the tests methods.
+      --cache-size=&lt;cacheSize&gt;
+                             Specify the size of the memory cache in terms of the number of store entries Default
+                               value: 10000
+      --clean                If enabled, DSpot will remove the out directory if exists, else it will append the results
+                               to the exist files. Default value: false
+      --collector=&lt;collector&gt;
+                             Set a collector: MongodbCollector to send info to Mongodb at end process, NullCollector
+                               which does nothing.Valid values: NullCollector, MongodbCollector Default value:
+                               NullCollector
+      --delta=&lt;delta&gt;        Specify the delta value for the assertions of floating-point numbers. If DSpot generates
+                               assertions for float, it uses Assert.assertEquals(expected, actual, delta). It specifies
+                               the delta value. Default value: 0.1
+      --descartes-mutators=&lt;descartesMutators&gt;
+                             Specify the list of descartes mutators to be used separated by comma. Please refer to the
+                               descartes documentation for more details: https://github.
+                               com/STAMP-project/pitest-descartes
+      --descartes-version=&lt;descartesVersion&gt;
+                             Specify the version of pit-descartes to use. Default value: 1.2.4
+      --dev-friendly         Amplifies the test cases in a way that is easy for developers to read and understand.
+                               Default value: false
+      --example              Run the example of DSpot and leave.
+      --excluded-classes=&lt;excludedClasses&gt;
+                             Specify the full qualified name of excluded test classes. Each qualified name must be
+                               separated by a comma ','. These classes won't be amplified, nor executed during the
+                               mutation analysis, if the PitMutantScoreSelector is used.This option can be valued by a
+                               regex.
+      --excluded-test-cases=&lt;excludedTestCases&gt;
+                             Specify the list of test cases to be excluded. Each is the name of a test case, separated
+                               by a comma ','.
+      --execute-test-parallel
+                             If enabled, DSpot will execute the tests in parallel. For JUnit5 tests it will use the
+                               number of given processors (specify 0 to take the number of available core processors).
+                               For JUnit4 tests, it will use the number of available CPU processors (given number of
+                               processors is ignored). Default value: false
+      --full-classpath=&lt;dependencies&gt;
+                             Specify the classpath of the project. If this option is used, DSpot won't use an
+                               AutomaticBuilder (e.g. Maven) to clean, compile and get the classpath of the project.
+                               Please ensure that your project is in a good shape, i.e. clean and correctly compiled,
+                               sources and test sources.
+      --generate-new-test-class
+                             Enable the creation of a new test class. Default value: false
+      --gregor-mode          Enable the gregor engine for Pit Mutant Score Selector. Default value: false
+  -h, --help                 Show this help message and exit.
+  -i, --iteration=&lt;nbIteration&gt;
+                             Specify the number of amplification iterations. A larger number may help to improve the
+                               test criterion (e.g. a larger number of iterations may help to kill more mutants). This
+                               has an impact on the execution time: the more iterations, the longer DSpot runs. Default
+                               value: 1
+      --input-ampl-distributor=&lt;inputAmplDistributor&gt;
+                             Specify an input amplification distributor.Valid values: RandomInputAmplDistributor,
+                               TextualDistanceInputAmplDistributor, SimpleInputAmplDistributor Default value:
+                               RandomInputAmplDistributor
+      --jvm-args=&lt;JVMArgs&gt;   Specify JVM args to use when executing the test, PIT or other java process. This arguments
+                               should be a list, separated by a comma ',', e.g. jvmArgs=Xmx2048m,-Xms1024m',-Dis.admin.
+                               user=admin,-Dis.admin.passwd=$2pRSid#
+      --keep-original-test-methods
+                             If enabled, DSpot keeps original test methods of the amplified test class. Default value:
+                               false
+      --maven-home=&lt;mavenHome&gt;
+                             Specify the maven home directory. If it is not specified DSpot will first look in both
+                               MAVEN_HOME and M2_HOME environment variables. If these variables are not set, DSpot will
+                               look for a maven home at default locations /usr/share/maven/, /usr/local/maven-3.3.9/
+                               and /usr/share/maven3/.
+      --maven-pre-goals-test-execution=&lt;preGoalsTestExecution&gt;
+                             Specify pre goals to run before executing test with maven.It will be used as follow: the
+                               elements, separated by a comma,must be valid maven goals and they will be placed just
+                               before the &quot;test&quot; goal, e.g.--maven-pre-goals-test-execution preGoal1,preGoal2 will give
+                               &quot;mvn preGoal1 preGoal2 test&quot;
+      --max-test-amplified=&lt;maxTestAmplified&gt;
+                             Specify the maximum number of amplified tests that dspot keeps (before generating
+                               assertion). Default value: 200
+      --mongo-colname=&lt;mongoColName&gt;
+                             If valid mongo-url and a mongo-dbname are provided, DSpot will submit result to the
+                               provided collection name.. Default value: AmpRecords
+      --mongo-dbname=&lt;mongoDbName&gt;
+                             If a valid mongo-url is provided, DSpot will submit result to the database indicated by
+                               this name. Default value: Dspot
+      --mongo-url=&lt;mongoUrl&gt; If valid url, DSpot will submit to Mongodb database. Default value: mongodb://localhost:
+                               27017
+      --nb-parallel-exe-processors=&lt;numberParallelExecutionProcessors&gt;
+                             Specify the number of processor to use for the parallel execution.0 will make DSpot use
+                               all processors available. Default value: 0
+      --only-input-amplification
+                             Only apply input amplification. Default value: false
+      --output-path, --output-directory=&lt;outputDirectory&gt;
+                             specify a path folder for the output. Default value: target/dspot/output/
+      --path-pit-result=&lt;pathPitResult&gt;
+                             Specify the path to the .xml or .csv of the original result of Pit Test. If you use this
+                               option the selector will be forced to PitMutantScoreSelector.
+      --path-to-additional-classpath-elements=&lt;additionalClasspathElements&gt;
+                             Specify additional classpath elements (e.g. a jar files). Elements of this list must be
+                               separated by a comma ','.
+      --path-to-test-list-csv=&lt;pathToTestListCSV&gt;
+                             Enable the selection of the test to be amplified from a csv file. This parameter is a path
+                               that must point to a csv file that list test classes and their test methods in the
+                               following format: test-class-name;test-method-1;test-method-2;test-method-3;... If this
+                               parameter is used, DSpot will ignore the value used in the parameter test and cases It
+                               is recommended to use an absolute path.
+      --pit-filter-classes-to-keep=&lt;filter&gt;
+                             Specify the filter of classes to keep used by PIT. This allow you restrict the scope of
+                               the mutation done by PIT. If this is not specified, DSpot will try to build on the fly a
+                               filter that takes into account the largest number of classes, e.g. the topest package.
+      --pit-output-format=&lt;pitOutputFormat&gt;
+                             Specify the Pit output format.Valid values: XML, CSV Default value: XML
+      --pit-version=&lt;pitVersion&gt;
+                             Specify the version of PIT to use. Default value: 1.4.0
+      --random-seed=&lt;seed&gt;   Specify a seed for the random object (used for all randomized operation). Default value: 23
+      --relative-path-to-classes=&lt;pathToClasses&gt;
+                             Specify the relative path from --absolute-path-to-project-root/--target-module
+                               command-line options that points to the folder that contains binaries of the source (.
+                               class). Default value: target/classes/
+      --relative-path-to-source-code=&lt;pathToSourceCode&gt;
+                             Specify the relative path from --absolute-path-to-project-root/--target-module
+                               command-line options that points to the folder that contains sources (.java). Default
+                               value: src/main/java/
+      --relative-path-to-test-classes=&lt;pathToTestClasses&gt;
+                             Specify the relative path from --absolute-path-to-project-root/--target-module
+                               command-line options that points to the folder that contains binaries of the test source
+                               (.class). Default value: target/test-classes/
+      --relative-path-to-test-code=&lt;pathToTestSourceCode&gt;
+                             Specify the relative path from --absolute-path-to-project-root/--target-module
+                               command-line options that points to the folder that contains test sources (.java).
+                               Default value: src/test/java/
+      --repo-branch=&lt;repoBranch&gt;
+                             Branch name of the submitted repo, This is used by mongodb as a identifier for analyzed
+                               repo's submitted data. Default value: UnknownBranch
+      --repo-slug=&lt;repoSlug&gt; Slug of the repo for instance Stamp/Dspot. This is used by mongodb as a identifier for
+                               analyzed repo's submitted data. Default value: UnknownSlug
+      --restful              If true, DSpot will enable restful mode for web Interface. It will look for a pending
+                               document in Mongodb with the corresponding slug and branch provided instead of creating
+                               a completely new one. Default value: false
+  -s, --test-selector, --test-criterion=&lt;selector&gt;
+                             Specify the test adequacy criterion to be maximized with amplification. Valid values:
+                               PitMutantScoreSelector, JacocoCoverageSelector, TakeAllSelector, ChangeDetectorSelector,
+                               ExtendedCoverageSelector Default value: PitMutantScoreSelector
+      --smtp-auth            Enable this if the smtp host server require auth. Default value: false
+      --smtp-host=&lt;smtpHost&gt; Host server name. Default value: smtp.gmail.com
+      --smtp-password=&lt;smtpPassword&gt;
+                             Password for Gmail, used for submit email at end-process. Default value: Unknown
+      --smtp-port=&lt;smtpPort&gt; Host server port. Default value: 587
+      --smtp-tls=&lt;smtpTls&gt;   Enable this if the smtp host server require secure tls transport. Default value: false
+      --smtp-username=&lt;smtpUsername&gt;
+                             Username for Gmail, used for submit email at end-process. Default value: Unknown@gmail.com
+      --system-properties=&lt;systemProperties&gt;
+                             Specify system properties. This value should be a list of couple property=value, separated
+                               by a comma ','. For example, systemProperties=admin=toto,passwd=tata. This defines two
+                               system properties.
+  -t, --test=&lt;testClasses&gt;[,&lt;testClasses&gt;...]
+                             Fully qualified names of test classes to be amplified. If the value is all, DSpot will
+                               amplify the whole test suite. You can also use regex to describe a set of test classes.
+                               By default, DSpot selects all the tests classes.
+      --target-module=&lt;targetModule&gt;
+                             Specify the module to be amplified. This value must be a relative path from value
+                               specified by --absolute-path-to-project-root command-line option. If your project is
+                               multi-module, you must use this property because DSpot works at module level.
+      --target-one-test-class
+                             Enable this option will make DSpot computing the mutation score of only one test class
+                               (the first pass through --test command line option). Default value: false
+      --time-out=&lt;timeOutInMs&gt;
+                             Specify the timeout value of the degenerated tests in millisecond. Default value: 10000
+      --use-maven-to-exe-test
+                             If enabled, DSpot will use maven to execute the tests. Default value: false
+      --use-working-directory
+                             Enable this option to change working directory with the root of the project. Default
+                               value: false
+  -v, --verbose              Enable verbose mode of DSpot. Default value: false
+  -V, --version              Print version information and exit.
+      --with-comment=&lt;withComment&gt;
+                             Enable comment on amplified test: details steps of the amplification. Valid values: All,
+                               Amplifier, Coverage, None. Default value: None
+</code></pre><!-- raw HTML omitted -->
+<p>For options that take list, the used separator is a comma <code>,</code>, whatever the platform you use.</p>
+<h3 id="maven-plugin-usage">Maven plugin usage</h3>
+<p>You can execute DSpot using the maven plugin. For more details, see the dedicated <a href="https://github.com/STAMP-project/dspot/blob/master/dspot-maven/README.md">README</a>.</p>
+<p>Each command line options is translated into an option for the maven plugin. You must prefix each of them with <code>-D</code>. Examples:</p>
+<pre><code>* `--test my.package.MyTestClass1:my.package.MyTestClass2` gives `-Dtest=my.package.MyTestClass1,my.package.MyTestClass2`
+* `--output-path output` gives `-Doutput-path=output` 
+</code></pre>
+<h3 id="configuration">Configuration</h3>
+<h4 id="amplifiers--a----amplifiers">Amplifiers (-a | &ndash;amplifiers)</h4>
+<p>By default, <strong>DSpot</strong> uses no amplifier because the simplest amplification that can be done is the generation of assertions on existing tests, <em>i.e.</em> it will improve the oracle and the potential of the test suite to capture bugs.</p>
+<p>However, <strong>DSpot</strong> provide different kind of <code>Amplifier</code>:</p>
+<ul>
+<li><code>StringLiteralAmplifier</code>: modifies string literals: remove, add and replace one random char, generate random string and empty string. It also replaces the existing string by the system path separator (<em>e.g.</em> <code>:</code> on Linux) and the system line separator (<em>e.g.</em> <code>\n</code> on Linux).</li>
+<li><code>NumberLiteralAmplifier</code>: modifies number literals: replace by boundaries (<em>e.g.</em> Integer_MAX_VALUE for int), increment and decrement values</li>
+<li><code>CharLiteralAmplifier</code>: modifies char literals: replace by random char and special chars: &lsquo;\0&rsquo; and <code> </code>. It also replaces the existing char by the previous and next one, <em>i.e.</em> it computes <code>codechar + 1</code> and <code>codechar - 1</code>. For example, we have <code>b</code>, it resuls with <code>b + 1 = c</code> and <code>b - 1 = a</code></li>
+<li><code>BooleanLiteralAmplifier</code>: modifies boolean literals: negate the value</li>
+<li><code>ArrayLiteralAmplifier</code>: modifies array literals: remove and add element in literal, replace literal with empty literal and null</li>
+<li><code>AllLiteralAmplifiers</code>: combines all literals amplifiers, <em>i.e.</em> StringLiteralAmplifier, NumberLiteralAmplifier, CharLiteralAmplifier, BooleanLiteralAmplifier and ArrayLiteralAmplifier</li>
+<li><code>MethodDuplicationAmplifier</code>: duplicates an existing method call</li>
+<li><code>MethodRemove</code>: removes an existing method call</li>
+<li><code>MethodAdderOnExistingObjectsAmplifier</code>: adds a method call, and generate required parameter</li>
+<li><code>ReplacementAmplifier</code>: replaces a local variable by a generated one</li>
+<li><code>FastLiteralAmplifier</code>: a faster amplifier for the literals</li>
+<li><code>NullifierAmplifier</code>: replaces value with null</li>
+<li><code>ArrayAmplifier</code>: replaces value of arrays</li>
+<li><code>ReturnValueAmplifier</code>: creates objects based on the returned value by existing method call</li>
+<li><code>None</code>: do nothing</li>
+</ul>
+<p>If you only want to use these amplifiers and not generate assertions, use <code>--only-input-amplification</code>.</p>
+<h4 id="test-selectors--s----test-selector----test-criterion">Test Selectors (-s | &ndash;test-selector | &ndash;test-criterion)</h4>
+<p>In <strong>DSpot</strong>, test selectors can be seen as a fitness: it measures the quality of amplified, and keeps only amplified tests that are worthy according to this selector.</p>
+<p>The
+The default selector is <code>PitMutantScoreSelector</code>. This selector is based on <a href="http://pitest.org/"><strong>PIT</strong></a>, which is a tool to computation mutation analysis. <strong>DSpot</strong> will keep only tests that increase the mutation score.</p>
+<p>Following the list of available test selectors:</p>
+<ul>
+<li><code>PitMutantScoreSelector</code>: uses <a href="http://pitest.org/"><strong>PIT</strong></a> to computes the mutation score, and selects amplified tests that kill mutants that was not kill by the original test suite.</li>
+<li><code>JacocoCoverageSelector</code>: uses <a href="http://www.eclemma.org/jacoco/"><strong>JaCoCo</strong></a> to compute instruction coverage and executed paths (the order matters). Selects test that increase the coverage and has unique executed path.</li>
+<li><code>ExtendedCoverageSelector</code>: uses <a href="http://www.eclemma.org/jacoco/"><strong>JaCoCo</strong></a> to compute instruction coverage. Selects tests that cover more instructions than the original test suite on any line of the code under test.</li>
+<li><code>TakeAllSelector</code>: keeps all amplified tests not matter the quality.</li>
+<li><code>ChangeDetectorSelector</code>: runs against a second version of the same program, and selects amplified tests that fail. This selector selects only amplified test that are able to show a difference of a behavior betweeen two versions of the same program.</li>
+</ul>
+<h4 id="input-ampl-distributor">Input Ampl Distributor</h4>
+<p>In <strong>DSpot</strong>, the Input Ampl Distributor is a way to select the amplified test methods after the input amplification. It allows to keep interesting and discard unwanted amplified test method.</p>
+<p>For now, there are three implementations of the Input Ampl Distributor:</p>
+<ul>
+<li><code>RandomInputAmplDistributor</code>: This distributor selects randonly amplified test methods.</li>
+<li><code>TextualDistanceInputAmplDistributor</code>: This distributor selects by maximize their distance of string representation among all the input amplified test methods. The number of amplified selected test methods is specified by the command line option <code>--max-test-amplified</code>.</li>
+<li><code>SimpleInputAmplDistributor</code>: This distributor selects a fair number of amplified test method per Amplifier per test methods, if possible. The total budget is specified by the command line option ``&ndash;max-test-amplified`, and is the total number of amplified test methods to keep, <em>i.e.</em> it will be divide by the number of Amplifiers and by the number of test methods to be amplified.
+Example: We have 2 Amplifiers. We apply them to 2 test methods. For each test methods, amplifiers generate 4 new test methods, totally 8 amplified test methods. If the budget is 6, it will select: 3 amplified test methods per amplifier, and 2 for one test method and 2 for the other.</li>
+</ul>
+<h4 id="supported-test-frameworks">Supported Test Frameworks</h4>
+<p>DSpot supports:</p>
+<ul>
+<li>JUnit3</li>
+<li>JUnit4</li>
+<li>JUnit5</li>
+</ul>
+<p>and</p>
+<ul>
+<li>Google Truth assertions</li>
+</ul>
+<p>However, DSpot detects the used test framework at test class level.</p>
+<p>Please, do not amplify test classes that mix test frameworks (test methods in JUnit4 and JUnit5 within the same test class.)</p>
+<p>If you have such test class, please amplify the different test framework separately.</p>
+<h4 id="supported-jdks--build-tools">Supported JDKs &amp; Build Tools</h4>
+<p>DSpot runs with the following Java versions:</p>
+<ul>
+<li>Java 1.8</li>
+<li>Java 11</li>
+<li>Java 16 (used as JDK, not tested if it can support Java 16 language features)</li>
+</ul>
+<p>It can amplify tests of projects built with:</p>
+<ul>
+<li>Maven 3.6</li>
+<li>Gradle 7</li>
+</ul>
+<h2 id="minimizing-and-prettifying-dspot-amplified-test-cases">Minimizing and Prettifying DSpot Amplified Test Cases</h2>
+<p>With the <a href="dspot-prettifier">DSpot Prettifier</a> you can remove redundant assertions from your amplified test cases &amp; give them more expressive names with the help of code2vec and context2vec.</p>
+<h2 id="license-and-contributions">License and Contributions</h2>
+<p>DSpot is licensed under LGPLv3. Contributors and pull requests are welcome :-).
+For more information on development, see the dedicated <a href="https://github.com/STAMP-project/dspot/blob/master/README-developers.md">README-developers.md</a></p>
+<h3 id="acknowledgement">Acknowledgement</h3>
+<p>Dspot is funded by <a href="https://www.stamp-project.eu/">EU H2020 research project STAMP</a>.</p>
+</div>
+<div class="d-flex flex-row justify-content-around">
+  <h3 class="mb-1 mt-1 text-left mr-4">
+    
+    <i class="nav-menu-disabled fas fa-chevron-circle-left"></i>
+    
+  </h3>
+  <h3 class="mb-1 mt-1 text-left ml-4">
+    
+    <a
+      href="/projects/post_4/"
+      title="Diff-test-selection"
+    >
+      <i class="nav-menu fas fa-chevron-circle-right"></i>
+    </a>
+    
+  </h3>
+</div>
+
+
+    </main>
+    
+    <footer class=" mt-2 mb-4 text-center ">
+  <span class="markdownify"></span>
+  <span style="font-size:0px;">
+    &middot;
+    <i>
+      <a href="https://github.com/darshanbaral/aafu">
+        aafu
+      </a>
+    </i>
+    by
+    <a href="https://www.darshanbaral.com/">
+      darshan
+    </a>
+  </span>
+</footer>
+
+    
+  </body>
+</html>

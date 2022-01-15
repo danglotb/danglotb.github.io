@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sustainability on </title>
+    <link>https://danglotb.github.io/tags/sustainability/</link>
+    <description>Recent content in sustainability on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 05 Dec 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://danglotb.github.io/tags/sustainability/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>TLPC-sensor</title>
+      <link>https://danglotb.github.io/projects/post_6/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/projects/post_6/</guid>
+      <description>Time-Lapse Performance Counters (TLPC) Sensor TLPC-sensor aims at providing an API to measure various Performance Counters, such as the number of executed intructions and cycles, or energy consumption (with RAPL) in a time-lapse, designed by the call of the function start() and stop().
+Install You need to install libpfm4 Then, you can run:
+git clone http://github.com/davidson-consulting/tlpc-sensor.git cd tlpc-sensor &amp;amp;&amp;amp; mkdir build &amp;amp;&amp;amp; cd build cmake .. make ./tlpc-sensor You need sudo priviliege and run echo -1 &amp;gt; /proc/sys/kernel/perf_event_paranoid.</description>
+    </item>
+    
+    <item>
+      <title>Diff-JJoules</title>
+      <link>https://danglotb.github.io/projects/post_5/</link>
+      <pubDate>Sun, 22 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/projects/post_5/</guid>
+      <description>Diff-JJoules ·    diff-jjoules is a tool to be integrated in your continuous integration in order to
+ measure the impact of commits on the energy consumption of the program break the build in case of an energy regression has been detected.  Install To use Diff-JJoules, you need to install JJoules and JUnit-JJoules.
+Then, you can install diff-jjoules:
+mvn clean install -DskipTest Usage The easiest way to use diff-jjoules, you need to clone your project twice: one for the version before applying the commit, and one for the version after applying the commit.</description>
+    </item>
+    
+  </channel>
+</rss>

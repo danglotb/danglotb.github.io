@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en-us" style="max-width: 1000px; margin: auto"><head>
+  <title>Dr Benjamin Danglot</title>
+
+<meta name="theme-color" content="" />
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<meta name="description" content="Personal Website" />
+<meta name="author" content="Dr Benjamin Danglot" />
+<meta name="generator" content="aafu theme by Darshan in Hugo 0.68.3" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">        <link rel="manifest" href="/site.webmanifest">        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">        <link rel="shortcut icon" href="/favicon.ico">        
+
+  <link
+    rel="stylesheet"
+    href="/css/bootstrap/bootstrap.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+    integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="//fonts.googleapis.com/css?family=Didact+Gothic%7CRoboto:400%7CRoboto+Mono"
+  />
+  <link rel="stylesheet" href="/css/aafu_green.css" />
+  <link rel="stylesheet" href="/css/aafu.css" />
+
+  <script>
+    var themeColor = document.querySelector("meta[name=theme-color]");
+    window.onload = () => {
+      themeColor.content = getComputedStyle(document.body)["background-color"];
+      let defaultActivePanel = document.querySelector(".accordion.active");
+      if (defaultActivePanel) {
+        defaultActivePanel.nextElementSibling.style.maxHeight =
+          defaultActivePanel.nextElementSibling.scrollHeight + "px";
+      }
+    };
+    window.onresize = () => {
+      let defaultActivePanel = document.querySelector(".accordion.active");
+      if (defaultActivePanel) {
+        defaultActivePanel.nextElementSibling.style.maxHeight =
+          defaultActivePanel.nextElementSibling.scrollHeight + "px";
+      }
+    };
+  </script>
+</head>
+<body class="container">
+    <main style="min-height: calc(100vh - 60px)">
+      
+      <div class="d-flex flex-row row p-2">
+  <h3 class="mr-3">
+    <a class="nes-btn" href="https://danglotb.github.io/">Home</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/publications">Publications</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/projects">Projects</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/teaching">Teaching</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/misc">Misc.</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/stoa">State of the art</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/blog">Blog</a>
+  </h3>
+</div>
+
+      
+<h1 class="standard top-h1 mb-3 ">Publications</h1>
+
+  <h3 class="d-flex flex-row align-items-start accordion mb-2 active">
+    <span onclick="expandAccordion(this)" class="expand-metadata"></span>
+    
+      <a href="https://www.computer.org/digital-library/magazines/so/call-for-papers-special-issue-on-bots-in-software-engineering">A Software Bot for Fault Localization</a>
+    
+  </h3>
+  <div id="panel-item-0" class="panel metadata-panel overflow-hidden">
+    <div class="metadata">
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Authors</span>: Davide Ginelli, André Silva, Benjamin Danglot, Matias Martinez and Martin Monperrus. </p>
+
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Venue</span>: Submitted to Call for Papers: Special Issue on Bots in Software Engineering (preprint incoming). </p>
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Publication date</span>: December 13, 2021</p>
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Abstract</span>: Software bots have gained a significant importance in the modern collaborative development landscape. They provide useful automation and reduce the burden on human developers. Fault localization is the task of locating and ranking potentially buggy lines of code. In this paper, we introduce FLACOCOBOT, a novel type of software bot aimed at automatically providing fault localization information in the development conversation. Whenever a Continuous Integration build fails, FLACOCOBOT presents the developer with potential buggy lines of code, tightly integrated in the development platform GitHub. We have run FLACOCOBOT on 22 active and popular open-source projects hosted on GitHub, demonstrating the feasibility of doing fault localization in the wild. Our research highlights the sheer difficulty of engineering software bots based on execution and dynamic analysis. </p>
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+</div>
+  </div>
+
+  <h3 class="d-flex flex-row align-items-start accordion mb-2 ">
+    <span onclick="expandAccordion(this)" class="expand-metadata"></span>
+    
+      <a href="https://arxiv.org/abs/2111.12513">FLACOCO: Fault Localization for Java based on Industry-grade Coverage.</a>
+    
+  </h3>
+  <div id="panel-item-1" class="panel metadata-panel overflow-hidden">
+    <div class="metadata">
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Authors</span>: André Silva, Matias Martinez, Benjamin Danglot, Davide Ginelli and Martin Monperrus. </p>
+
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Venue</span>: ArXiv preprint, submitted to ICSE&#39;21 demo tool track </p>
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Publication date</span>: November 24, 2021</p>
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Abstract</span>: Fault localization is an essential step in the debugging process. Spectrum-Based Fault Localization (SBFL) is a popular fault localization family of techniques, utilizing code-coverage to predict suspicious lines of code. In this paper, we present FLACOCO, a new fault localization tool for Java. The key novelty of FLACOCO is that it is built on top of one of the most used and most reliable coverage libraries for Java, JaCoCo. FLACOCO is made available through a well-designed command-line interface and Java API and supports all Java versions. We validate FLACOCO on two use-cases from the automatic program repair domain by reproducing previous scientific experiments. We find it is capable of effectively replacing the state-of-the-art FL library. Overall, we hope that FLACOCO will help research in fault localization as well as industry adoption thanks to being founded on industry-grade code coverage. An introductory video is available at this https URL </p>
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+</div>
+  </div>
+
+  <h3 class="d-flex flex-row align-items-start accordion mb-2 ">
+    <span onclick="expandAccordion(this)" class="expand-metadata"></span>
+    
+      <a href="https://arxiv.org/abs/2108.05691">Can We Spot Energy Regressions using Developers Tests?</a>
+    
+  </h3>
+  <div id="panel-item-2" class="panel metadata-panel overflow-hidden">
+    <div class="metadata">
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Authors</span>: Benjamin Danglot, Jean-Rémy Falleri, Romain Rouvoy </p>
+
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Venue</span>: Registered Reports Track @ 37th International Conference on Software Maintenance and Evolution (ICSME 2021), September 27 - October 1, Luxembourg City </p>
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Publication date</span>: September 29, 2021</p>
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Abstract</span>: Software Energy Consumption(SEC) is gaining more and more attention. In this paper, we tackle the problem of hinting developers about the SEC of their programs in the context of software developments based on Continuous Integration(CI). In this study, we investigate if the CI can leverage developers&#39; tests to perform a new class of tests: the energy regression testing. Energy regression is similar to performance regression but focused on the energy consumption of the program instead of standard performance indicators, like execution time or memory consumption. We propose to perform an exploratory study of the usage of developers&#39; tests for energy regression testing. We propose to first investigate if developers&#39; tests can be used to obtain stable SEC indicators. Then, to consider if comparing the SEC of developers&#39; tests between two versions can accurately spot energy regressions introduced by automated program mutations. Finally, to assess if it can successfully pinpoint the source code lines guilty of energy regressions. Our study will pave the way for automated SEC regression tools that can be readily deployed inside an existing CI infrastructure to raise awareness of SEC issues among practitioners. </p>
+
+
+
+
+
+
+
+
+ 
+
+
+
+<p class="metadata-value mb-1 taxa taxa-container-div list-tags">
+  Tags: 
+  <a
+    class="metadata-tags"
+    href="/tags/continuous-integration"
+    title="tags"
+  >Continuous Integration</a>
+  
+  <a
+    class="metadata-tags"
+    href="/tags/energy-regression"
+    title="tags"
+  >Energy Regression</a>
+  
+  <a
+    class="metadata-tags"
+    href="/tags/sustainable-software"
+    title="tags"
+  >Sustainable Software</a>
+  
+</p>
+
+
+</div>
+  </div>
+
+  <h3 class="d-flex flex-row align-items-start accordion mb-2 ">
+    <span onclick="expandAccordion(this)" class="expand-metadata"></span>
+    
+      <a href="https://link.springer.com/article/10.1007/s10664-019-09794-7">An approach and benchmark to detect behavioral changes of commits in continuous integration.</a>
+    
+  </h3>
+  <div id="panel-item-3" class="panel metadata-panel overflow-hidden">
+    <div class="metadata">
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Authors</span>: Benjamin Danglot, Martin Monperrus, Walter Rudametkin and Benoit Baudry. </p>
+
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Venue</span>: Empirical Software Engineering 25, 2379–2415 (2020). https://doi.org/10.1007/s10664-019-09794-7 </p>
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Publication date</span>: March 5, 2020</p>
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Abstract</span>: When a developer pushes a change to an application’s codebase, a good practice is to have a test case specifying this behavioral change. Thanks to continuous integration (CI), the test is run on subsequent commits to check that they do no introduce a regression for that behavior. In this paper, we propose an approach that detects behavioral changes in commits. As input, it takes a program, its test suite, and a commit. Its output is a set of test methods that capture the behavioral difference between the pre-commit and post-commit versions of the program. We call our approach DCI (Detecting behavioral changes in CI). It works by generating variations of the existing test cases through (i) assertion amplification and (ii) a search-based exploration of the input space. We evaluate our approach on a curated set of 60 commits from 6 open source Java projects. To our knowledge, this is the first ever curated dataset of real-world behavioral changes. Our evaluation shows that DCI is able to generate test methods that detect behavioral changes. Our approach is fully automated and can be integrated into current development processes. The main limitations are that it targets unit tests and works on a relatively small fraction of commits. More specifically, DCI works on commits that have a unit test that already executes the modified code. In practice, from our benchmark projects, we found 15.29% of commits to meet the conditions required by DCI. </p>
+
+
+
+
+
+
+
+
+ 
+
+
+
+<p class="metadata-value mb-1 taxa taxa-container-div list-tags">
+  Tags: 
+  <a
+    class="metadata-tags"
+    href="/tags/continuous-integration"
+    title="tags"
+  >Continuous Integration</a>
+  
+  <a
+    class="metadata-tags"
+    href="/tags/test-amplification"
+    title="tags"
+  >Test amplification</a>
+  
+  <a
+    class="metadata-tags"
+    href="/tags/behavioral-change-detection"
+    title="tags"
+  >Behavioral change detection</a>
+  
+</p>
+
+
+</div>
+  </div>
+
+  <h3 class="d-flex flex-row align-items-start accordion mb-2 ">
+    <span onclick="expandAccordion(this)" class="expand-metadata"></span>
+    
+      <a href="https://www.sciencedirect.com/science/article/abs/pii/S0164121219301736?via%3Dihub">A snowballing literature study on test amplification.</a>
+    
+  </h3>
+  <div id="panel-item-4" class="panel metadata-panel overflow-hidden">
+    <div class="metadata">
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Authors</span>: BenjaminDanglot, Oscar Vera-Perez, Zhongxing Yu, Andy Zaidman, Martin Monperrus and Benoit Baudry </p>
+
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Venue</span>: Journal of Systems and Software Volume 157, November 2019, 110398, https://doi.org/10.1016/j.jss.2019.110398 </p>
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Publication date</span>: November 1, 2019</p>
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Abstract</span>: The adoption of agile approaches has put an increased emphasis on testing, resulting in extensive test suites. These suites include a large number of tests, in which developers embed knowledge about meaningful input data and expected properties as oracles. This article surveys works that exploit this knowledge to enhance manually written tests with respect to an engineering goal (e.g., improve coverage or refine fault localization). While these works rely on various techniques and address various goals, we believe they form an emerging and coherent field of research, which we coin “test amplification”. We devised a first set of papers from DBLP, searching for all papers containing “test” and “amplification” in their title. We reviewed the 70 papers in this set and selected the 4 papers that fit the definition of test amplification. We use them as the seeds for our snowballing study, and systematically followed the citation graph. This study is the first that draws a comprehensive picture of the different engineering goals proposed in the literature for test amplification. We believe that this survey will help researchers and practitioners entering this new field to understand more quickly and more deeply the intuitions, concepts and techniques used for test amplification. </p>
+
+
+
+
+
+
+
+
+ 
+
+
+
+<p class="metadata-value mb-1 taxa taxa-container-div list-tags">
+  Tags: 
+  <a
+    class="metadata-tags"
+    href="/tags/test-amplification"
+    title="tags"
+  >Test amplification</a>
+  
+  <a
+    class="metadata-tags"
+    href="/tags/test-augmentation"
+    title="tags"
+  >Test augmentation</a>
+  
+  <a
+    class="metadata-tags"
+    href="/tags/test-optimization"
+    title="tags"
+  >Test optimization</a>
+  
+  <a
+    class="metadata-tags"
+    href="/tags/test-regeneration"
+    title="tags"
+  >Test regeneration</a>
+  
+  <a
+    class="metadata-tags"
+    href="/tags/automatic-testing"
+    title="tags"
+  >Automatic testing</a>
+  
+</p>
+
+
+</div>
+  </div>
+
+  <h3 class="d-flex flex-row align-items-start accordion mb-2 ">
+    <span onclick="expandAccordion(this)" class="expand-metadata"></span>
+    
+      <a href="https://arxiv.org/abs/1909.04770">Suggestions on Test Suite Improvements with Automatic Infection and Propagation Analysis.</a>
+    
+  </h3>
+  <div id="panel-item-5" class="panel metadata-panel overflow-hidden">
+    <div class="metadata">
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Authors</span>: Oscar Luis Vera-Pérez, Benjamin Danglot, Martin Monperrus and Benoit Baudry </p>
+
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Venue</span>: ArXiv preprint, https://arxiv.org/abs/1909.04770 </p>
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Publication date</span>: September 10, 2019</p>
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Abstract</span>: An extreme transformation removes the body of a method that is reached by one test case at least. If the test suite passes on the original program and still passes after the extreme transformation, the transformation is said to be undetected, and the test suite needs to be improved. In this work we propose a technique to automatically determine which of the following three reasons prevent the detection of the extreme transformation is : the test inputs are not sufficient to infect the state of the program; the infection does not propagate to the test cases; the test cases have a weak oracle that does not observe the infection. We have developed Reneri, a tool that observes the program under test and the test suite in order to determine runtime differences between test runs on the original and the transformed method. The observations gathered during the analysis are processed by Reneri to suggest possible improvements to the developers. We evaluate Reneri on 15 projects and a total of 312 undetected extreme transformations. The tool is able to generate a suggestion for each each undetected transformation. For 63% of the cases, the existing test cases can infect the program state, meaning that undetected transformations are mostly due to observability and weak oracle issues. Interviews with developers confirm the relevance of the suggested improvements and experiments with state of the art automatic test generation tools indicate that no tool can improve the existing test suites to fix all undetected transformations. </p>
+
+
+
+
+
+
+
+
+ 
+
+
+
+<p class="metadata-value mb-1 taxa taxa-container-div list-tags">
+  Tags: 
+  <a
+    class="metadata-tags"
+    href="/tags/software-testing"
+    title="tags"
+  >Software testing</a>
+  
+  <a
+    class="metadata-tags"
+    href="/tags/test-oracle"
+    title="tags"
+  >test oracle</a>
+  
+  <a
+    class="metadata-tags"
+    href="/tags/test-improvement"
+    title="tags"
+  >test improvement</a>
+  
+  <a
+    class="metadata-tags"
+    href="/tags/reachability-infection-propagation"
+    title="tags"
+  >reachability-infection-propagation</a>
+  
+  <a
+    class="metadata-tags"
+    href="/tags/extreme-transformation"
+    title="tags"
+  >extreme transformation</a>
+  
+</p>
+
+
+</div>
+  </div>
+
+  <h3 class="d-flex flex-row align-items-start accordion mb-2 ">
+    <span onclick="expandAccordion(this)" class="expand-metadata"></span>
+    
+      <a href="https://link.springer.com/article/10.1007/s10664-019-09692-y">Automatic test improvement with DSpot: a study with ten mature open-source projects.</a>
+    
+  </h3>
+  <div id="panel-item-6" class="panel metadata-panel overflow-hidden">
+    <div class="metadata">
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Authors</span>: Benjamin Danglot, Oscar Luis Vera-Pérez, Benoit Baudry &amp; Martin Monperrus  </p>
+
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Venue</span>: Empirical Software Engineering 24, 2603–2635 (2019). https://doi.org/10.1007/s10664-019-09692-y </p>
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Publication date</span>: April 24, 2019</p>
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Abstract</span>: In the literature, there is a rather clear segregation between manually written tests by developers and automatically generated ones. In this paper, we explore a third solution: to automatically improve existing test cases written by developers. We present the concept, design and implementation of a system called DSpot, that takes developer-written test cases as input (JUnit tests in Java) and synthesizes improved versions of them as output. Those test improvements are given back to developers as patches or pull requests, that can be directly integrated in the main branch of the test code base. We have evaluated DSpot in a deep, systematic manner over 40 real-world unit test classes from 10 notable and open-source software projects. We have amplified all test methods from those 40 unit test classes. In 26/40 cases, DSpot is able to automatically improve the test under study, by triggering new behaviors and adding new valuable assertions. Next, for ten projects under consideration, we have proposed a test improvement automatically synthesized by DSpot to the lead developers. In total, 13/19 proposed test improvements were accepted by the developers and merged into the main code base. This shows that DSpot is capable of automatically improving unit-tests in real-world, large scale Java software. </p>
+
+
+
+
+
+
+
+
+ 
+
+
+
+<p class="metadata-value mb-1 taxa taxa-container-div list-tags">
+  Tags: 
+  <a
+    class="metadata-tags"
+    href="/tags/test-improvement"
+    title="tags"
+  >Test improvement</a>
+  
+  <a
+    class="metadata-tags"
+    href="/tags/junit-test"
+    title="tags"
+  >Junit test</a>
+  
+  <a
+    class="metadata-tags"
+    href="/tags/pull-request-empirical-study"
+    title="tags"
+  >Pull request empirical study</a>
+  
+</p>
+
+
+</div>
+  </div>
+
+  <h3 class="d-flex flex-row align-items-start accordion mb-2 ">
+    <span onclick="expandAccordion(this)" class="expand-metadata"></span>
+    
+      <a href="https://link.springer.com/article/10.1007/s10664-018-9653-2">A comprehensive study of pseudo-tested methods.</a>
+    
+  </h3>
+  <div id="panel-item-7" class="panel metadata-panel overflow-hidden">
+    <div class="metadata">
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Authors</span>: Oscar Luis Vera-Pérez, Benjamin Danglot, Martin Monperrus and Benoit Baudry </p>
+
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Venue</span>: Empirical Software Engineering 24, 1195–1225 (2019). https://doi.org/10.1007/s10664-018-9653-2 </p>
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Publication date</span>: September 19, 2018</p>
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Abstract</span>: Pseudo-tested methods are defined as follows: they are covered by the test suite, yet no test case fails when the method body is removed, i.e., when all the effects of this method are suppressed. This intriguing concept was coined in 2016, by Niedermayr and colleagues, who showed that such methods are systematically present, even in well-tested projects with high statement coverage. This work presents a novel analysis of pseudo-tested methods. First, we run a replication of Niedermayr’s study with 28K&#43; methods, enhancing its external validity thanks to the use of new tools and new study subjects. Second, we perform a systematic characterization of these methods, both quantitatively and qualitatively with an extensive manual analysis of 101 pseudo-tested methods. The first part of the study confirms Niedermayr’s results: pseudo-tested methods exist in all our subjects. Our in-depth characterization of pseudo-tested methods leads to two key insights: pseudo-tested methods are significantly less tested than the other methods; yet, for most of them, the developers would not pay the testing price to fix this situation. This calls for future work on targeted test generation to specify those pseudo-tested methods without spending developer time. </p>
+
+
+
+
+
+
+
+
+ 
+
+
+
+<p class="metadata-value mb-1 taxa taxa-container-div list-tags">
+  Tags: 
+  <a
+    class="metadata-tags"
+    href="/tags/software-testing"
+    title="tags"
+  >Software testing</a>
+  
+  <a
+    class="metadata-tags"
+    href="/tags/software-developers"
+    title="tags"
+  >Software developers</a>
+  
+  <a
+    class="metadata-tags"
+    href="/tags/pseudo-tested-methods"
+    title="tags"
+  >Pseudo-tested methods</a>
+  
+  <a
+    class="metadata-tags"
+    href="/tags/test-quality"
+    title="tags"
+  >Test quality</a>
+  
+  <a
+    class="metadata-tags"
+    href="/tags/program-analysis"
+    title="tags"
+  >Program analysis</a>
+  
+</p>
+
+
+</div>
+  </div>
+
+  <h3 class="d-flex flex-row align-items-start accordion mb-2 ">
+    <span onclick="expandAccordion(this)" class="expand-metadata"></span>
+    
+      <a href="https://link.springer.com/article/10.1007/s10664-018-9619-4#article-info">Alleviating patch overfitting with automatic test generation: a study of feasibility and effectiveness for the nopol repair system.</a>
+    
+  </h3>
+  <div id="panel-item-8" class="panel metadata-panel overflow-hidden">
+    <div class="metadata">
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Authors</span>: Zhongxing Yu, Matias Martinez, Benjamin Danglot, Thomas Durieux, and Martin Monperrus. </p>
+
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Venue</span>: Empirical Software Engineering 24, 33–67 (2019). https://doi.org/10.1007/s10664-018-9619-4 </p>
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Publication date</span>: May 12, 2018</p>
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Abstract</span>: Among the many different kinds of program repair techniques, one widely studied family of techniques is called test suite based repair. However, test suites are in essence input-output specifications and are thus typically inadequate for completely specifying the expected behavior of the program under repair. Consequently, the patches generated by test suite based repair techniques can just overfit to the used test suite, and fail to generalize to other tests. We deeply analyze the overfitting problem in program repair and give a classification of this problem. This classification will help the community to better understand and design techniques to defeat the overfitting problem. We further propose and evaluate an approach called UnsatGuided, which aims to alleviate the overfitting problem for synthesis-based repair techniques with automatic test case generation. The approach uses additional automatically generated tests to strengthen the repair constraint used by synthesis-based repair techniques. We analyze the effectiveness of UnsatGuided: 1) analytically with respect to alleviating two different kinds of overfitting issues; 2) empirically based on an experiment over the 224 bugs of the Defects4J repository. The main result is that automatic test generation is effective in alleviating one kind of overfitting, issue–regression introduction, but due to oracle problem, has minimal positive impact on alleviating the other kind of overfitting issue–incomplete fixing. </p>
+
+
+
+
+
+
+
+
+ 
+
+
+
+<p class="metadata-value mb-1 taxa taxa-container-div list-tags">
+  Tags: 
+  <a
+    class="metadata-tags"
+    href="/tags/program-repair"
+    title="tags"
+  >Program repair</a>
+  
+  <a
+    class="metadata-tags"
+    href="/tags/synthesis-based-repair"
+    title="tags"
+  >Synthesis-based repair</a>
+  
+  <a
+    class="metadata-tags"
+    href="/tags/patch-overfitting"
+    title="tags"
+  >Patch overfitting</a>
+  
+  <a
+    class="metadata-tags"
+    href="/tags/automatic-test-case-generation"
+    title="tags"
+  >Automatic test case generation</a>
+  
+</p>
+
+
+</div>
+  </div>
+
+  <h3 class="d-flex flex-row align-items-start accordion mb-2 ">
+    <span onclick="expandAccordion(this)" class="expand-metadata"></span>
+    
+      <a href="https://link.springer.com/article/10.1007/s10664-017-9571-8">Correctness attraction: a study of stability of software behavior under runtime perturbation.</a>
+    
+  </h3>
+  <div id="panel-item-9" class="panel metadata-panel overflow-hidden">
+    <div class="metadata">
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Authors</span>: Benjamin Danglot, Philippe Preux, Benoit Baudry and Martin Monperrus </p>
+
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Venue</span>: Empirical Software Engineering 23, 2086–2119 (2018). https://doi.org/10.1007/s10664-017-9571-8 </p>
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Publication date</span>: December 21, 2017</p>
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Abstract</span>: Can the execution of software be perturbed without breaking the correctness of the output? In this paper, we devise a protocol to answer this question from a novel perspective. In an experimental study, we observe that many perturbations do not break the correctness in ten subject programs. We call this phenomenon “correctness attraction”. The uniqueness of this protocol is that it considers a systematic exploration of the perturbation space as well as perfect oracles to determine the correctness of the output. To this extent, our findings on the stability of software under execution perturbations have a level of validity that has never been reported before in the scarce related work. A qualitative manual analysis enables us to set up the first taxonomy ever of the reasons behind correctness attraction. </p>
+
+
+
+
+
+
+
+
+ 
+
+
+
+<p class="metadata-value mb-1 taxa taxa-container-div list-tags">
+  Tags: 
+  <a
+    class="metadata-tags"
+    href="/tags/perturbation-analysis"
+    title="tags"
+  >Perturbation analysis</a>
+  
+  <a
+    class="metadata-tags"
+    href="/tags/software-correctness"
+    title="tags"
+  >Software correctness</a>
+  
+  <a
+    class="metadata-tags"
+    href="/tags/empirical-study"
+    title="tags"
+  >Empirical study</a>
+  
+</p>
+
+
+</div>
+  </div>
+
+<script src="/js/accordion.js"></script>
+<div class="mt-4 d-flex justify-content-center">
+  
+
+
+</div>
+
+    </main>
+    
+    <footer class=" mt-2 mb-4 text-center ">
+  <span class="markdownify"></span>
+  <span style="font-size:0px;">
+    &middot;
+    <i>
+      <a href="https://github.com/darshanbaral/aafu">
+        aafu
+      </a>
+    </i>
+    by
+    <a href="https://www.darshanbaral.com/">
+      darshan
+    </a>
+  </span>
+</footer>
+
+    
+  </body>
+</html>

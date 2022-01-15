@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-us" style="max-width: 1000px; margin: auto"><head>
+  <title>Dr Benjamin Danglot</title>
+
+<meta name="theme-color" content="" />
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<meta name="description" content="Personal Website" />
+<meta name="author" content="Dr Benjamin Danglot" />
+<meta name="generator" content="aafu theme by Darshan in Hugo 0.68.3" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">        <link rel="manifest" href="/site.webmanifest">        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">        <link rel="shortcut icon" href="/favicon.ico">        
+
+  <link
+    rel="stylesheet"
+    href="/css/bootstrap/bootstrap.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+    integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="//fonts.googleapis.com/css?family=Didact+Gothic%7CRoboto:400%7CRoboto+Mono"
+  />
+  <link rel="stylesheet" href="/css/aafu_green.css" />
+  <link rel="stylesheet" href="/css/aafu.css" />
+
+  <script>
+    var themeColor = document.querySelector("meta[name=theme-color]");
+    window.onload = () => {
+      themeColor.content = getComputedStyle(document.body)["background-color"];
+      let defaultActivePanel = document.querySelector(".accordion.active");
+      if (defaultActivePanel) {
+        defaultActivePanel.nextElementSibling.style.maxHeight =
+          defaultActivePanel.nextElementSibling.scrollHeight + "px";
+      }
+    };
+    window.onresize = () => {
+      let defaultActivePanel = document.querySelector(".accordion.active");
+      if (defaultActivePanel) {
+        defaultActivePanel.nextElementSibling.style.maxHeight =
+          defaultActivePanel.nextElementSibling.scrollHeight + "px";
+      }
+    };
+  </script>
+</head>
+<body class="container">
+    <main style="min-height: calc(100vh - 60px)">
+      
+      <div class="d-flex flex-row row p-2">
+  <h3 class="mr-3">
+    <a class="nes-btn" href="https://danglotb.github.io/">Home</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/publications">Publications</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/projects">Projects</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/teaching">Teaching</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/misc">Misc.</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/stoa">State of the art</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/blog">Blog</a>
+  </h3>
+</div>
+
+      
+<div class="mb-3">
+  <h1 class="top-h1" style="font-size: 2.75em">Diff-JJoules</h1>
+  <p class="mb-1">November 22, 2020</p>
+  <p>&mdash;</p>
+</div>
+<div class="content"><h1 id="diff-jjoules--testshttpsgithubcomdavidson-consultingdiff-jjoulesactionsworkflowsmainymlbadgesvghttpsgithubcomdavidson-consultingdiff-jjoulesactionsworkflowsmainyml--maintainability-ratinghttpssonarcloudioapiproject_badgesmeasureprojectdavidson-consulting_diff-jjoulesmetricsqale_ratinghttpssonarcloudiosummarynew_codeiddavidson-consulting_diff-jjoules-codecovhttpscodecovioghdavidson-consultingdiff-jjoulesbranchmaingraphbadgesvgtokenxh4q36ymmehttpscodecovioghdavidson-consultingdiff-jjoules">Diff-JJoules · <a href="https://github.com/davidson-consulting/diff-jjoules/actions/workflows/main.yml"><img src="https://github.com/davidson-consulting/diff-jjoules/actions/workflows/main.yml/badge.svg" alt="tests"></a>  <a href="https://sonarcloud.io/summary/new_code?id=davidson-consulting_diff-jjoules"><img src="https://sonarcloud.io/api/project_badges/measure?project=davidson-consulting_diff-jjoules&amp;metric=sqale_rating" alt="Maintainability Rating"></a> <a href="https://codecov.io/gh/davidson-consulting/diff-jjoules"><img src="https://codecov.io/gh/davidson-consulting/diff-jjoules/branch/main/graph/badge.svg?token=XH4Q36YMME" alt="codecov"></a></h1>
+<p><code>diff-jjoules</code> is a tool to be integrated in your continuous integration in order to</p>
+<ul>
+<li>measure the impact of commits on the energy consumption of the program</li>
+<li>break the build in case of an energy regression has been detected.</li>
+</ul>
+<h2 id="install">Install</h2>
+<p>To use Diff-JJoules, you need to install <a href="https://github.com/davidson-consulting/j-joules">JJoules</a> and <a href="https://github.com/davidson-consulting/junit-jjoules">JUnit-JJoules</a>.</p>
+<p>Then, you can install <code>diff-jjoules</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">mvn clean install -DskipTest
+</code></pre></div><h2 id="usage">Usage</h2>
+<p>The easiest way to use <code>diff-jjoules</code>, you need to clone your project twice: one for the version before applying the
+commit, and one for the version after applying the commit.
+In the following, we consider <strong>path/v1</strong> as the path to the version of the program before applying the commit, and
+<strong>path/v2</strong> as the path to the version of the program after applying the commit.</p>
+<p>You can run <code>diff-jjoules</code> with the following command line, from <strong>path/v1</strong>, where your <code>pom.xml</code> is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">mvn fr.davidson:diff-jjoules:diff-jjoules -Dpath-dir-second-version<span style="color:#f92672">=</span>path/v2
+</code></pre></div><p>Calling this maven plugin will apply the whole process as follow:
+InstrumentationStepTest</p>
+<ol>
+<li><code>test-selection</code>: select the tests that execute the code changes (this is done by <code>diff-test-selection</code>;</li>
+<li><a href="./doc/instrumentation.md"><code>instrumention</code></a>: instrument the selected tests with probes to measure their energy consumption;</li>
+<li><a href="./doc/delta.md"><code>delta</code></a>: computation of the energy consumption delta test-wise (ΔSEC(t) = SEC(v2,t) - SEC(v1,t));</li>
+<li><a href="./doc/mark.md"><code>mark</code></a>: apply a strategy to mark as passing :heavy_check_mark: or failing :x: the commit;</li>
+<li><a href="./doc/failer.md"><code>failer</code></a>: instrument the tests that have a positive &amp;Delta, meaning that are consuming energy after applying the commit;</li>
+<li><a href="./doc/suspect.md"><code>suspect</code></a>: run fault localization to rate the modified line according to their suspiciousness;</li>
+<li><a href="./doc/report.md"><code>report</code></a>: generate a readable report;</li>
+</ol>
+<p>For more information, you can view a dedicated README for each step, however, we advise you to <strong>not</strong> run the steps
+individually since they are made to work together.</p>
+<p><code>Diff-jjoules</code> offers an extra feature which the mutation of the source code in order to introduce artificial energy
+regression. Please, see the dedicated <a href="./doc/mutation.md"><code>documentation</code></a> for more information.</p>
+<h2 id="options">Options</h2>
+<p>In this section, we list the options that are configurables.</p>
+<p>:construction:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Usage: fr.davidson.diff.jjoules.Main [-hV] [--junit4] [--mark] [--measure] [--suspect] -f=&lt;pathToFirstVersion&gt;
+                                     [-i=&lt;iterations&gt;] [-o=&lt;output&gt;] [--path-report-file=&lt;pathToReport&gt;]
+                                     [--path-repository-v1=&lt;pathToRepositoryV1&gt;]
+                                     [--path-repository-v2=&lt;pathToRepositoryV2&gt;] [--report=&lt;reportEnum&gt;]
+                                     -s=&lt;pathToSecondVersion&gt; [--wrapper=&lt;wrapperEnum&gt;]
+  -f, --path-first-version=&lt;pathToFirstVersion&gt;
+                          Path to the first version of the program.
+  -h, --help              Show this help message and exit.
+  -i, --iteration=&lt;iterations&gt;
+                          Number of test executions to measure their energy consumption.
+      --junit4            Enable junit4 tests
+      --mark              Enable mark step.
+      --measure           Enable the energy consumption measurements of Diff-JJoules Default value: false
+  -o, --output=&lt;output&gt;   Path to the output folder.
+      --path-report-file=&lt;pathToReport&gt;
+                          Path to report file to produce.
+      --path-repository-v1=&lt;pathToRepositoryV1&gt;
+                          Path to the first version of the program that contains .git (this is used for multi-modu
+                            projects)
+      --path-repository-v2=&lt;pathToRepositoryV2&gt;
+                          Path to the second version of the program that contains .git (this is used for multi-mod
+                            projects)
+      --report=&lt;reportEnum&gt;
+                          Specify the report type to produce.Valid values: TXT, MARKDOWN, NONE Default value: TXT
+  -s, --path-second-version=&lt;pathToSecondVersion&gt;
+                          Path to the second version of the program.
+      --suspect           Enable suspect step.
+  -V, --version           Print version information and exit.
+      --wrapper=&lt;wrapperEnum&gt;
+                          Specify the wrapper to be used.Valid values: MAVEN, PROPERTIES Default value: MAVEN
+</code></pre></div><h2 id="contributing">Contributing</h2>
+<p>If you have any questions, remarks, suggestions or bug reports, please do not hesitate to open an issue.
+Diff-JJoules is licensed under GNU GPL.
+Contributions and pull requests are very welcome :smiley:.
+For more information on contributing, see the dedicated <a href="./CONTRIBUTING.md">CONTRIBUTING.md</a>.</p>
+</div>
+<div class="d-flex flex-row justify-content-around">
+  <h3 class="mb-1 mt-1 text-left mr-4">
+    
+    <a
+      href="/projects/post_2/"
+      title="Test Runner"
+    >
+      <i class="nav-menu fas fa-chevron-circle-left"></i>
+    </a>
+    
+  </h3>
+  <h3 class="mb-1 mt-1 text-left ml-4">
+    
+    <a
+      href="/projects/post_6/"
+      title="TLPC-sensor"
+    >
+      <i class="nav-menu fas fa-chevron-circle-right"></i>
+    </a>
+    
+  </h3>
+</div>
+
+
+    </main>
+    
+    <footer class=" mt-2 mb-4 text-center ">
+  <span class="markdownify"></span>
+  <span style="font-size:0px;">
+    &middot;
+    <i>
+      <a href="https://github.com/darshanbaral/aafu">
+        aafu
+      </a>
+    </i>
+    by
+    <a href="https://www.darshanbaral.com/">
+      darshan
+    </a>
+  </span>
+</footer>
+
+    
+  </body>
+</html>

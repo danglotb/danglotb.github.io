@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mockito on </title>
+    <link>https://danglotb.github.io/tags/mockito/</link>
+    <description>Recent content in mockito on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 02 Jul 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://danglotb.github.io/tags/mockito/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Test Runner</title>
+      <link>https://danglotb.github.io/projects/post_2/</link>
+      <pubDate>Sun, 02 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/projects/post_2/</guid>
+      <description>Test Runner   
+This project provides a framework to run JUnit tests in a new JVM. It allows to retrieve results using serialization / deserialization.
+Supported Features:  test: run JUnit test, the whole test class or specific test cases methods. coverage: run JaCoCo to compute the instruction coverage of the given test suite or by test methods. mutation score: run PIT to compute the mutation score of the test suite.</description>
+    </item>
+    
+  </channel>
+</rss>

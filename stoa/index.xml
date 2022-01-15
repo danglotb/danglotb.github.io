@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>State of the Art on </title>
+    <link>https://danglotb.github.io/stoa/</link>
+    <description>Recent content in State of the Art on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 14 Jan 2022 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://danglotb.github.io/stoa/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>An Approach to Test Data Generation for Killing Multiple Mutants</title>
+      <link>https://danglotb.github.io/stoa/post_2/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/stoa/post_2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Constraint-Based Automatic Test Data Generation</title>
+      <link>https://danglotb.github.io/stoa/post_1/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/stoa/post_1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Evaluating the “Small Scope Hypothesis”</title>
+      <link>https://danglotb.github.io/stoa/post_6/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/stoa/post_6/</guid>
+      <description>Detecting near-duplicates for web crawling.</description>
+    </item>
+    
+    <item>
+      <title>Evaluating the “Small Scope Hypothesis”</title>
+      <link>https://danglotb.github.io/stoa/post_7/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/stoa/post_7/</guid>
+      <description>Detecting near-duplicates for web crawling.</description>
+    </item>
+    
+    <item>
+      <title>Saying ’Hi!’ Is Not Enough:Mining Inputs for Effective Test Generation</title>
+      <link>https://danglotb.github.io/stoa/post_4/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/stoa/post_4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Saying ’Hi!’ Is Not Enough:Mining Inputs for Effective Test Generation</title>
+      <link>https://danglotb.github.io/stoa/post_5/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/stoa/post_5/</guid>
+      <description>Detecting near-duplicates for web crawling.</description>
+    </item>
+    
+    <item>
+      <title>Shadow Symbolic Execution with Java PathFinder</title>
+      <link>https://danglotb.github.io/stoa/post_9/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/stoa/post_9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The care and feeding of wild-caught mutants</title>
+      <link>https://danglotb.github.io/stoa/post_3/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/stoa/post_3/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

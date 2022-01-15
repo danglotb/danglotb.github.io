@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Backend development on </title>
+    <link>https://danglotb.github.io/tags/backend-development/</link>
+    <description>Recent content in Backend development on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Apr 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://danglotb.github.io/tags/backend-development/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>WebServer Programming (JXT)</title>
+      <link>https://danglotb.github.io/teaching/post_5/</link>
+      <pubDate>Thu, 01 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/teaching/post_5/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

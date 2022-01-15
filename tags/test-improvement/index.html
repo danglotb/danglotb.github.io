@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en-us" style="max-width: 1000px; margin: auto"><head>
+  <title>Dr Benjamin Danglot</title>
+
+<meta name="theme-color" content="" />
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<meta name="description" content="Personal Website" />
+<meta name="author" content="Dr Benjamin Danglot" />
+<meta name="generator" content="aafu theme by Darshan in Hugo 0.68.3" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">        <link rel="manifest" href="/site.webmanifest">        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">        <link rel="shortcut icon" href="/favicon.ico">        
+
+  <link
+    rel="stylesheet"
+    href="/css/bootstrap/bootstrap.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+    integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="//fonts.googleapis.com/css?family=Didact+Gothic%7CRoboto:400%7CRoboto+Mono"
+  />
+  <link rel="stylesheet" href="/css/aafu_green.css" />
+  <link rel="stylesheet" href="/css/aafu.css" />
+
+  <script>
+    var themeColor = document.querySelector("meta[name=theme-color]");
+    window.onload = () => {
+      themeColor.content = getComputedStyle(document.body)["background-color"];
+      let defaultActivePanel = document.querySelector(".accordion.active");
+      if (defaultActivePanel) {
+        defaultActivePanel.nextElementSibling.style.maxHeight =
+          defaultActivePanel.nextElementSibling.scrollHeight + "px";
+      }
+    };
+    window.onresize = () => {
+      let defaultActivePanel = document.querySelector(".accordion.active");
+      if (defaultActivePanel) {
+        defaultActivePanel.nextElementSibling.style.maxHeight =
+          defaultActivePanel.nextElementSibling.scrollHeight + "px";
+      }
+    };
+  </script>
+</head>
+<body class="container">
+    <main style="min-height: calc(100vh - 60px)">
+      
+      <div class="d-flex flex-row row p-2">
+  <h3 class="mr-3">
+    <a class="nes-btn" href="https://danglotb.github.io/">Home</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/publications">Publications</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/projects">Projects</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/teaching">Teaching</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/misc">Misc.</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/stoa">State of the art</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/blog">Blog</a>
+  </h3>
+</div>
+
+      
+<h1 class="standard top-h1 mb-3 ">Test improvement</h1>
+
+  <h3 class="d-flex flex-row align-items-start accordion mb-2 active">
+    <span onclick="expandAccordion(this)" class="expand-metadata"></span>
+    
+      <a href="https://arxiv.org/abs/1909.04770">Suggestions on Test Suite Improvements with Automatic Infection and Propagation Analysis.</a>
+    
+  </h3>
+  <div id="panel-item-0" class="panel metadata-panel overflow-hidden">
+    <div class="metadata">
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Authors</span>: Oscar Luis Vera-Pérez, Benjamin Danglot, Martin Monperrus and Benoit Baudry </p>
+
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Venue</span>: ArXiv preprint, https://arxiv.org/abs/1909.04770 </p>
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Publication date</span>: September 10, 2019</p>
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Abstract</span>: An extreme transformation removes the body of a method that is reached by one test case at least. If the test suite passes on the original program and still passes after the extreme transformation, the transformation is said to be undetected, and the test suite needs to be improved. In this work we propose a technique to automatically determine which of the following three reasons prevent the detection of the extreme transformation is : the test inputs are not sufficient to infect the state of the program; the infection does not propagate to the test cases; the test cases have a weak oracle that does not observe the infection. We have developed Reneri, a tool that observes the program under test and the test suite in order to determine runtime differences between test runs on the original and the transformed method. The observations gathered during the analysis are processed by Reneri to suggest possible improvements to the developers. We evaluate Reneri on 15 projects and a total of 312 undetected extreme transformations. The tool is able to generate a suggestion for each each undetected transformation. For 63% of the cases, the existing test cases can infect the program state, meaning that undetected transformations are mostly due to observability and weak oracle issues. Interviews with developers confirm the relevance of the suggested improvements and experiments with state of the art automatic test generation tools indicate that no tool can improve the existing test suites to fix all undetected transformations. </p>
+
+
+
+
+
+
+
+
+ 
+
+
+
+<p class="metadata-value mb-1 taxa taxa-container-div list-tags">
+  Tags: 
+  <a
+    class="metadata-tags"
+    href="/tags/software-testing"
+    title="tags"
+  >Software testing</a>
+  
+  <a
+    class="metadata-tags"
+    href="/tags/test-oracle"
+    title="tags"
+  >test oracle</a>
+  
+  <a
+    class="metadata-tags"
+    href="/tags/test-improvement"
+    title="tags"
+  >test improvement</a>
+  
+  <a
+    class="metadata-tags"
+    href="/tags/reachability-infection-propagation"
+    title="tags"
+  >reachability-infection-propagation</a>
+  
+  <a
+    class="metadata-tags"
+    href="/tags/extreme-transformation"
+    title="tags"
+  >extreme transformation</a>
+  
+</p>
+
+
+</div>
+  </div>
+
+  <h3 class="d-flex flex-row align-items-start accordion mb-2 ">
+    <span onclick="expandAccordion(this)" class="expand-metadata"></span>
+    
+      <a href="https://link.springer.com/article/10.1007/s10664-019-09692-y">Automatic test improvement with DSpot: a study with ten mature open-source projects.</a>
+    
+  </h3>
+  <div id="panel-item-1" class="panel metadata-panel overflow-hidden">
+    <div class="metadata">
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Authors</span>: Benjamin Danglot, Oscar Luis Vera-Pérez, Benoit Baudry &amp; Martin Monperrus  </p>
+
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Venue</span>: Empirical Software Engineering 24, 2603–2635 (2019). https://doi.org/10.1007/s10664-019-09692-y </p>
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Publication date</span>: April 24, 2019</p>
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Abstract</span>: In the literature, there is a rather clear segregation between manually written tests by developers and automatically generated ones. In this paper, we explore a third solution: to automatically improve existing test cases written by developers. We present the concept, design and implementation of a system called DSpot, that takes developer-written test cases as input (JUnit tests in Java) and synthesizes improved versions of them as output. Those test improvements are given back to developers as patches or pull requests, that can be directly integrated in the main branch of the test code base. We have evaluated DSpot in a deep, systematic manner over 40 real-world unit test classes from 10 notable and open-source software projects. We have amplified all test methods from those 40 unit test classes. In 26/40 cases, DSpot is able to automatically improve the test under study, by triggering new behaviors and adding new valuable assertions. Next, for ten projects under consideration, we have proposed a test improvement automatically synthesized by DSpot to the lead developers. In total, 13/19 proposed test improvements were accepted by the developers and merged into the main code base. This shows that DSpot is capable of automatically improving unit-tests in real-world, large scale Java software. </p>
+
+
+
+
+
+
+
+
+ 
+
+
+
+<p class="metadata-value mb-1 taxa taxa-container-div list-tags">
+  Tags: 
+  <a
+    class="metadata-tags"
+    href="/tags/test-improvement"
+    title="tags"
+  >Test improvement</a>
+  
+  <a
+    class="metadata-tags"
+    href="/tags/junit-test"
+    title="tags"
+  >Junit test</a>
+  
+  <a
+    class="metadata-tags"
+    href="/tags/pull-request-empirical-study"
+    title="tags"
+  >Pull request empirical study</a>
+  
+</p>
+
+
+</div>
+  </div>
+
+<script src="/js/accordion.js"></script>
+<div class="mt-4 d-flex justify-content-center">
+  
+
+
+</div>
+
+    </main>
+    
+    <footer class=" mt-2 mb-4 text-center ">
+  <span class="markdownify"></span>
+  <span style="font-size:0px;">
+    &middot;
+    <i>
+      <a href="https://github.com/darshanbaral/aafu">
+        aafu
+      </a>
+    </i>
+    by
+    <a href="https://www.darshanbaral.com/">
+      darshan
+    </a>
+  </span>
+</footer>
+
+    
+  </body>
+</html>

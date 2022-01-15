@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Miscellaneous on </title>
+    <link>https://danglotb.github.io/misc/</link>
+    <description>Recent content in Miscellaneous on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://danglotb.github.io/misc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>DCI Web page</title>
+      <link>https://danglotb.github.io/misc/post_2/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/misc/post_2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>[Talk] STAMP open workshop</title>
+      <link>https://danglotb.github.io/misc/post_6/</link>
+      <pubDate>Wed, 30 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/misc/post_6/</guid>
+      <description> STAMP open WorkShop Link to the hands-on.  </description>
+    </item>
+    
+    <item>
+      <title>Correctness Attraction: Live-Demo</title>
+      <link>https://danglotb.github.io/misc/post_1/</link>
+      <pubDate>Thu, 21 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/misc/post_1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>[Talk] STAMP open workshop</title>
+      <link>https://danglotb.github.io/misc/post_5/</link>
+      <pubDate>Thu, 14 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/misc/post_5/</guid>
+      <description> STAMP open WorkShop  </description>
+    </item>
+    
+    <item>
+      <title>[Talk] European Chaos Engineering Days</title>
+      <link>https://danglotb.github.io/misc/post_4/</link>
+      <pubDate>Wed, 06 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/misc/post_4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>[Talk] OW2Con&#39;17</title>
+      <link>https://danglotb.github.io/misc/post_3/</link>
+      <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/misc/post_3/</guid>
+      <description>OW2Con&amp;rsquo;17 and Community Award.</description>
+    </item>
+    
+  </channel>
+</rss>

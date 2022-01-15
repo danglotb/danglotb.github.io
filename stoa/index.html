@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en-us" style="max-width: 1000px; margin: auto"><head>
+  <title>Dr Benjamin Danglot</title>
+
+<meta name="theme-color" content="" />
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<meta name="description" content="Personal Website" />
+<meta name="author" content="Dr Benjamin Danglot" />
+<meta name="generator" content="aafu theme by Darshan in Hugo 0.68.3" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">        <link rel="manifest" href="/site.webmanifest">        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">        <link rel="shortcut icon" href="/favicon.ico">        
+
+  <link
+    rel="stylesheet"
+    href="/css/bootstrap/bootstrap.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+    integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="//fonts.googleapis.com/css?family=Didact+Gothic%7CRoboto:400%7CRoboto+Mono"
+  />
+  <link rel="stylesheet" href="/css/aafu_green.css" />
+  <link rel="stylesheet" href="/css/aafu.css" />
+
+  <script>
+    var themeColor = document.querySelector("meta[name=theme-color]");
+    window.onload = () => {
+      themeColor.content = getComputedStyle(document.body)["background-color"];
+      let defaultActivePanel = document.querySelector(".accordion.active");
+      if (defaultActivePanel) {
+        defaultActivePanel.nextElementSibling.style.maxHeight =
+          defaultActivePanel.nextElementSibling.scrollHeight + "px";
+      }
+    };
+    window.onresize = () => {
+      let defaultActivePanel = document.querySelector(".accordion.active");
+      if (defaultActivePanel) {
+        defaultActivePanel.nextElementSibling.style.maxHeight =
+          defaultActivePanel.nextElementSibling.scrollHeight + "px";
+      }
+    };
+  </script>
+</head>
+<body class="container">
+    <main style="min-height: calc(100vh - 60px)">
+      
+      <div class="d-flex flex-row row p-2">
+  <h3 class="mr-3">
+    <a class="nes-btn" href="https://danglotb.github.io/">Home</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/publications">Publications</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/projects">Projects</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/teaching">Teaching</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/misc">Misc.</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/stoa">State of the art</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/blog">Blog</a>
+  </h3>
+</div>
+
+      
+<h1 class="standard top-h1 mb-3 ">State of the Art</h1>
+
+  <h3 class="d-flex flex-row align-items-start accordion mb-2 active">
+    <span onclick="expandAccordion(this)" class="expand-metadata"></span>
+    
+      <a href="http://ieeexplore.ieee.org/document/4021328/">An Approach to Test Data Generation for Killing Multiple Mutants</a>
+    
+  </h3>
+  <div id="panel-item-0" class="panel metadata-panel overflow-hidden">
+    <div class="metadata">
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Publication date</span>: January 14, 2022</p>
+
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Description</span>:  Mutation analysis is an approximation of fault detection potential of a test suite. Liu et al. aim at generating a &#34;good&#34; test suite. To do so, they devise a techniques that generate test data that kills multiple mutants. The idea is that for multiple mutant that are the same location, the constraints to reach them are the same. They improve Constraint Based Testing (CBT) by introduce their Improved Iterative Relaxation Method IIRM. The approach is based on the observation that mutants at the same location (same-location mutants) have the same reachability conditions. The approach use pair-wise test data generation techniques rather than symbolic execution. The approach is done in three steps: 1) collect reachability condition during generation of mutants; 2) combine same-location mutants reachability conditions; 3) program path formations. To express reachability conditions, Authors use branch predicates, instead of execution paths in CBT. There are two main advantages to use branch predicates: 1) there is no need to figure out a path expression to represent all the branch predicates; 2) it is no more necessary to figure out all executions path from the starting points. They compute reachability condition of each mutant while traversing the parse tree of the original program. They push on a stack the branch predicate when the first statement of one block is met, and they pop the top element when the last one is met. To combine reachability condition of same-locations mutants, they distinguish two categories of locations: 1) Several mutation operator can be applied to the location; 2) location with only on mutation operator that produce multiple mutants. For the former case, there is no contradiction in there used mutation operators, they combine them into one condition by conjunction. For the latter case, there is two mutation operators: arithmetic and relational. For arithmetic, there is no contradiction so they combine reachability condition by conjunction. For relationel, there is contradiction. There reduce the combination to two conjunctions. Last but not least, they generate the desired test data by using transforming the combined necessity into branch predicates. They use existing path-wise test data generation to obtain the desired data, i.e. covering the desired path. They evaluate their approach on 5 JAVA programs, ranging from 5 to 21 statements. They applied 5 most frequently mutation operators of their tools, named JUTO. They show that with their approach, they need fewer (20% to 40%) less test data to have almost the same mutation score. Less data generated means less time consumption.  </p>
+
+
+
+
+
+
+
+ 
+
+
+
+
+</div>
+  </div>
+
+  <h3 class="d-flex flex-row align-items-start accordion mb-2 ">
+    <span onclick="expandAccordion(this)" class="expand-metadata"></span>
+    
+      <a href="https://dl.acm.org/doi/10.1109/32.92910">Constraint-Based Automatic Test Data Generation</a>
+    
+  </h3>
+  <div id="panel-item-1" class="panel metadata-panel overflow-hidden">
+    <div class="metadata">
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Publication date</span>: January 14, 2022</p>
+
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Description</span>:  DeMillo et al. proposed a first attempt to automatically generate test to meet the fault-based testing criteria. The fault-based testing criteria is to use mutation analysis, i.e. inject seeded fault into a program, then exercise the tests. If the tests fails, it kills the mutants and detects the fault. If not, there is a potential lack of test data input in the test suite. This lead the testers to produce this new test data input. However, this task is tedious and time-consumption, that why, authors proposed a technique to generate them. Their techniques is base on a representation algebraic constraints to kill mutants, and then use this representation to generate data to kill it. They called their techniques Constraint-based Testing (CBT). In order to kill mutants, Generated test data input must makes a difference in the behavior of the mutant. They define necessity constraints templates based on mutation operators used, in Mothra. They overcome mutant equivalent program, they add constraints on predicate to force mutant programs to have different value than original program. In their techniques, constraints are composed by algebraic expression, i.e. variables, parentheses and programming language operators. A constraint is a pair of algebraic expression related with one conditional operator. A clause is a conjunctive or disjunctive list of constraints. A constraint is a clause that represent one test case. The global workflow of their approach is to successively substitute value for a variable in constraints that remains consistent with the rest of the clauses. At the begin, all the values are assigned to a domain that contains all the possible values. The reduction aims at eliminate expression in the constraints, and reduce the domain of each values by substitute variables by values. At each steps they take the variables with the smallest domain. They implemented CBT for Fortran 77 programs in a tool named Godzilla. They use the widely use triangle classification program TRITYP. They compare generated test by Godzilla to manually written-test cases (in 30 hours). Godzilla achieve a better mutation score: 99% against 95 for the manually-written test. </p>
+
+
+
+
+
+
+
+ 
+
+
+
+
+</div>
+  </div>
+
+  <h3 class="d-flex flex-row align-items-start accordion mb-2 ">
+    <span onclick="expandAccordion(this)" class="expand-metadata"></span>
+    
+      <a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.63.9997">Evaluating the “Small Scope Hypothesis”</a>
+    
+  </h3>
+  <div id="panel-item-2" class="panel metadata-panel overflow-hidden">
+    <div class="metadata">
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Publication date</span>: January 14, 2022</p>
+
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Description</span>: Rather than testing fewer test inputs inside a large scope, the &#34;small scope hypothesis&#34; argues that testing exhaustively test input within a small scope would be more effective[12]. Andoni et al. evaluates this hypothesis using code coverage and mutation analysis on several benchmark in Java. If the hypothesis holds, it means that the generation of test inputs should be done exhaustively within a small scope rather than a large scope. In fact, enumerate all possible cases in a large scope is not practicable. They use the &#34;small scope hypothesis&#34; in the context of generating test input, for Java programs. In Java, test inputs are constructed from objects and literals, on which methods are invoked. Andoni et al. aim at generate all possible test inputs within a small, but sufficient, scope. To do this, they devise a tool names Korat. Korat is a technique that generate input from a given predicate and a bound for them. The predicate must be written developers, and describe acceptable inputs. In addition to this, developers must build a Finitization, which a specific (Java) object from Korat. In this object, the developer specify the size limit of each inputs, i.e. the number of objects for each classes that compose the test inputs. This Finitization creates the state space explorable by Korat, which is a &#34;small scope&#34;. This scope is defined by the class domain and the field domain, which are respectively the set of objects from one class and the set of values for each fields. Korat then generate test inputs as follow: it uses a vector of indices. Each index are index of values inside class domain and the field domain. This vector is initialized with all zeros. Then, it call the predicate using this first values. During, this call, Korat monitors access of values inside the vector. This allows to prune the exploration, by only change accessed values during the predicate call. They evaluated Korat by studying the impact of the size of the scope on the code coverage and the mutation score on 9 Java classes. The main cons of this technique is that require that developers write manually the predicate and the Finitization. </p>
+
+
+
+
+
+
+
+ 
+
+
+
+
+</div>
+  </div>
+
+  <h3 class="d-flex flex-row align-items-start accordion mb-2 ">
+    <span onclick="expandAccordion(this)" class="expand-metadata"></span>
+    
+      <a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.63.9997">Evaluating the “Small Scope Hypothesis”</a>
+    
+  </h3>
+  <div id="panel-item-3" class="panel metadata-panel overflow-hidden">
+    <div class="metadata">
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Publication date</span>: January 14, 2022</p>
+
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Description</span>: Rather than testing fewer test inputs inside a large scope, the &#34;small scope hypothesis&#34; argues that testing exhaustively test input within a small scope would be more effective[12]. Andoni et al. evaluates this hypothesis using code coverage and mutation analysis on several benchmark in Java. If the hypothesis holds, it means that the generation of test inputs should be done exhaustively within a small scope rather than a large scope. In fact, enumerate all possible cases in a large scope is not practicable. They use the &#34;small scope hypothesis&#34; in the context of generating test input, for Java programs. In Java, test inputs are constructed from objects and literals, on which methods are invoked. Andoni et al. aim at generate all possible test inputs within a small, but sufficient, scope. To do this, they devise a tool names Korat. Korat is a technique that generate input from a given predicate and a bound for them. The predicate must be written developers, and describe acceptable inputs. In addition to this, developers must build a Finitization, which a specific (Java) object from Korat. In this object, the developer specify the size limit of each inputs, i.e. the number of objects for each classes that compose the test inputs. This Finitization creates the state space explorable by Korat, which is a &#34;small scope&#34;. This scope is defined by the class domain and the field domain, which are respectively the set of objects from one class and the set of values for each fields. Korat then generate test inputs as follow: it uses a vector of indices. Each index are index of values inside class domain and the field domain. This vector is initialized with all zeros. Then, it call the predicate using this first values. During, this call, Korat monitors access of values inside the vector. This allows to prune the exploration, by only change accessed values during the predicate call. They evaluated Korat by studying the impact of the size of the scope on the code coverage and the mutation score on 9 Java classes. The main cons of this technique is that require that developers write manually the predicate and the Finitization. </p>
+
+
+
+
+
+
+
+ 
+
+
+
+
+</div>
+  </div>
+
+  <h3 class="d-flex flex-row align-items-start accordion mb-2 ">
+    <span onclick="expandAccordion(this)" class="expand-metadata"></span>
+    
+      <a href="https://www.conference-publishing.com/list.php?Event=ASE17">Saying ’Hi!’ Is Not Enough:Mining Inputs for Effective Test Generation</a>
+    
+  </h3>
+  <div id="panel-item-4" class="panel metadata-panel overflow-hidden">
+    <div class="metadata">
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Publication date</span>: January 14, 2022</p>
+
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Description</span>: Generators of tests fails to reproduce a majority of bugs (see [5]). This is explained by the fact that generator tends at using wrong inputs. For instance, most of generator use random generated values or values from a predefined pool. But this techniques do not obtain good results because programs use domain-specific data formats. Usually, generated inputs tends to not trigger deep codes because they do not pass the sanity-check from the domain. Toffola et al. presents TestMiner, a novel techniques to address this issue. Their technique is to exploit the knowledge inside existing tests (amplification) to generate proper input. This approach is devised into two steps: 1) It extracts existing literals from tests and index them for a quick retrieval; 2) the test generator queries this index for a given method call. The approach first analyze statically the program. It extracts from this analysis input values associated with a context. A context might be anything that can be represented as a bag of words. In their approach, they choose to use the full qualified name of methods. For each literals, the analysis returns a set of call site tuples Sc. A call site tuples is three elements: the qualified names of the type that defines the method called, the name of the method called and the literals used as input. From Sc, they build a bag of word that summarizes the context. They put context into an HashMap. They assign a specific weigh to each word of bags, because some of them are more relevant than others. For instance, we have the following context: ({org, sql, parser}; &#34;SELECT x FROM y&#34;). The word sql contains more information about the context than the word org, which is a common package. To leverage this, they compute the term frequency-inverse document frequency for each words. They use a specific Hash function for the indexing: Simhashing, which allows TestMiner to assign similar hash to similar values. TestMiner retrieves string values for a test generator. First, it assign a weight to the query. The used weight function is prioritizing uncommon words. The search algorithm used is the presented by Manku et al. [6]. Named searchSimhash, the algorithm returns a mapping between string and a list of integers. The algorithm selects multiple indices. This is allow to have all indices of string values that differ of a given number of bits from the querried hash. The more this value is high, the more the algorithm returns values. They implement TestMiner in Randoop, a state-of-the-art generator of test in Java [7]. Their implementation is a web server, that allows to modify only one hundred lines of code in Randoop. They learned data from 3,601 Java projects from the Maven Central Repository, which results with 263,276 string values in 37,821 different contexts. They used 40 classes from 18 Java projects to evaluate the effectiveness of tests generated with the help of TestMiner. Then, they generated 10 test suites using only Randoop and Random enhanced with TestMiner, and compare the branch coverage obtained, computed with JaCoCo. It results that using TestMiner with Randoop increase the coverage for thirty classes and decreases it for two classes. On average, the relative improvement is 21%. TestMiner provides results examples that fit real contract such as IBAN, SQL, Network address, or E-mail. TestMiner has an overhead of 55% in time consumption. </p>
+
+
+
+
+
+
+
+ 
+
+
+
+
+</div>
+  </div>
+
+  <h3 class="d-flex flex-row align-items-start accordion mb-2 ">
+    <span onclick="expandAccordion(this)" class="expand-metadata"></span>
+    
+      <a href="http://dl.acm.org/citation.cfm?id=1242592">Saying ’Hi!’ Is Not Enough:Mining Inputs for Effective Test Generation</a>
+    
+  </h3>
+  <div id="panel-item-5" class="panel metadata-panel overflow-hidden">
+    <div class="metadata">
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Publication date</span>: January 14, 2022</p>
+
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Description</span>: Identification of near-duplicate document in web crawling is a very difficult problem. Such documents, near-duplicate, are similar in term of content but differ in a small portion such as advertisements. Such page should crawled only one time a crawler, because different information is no relevant for web search. The most import issue is to scale on billion web pages. Manku et al. propose to use the hash function simhash to identify near-duplicate web pages and a technique for solving the Hamming Distance Problem (see below for more information). Simhash maps large vectors to small fingerprints. It is applied as follows: split the web page into weighted features. These weighted features are a large vector, and it is convert into a small fingerprint by simhash. This conversion is done in three steps: First, it initializes all dimensions of a vector (of the size of the fingerprint) with zero; Second, it computes the hash of each features, unique to each feature; Third, for each hash, if the i-th bits is equals to one, it increments of the weight of the features, the i-th dimension of the vector, and decrement in case the i-th is equals to zero. The sign of each dimension determine the value of each bits of the fingerprint. Simhash has two main advantages: the fingerprint of a document is a hash of its features, and similar document have similar hash. The latter property lead to the Hamming Distance Problem. In fact, how to find in the set of computed hashes, crawled web page that differ, of 3 bits for instance, in their hash? There are two scenarios for the Hamming Distance Problem. In the online version, we have to find fingerprints that differ from the queried in milliseconds. In the batch version, we have a lot of queries, e.g. one million, and we have to solve them in one hundred seconds. In both case, they applied the same approach: They use a sorted table. Taking the d most significant bits, it brings the table a simple counter, and the less significant bits are just random. Now, take a d&#39; such that d&#39; - d is small. We know that the table is sorted, so a single probe is sufficient to find all fingerprints that match in d&#39; most significant bit-positions. For each of them, we can easily checks if they differs from the original fingerprint in at most k bit-positions.They experimented their approach on eight billions web pages. (Did not find explicit results about performance). </p>
+
+
+
+
+
+
+
+ 
+
+
+
+
+</div>
+  </div>
+
+  <h3 class="d-flex flex-row align-items-start accordion mb-2 ">
+    <span onclick="expandAccordion(this)" class="expand-metadata"></span>
+    
+      <a href="https://dl.acm.org/citation.cfm?id=3149492">Shadow Symbolic Execution with Java PathFinder</a>
+    
+  </h3>
+  <div id="panel-item-6" class="panel metadata-panel overflow-hidden">
+    <div class="metadata">
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Publication date</span>: January 14, 2022</p>
+
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Description</span>: The authors aim at detecting regression bug. To This, the authors apply the shadow symbolic execution, original from Palikevera with the shadowKLEE for C program, on JAVA program. Shadow symbolic execution generate test inputs that trigger the new program behavior. To this, it uses a merged version of the both version of the same program, i.e. the previous version, so called old, and the changed version, called new. This done by instrumenting the code with annotation as method calls change(). The method change() takes two inputs: the old statement and the new one. Then, it uses two steps: 1) the concoic phase. This step collects divergence points, i.e. conditional where the old version and the new version does not take the same branch, e.g. for a given conditional, the old version takes the then branch and the new version takes the else branch. Then the bounded symbolic execution, a.k.a. BSE.  </p>
+
+
+
+
+
+
+
+ 
+
+
+
+
+</div>
+  </div>
+
+  <h3 class="d-flex flex-row align-items-start accordion mb-2 ">
+    <span onclick="expandAccordion(this)" class="expand-metadata"></span>
+    
+      <a href="http://dl.acm.org/citation.cfm?doid=3106237.3106280">The care and feeding of wild-caught mutants</a>
+    
+  </h3>
+  <div id="panel-item-7" class="panel metadata-panel overflow-hidden">
+    <div class="metadata">
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Publication date</span>: January 14, 2022</p>
+
+
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Description</span>:  Brown et al. highlight the fact that mutants (changes in source code) in mutation analysis do not necessarily reflect errors made by developers. They propose an approach named wild-caught mutants to generate mutants that reflect errors introduce by developers instead of classic changes. To create those new mutation operators, they use revision of software. They take the reverse (backward) of what is likely to be a correction in the revision history. They have 4 research axes: 1) Does the technique find existing mutations operators? 2) Does the technique find new mutation operations? 3) In what way new mutation operators are different from existing? 4) Does the forward generation is different from the backward generation? Their approach is devised with two tools: mutgen and mutins. The former is responsible to extract new mutation operators from a set of code diffs. Then, the latter apply this new mutation operators to a new code base. Both tools also use a language definition. Mutgen extract candidate mutation operators by analyzing diff between two version of program. It is isolating changes into small block that are contiguous. Each of this block are treated separately. To identify a candidate, changes must not require any synthesise to run its &#34;after&#34; state into &#34;before&#34; state. After the extraction they filter the candidate using diverse criteria: length of the sequence, candidate that contains repeated specific characters such as &#34;*&#34; or &#34;/&#34;, unbalanced bracket... During this process, they also collect identifier-shift, which are mutation operators that solely change an identifier by another. Mutins attempts to insert mutation operator into another codebase. To do so, it try to match the operators to the token stream. Then, among the matches, it insert the mutants into the code (selected randomly or specified by the user). To evaluate the approach, they use project on github and their history. They used the full revision of the top 50 project, order by the number of forks. They use Mutgen on the 50 projects to create the set of mutation operators. For Mutins, they targeted the program Space(Filippos I. Vokolos and Phyllis G. Frankl. 1998. Empirical Evaluation of the Textual Differencing Regression Testing Technique.). For this program, they generated 5,000 100-cases test-suite. They then compute the number of compiled mutants, and the number of mutant that have been killed. Their approach allows to reproduce four common operators. They identified three stronger mutation operators and two new mutation operators. The wild-caught mutants are as hard to detect that existing (0.81 sampl-based mutation-detection ratio against 0.75 for classical operator). The compatibility is lower 14% against 92% reported by Andrews et al. (J. H. Andrews, L. C. Briand, and Y. Labiche. 2005. Is Mutation an Appropriate Tool for Testing Experiments?). The difference between backward and forward generation is in the number of patches found by the techniques: 6,359 for forward and 5.860 for backward. For the 38 bugs of Space, 7 faults would be reintroduced by backward patches, against only one by both. Five other bugs could be reproduce using the identifier-shift. </p>
+
+
+
+
+
+
+
+ 
+
+
+
+
+</div>
+  </div>
+
+<script src="/js/accordion.js"></script>
+<div class="mt-4 d-flex justify-content-center">
+  
+
+
+</div>
+
+    </main>
+    
+    <footer class=" mt-2 mb-4 text-center ">
+  <span class="markdownify"></span>
+  <span style="font-size:0px;">
+    &middot;
+    <i>
+      <a href="https://github.com/darshanbaral/aafu">
+        aafu
+      </a>
+    </i>
+    by
+    <a href="https://www.darshanbaral.com/">
+      darshan
+    </a>
+  </span>
+</footer>
+
+    
+  </body>
+</html>

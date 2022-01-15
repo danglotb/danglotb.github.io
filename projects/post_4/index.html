@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en-us" style="max-width: 1000px; margin: auto"><head>
+  <title>Dr Benjamin Danglot</title>
+
+<meta name="theme-color" content="" />
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<meta name="description" content="Personal Website" />
+<meta name="author" content="Dr Benjamin Danglot" />
+<meta name="generator" content="aafu theme by Darshan in Hugo 0.68.3" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">        <link rel="manifest" href="/site.webmanifest">        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">        <link rel="shortcut icon" href="/favicon.ico">        
+
+  <link
+    rel="stylesheet"
+    href="/css/bootstrap/bootstrap.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+    integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="//fonts.googleapis.com/css?family=Didact+Gothic%7CRoboto:400%7CRoboto+Mono"
+  />
+  <link rel="stylesheet" href="/css/aafu_green.css" />
+  <link rel="stylesheet" href="/css/aafu.css" />
+
+  <script>
+    var themeColor = document.querySelector("meta[name=theme-color]");
+    window.onload = () => {
+      themeColor.content = getComputedStyle(document.body)["background-color"];
+      let defaultActivePanel = document.querySelector(".accordion.active");
+      if (defaultActivePanel) {
+        defaultActivePanel.nextElementSibling.style.maxHeight =
+          defaultActivePanel.nextElementSibling.scrollHeight + "px";
+      }
+    };
+    window.onresize = () => {
+      let defaultActivePanel = document.querySelector(".accordion.active");
+      if (defaultActivePanel) {
+        defaultActivePanel.nextElementSibling.style.maxHeight =
+          defaultActivePanel.nextElementSibling.scrollHeight + "px";
+      }
+    };
+  </script>
+</head>
+<body class="container">
+    <main style="min-height: calc(100vh - 60px)">
+      
+      <div class="d-flex flex-row row p-2">
+  <h3 class="mr-3">
+    <a class="nes-btn" href="https://danglotb.github.io/">Home</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/publications">Publications</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/projects">Projects</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/teaching">Teaching</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/misc">Misc.</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/stoa">State of the art</a>
+  </h3>
+  <h3 class="mr-3">
+    <a href="/blog">Blog</a>
+  </h3>
+</div>
+
+      
+<div class="mb-3">
+  <h1 class="top-h1" style="font-size: 2.75em">Diff-test-selection</h1>
+  <p class="mb-1">February 7, 2016</p>
+  <p>&mdash;</p>
+</div>
+<div class="content"><h1 id="diff-test-selection--build-statushttpstravis-ciorgstamp-projectdiff-test-selectionsvgbranchmasterhttpstravis-ciorgstamp-projectdiff-test-selection-maven-centralhttpsmaven-badgesherokuappcommaven-centraleustamp-projectdiff-test-selectionbadgesvghttpsmavenbadgesherokuappcommaven-centraleustamp-projectdiff-test-selection">diff-test-selection · <a href="https://travis-ci.org/STAMP-project/diff-test-selection"><img src="https://travis-ci.org/STAMP-project/diff-test-selection.svg?branch=master" alt="Build Status"></a> <a href="https://mavenbadges.herokuapp.com/maven-central/eu.stamp-project/diff-test-selection"><img src="https://maven-badges.herokuapp.com/maven-central/eu.stamp-project/diff-test-selection/badge.svg" alt="Maven Central"></a></h1>
+<p>Diff-Test-Selection aims at selecting the subset of test classes and methods that execute the changed code between two versions of the same program. It relies on Clover and Maven to compute the coverage and returns this subset of tests.</p>
+<p>Diff-Test-Selection is implemented as a maven plugin that directly works from the command line, without modifying your <code>pom.xml</code>. See below for more details.</p>
+<h2 id="usage">Usage</h2>
+<p>We advise you to use the maven plugin. Note that this does not require modifying your <code>pom.xml</code>.</p>
+<p>You can run it with:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">mvn clean eu.stamp-project:dspot-diff-test-selection:list -Dpath-dir-second-version<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;pathToSecondVersion&gt;&#34;</span>
+</code></pre></div><p>at the root of your project, where your <code>pom.xml</code> is.</p>
+<p>Only the command-line argument <code>path-dir-second-version</code> is mandatory, see below for more information.</p>
+<h2 id="properties">Properties</h2>
+<ul>
+<li>
+<p><code>path-dir-second-version</code> [mandatory]: the path of the second version of the program (can be relative from the root of the project)</p>
+</li>
+<li>
+<p><code>output-format</code>: the kind of report you want to generate. Value: (CSV) (default: CSV)</p>
+</li>
+<li>
+<p><code>output-path</code>: the path of the output. The output is dependent of the <code>report</code> property  (can be relative from the root of the project)</p>
+</li>
+<li>
+<p><code>module</code>: the relative path of the targeted module from the root of the project.</p>
+</li>
+</ul>
+<h2 id="running-example">Running Example</h2>
+<p>We provide an example to try the this plugin.</p>
+<p>First clone this repository.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/STAMP-project/dspot.git
+</code></pre></div><p>Then, go to the test resources of <code>diff-test-selection</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd dspot-diff-test-selection/src/test/resources/
+</code></pre></div><p>In this folder, you have two versions of the same program: <code>tavern</code> and <code>tavern-refactor</code>.</p>
+<p>Now, we will execute <code>diff-test-selection</code> on tavern and selects the subset of test that execute the changes:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd tavern
+mvn clean eu.stamp-project:dspot-diff-test-selection:list -Dpath-dir-second-version<span style="color:#f92672">=</span>../tavern-refactor
+</code></pre></div><p>You should observe the following on the standard output:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">[INFO] Saving result in /home/bdanglot/workspace/dspot/dspot-diff-test-selection/src/test/resources/tavern/testsThatExecuteTheChange.csv ...
+[INFO] fr.inria.stamp.MainTest;test
+[INFO] Writing Coverage in /home/bdanglot/workspace/dspot/dspot-diff-test-selection/src/test/resources/tavern/testsThatExecuteTheChange_coverage.csv
+[INFO] fr.inria.stamp.tavern.Seller;12;13
+</code></pre></div><p>This means that test method <code>fr.inria.stamp.MainTest#test</code> is the only one that executes the changes introduced by the refactoring.</p>
+<p>Two files are produced <code>testsThatExecuteTheChange.csv</code> and <code>testsThatExecuteTheChange_coverage.csv</code> which are respectively the subset of test classes and their test methods that execute the changes in a CSV format, and the changed line coverage of each test class.</p>
+<h2 id="use-case-example-with-dspot">Use case example with DSpot</h2>
+<p>In this section, we present a use case example that uses DSpot and <code>dspot-diff-test-selection</code> in order to detect some regression introduced in the changes. This is meant to be used in continuous integration.</p>
+<p>First, let&rsquo;s have a look to the test resources of <code>dspot-diff-test-selection</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd dspot-diff-test-selection/src/test/resources/
+</code></pre></div><p>In this folder, you have two versions of the same program: <code>tavern</code> and <code>tavern-refactor</code>.</p>
+<p>Let&rsquo;s consider the first one, <code>tavern</code> as the <code>master</code> branch and <code>tavern-refactor</code> as a refactor branch that a developer created. This developer wants to merge its changes in a pull request.
+The CI is triggered when the pull request is opened. Typically, the CI will execute the test suite and a bunch of scripts to verify that the program is correct.</p>
+<p>Here, we can enhance this verification with <code>DSpot</code> and <code>dspot-diff-test-selection</code> as follow:</p>
+<ol>
+<li>We compute the subset of test classes and their test methods that execute the changes with <code>dspot-diff-test-selection</code>.</li>
+<li>We amplify the selected test methods using <code>DSpot</code> and the <code>ChangeDetectorSelector</code>.</li>
+<li>The amplified test methods are test methods that pass on the master but fail on the refactor branch, meaning that they catch the behavioral change.</li>
+</ol>
+<p>Since the proposed change is a refactoring, and thus a refactoring should not modify the behavior of the program, it means that the changes contains a regression.</p>
+<p>This is done with one single command line as follow:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mvn clean eu.stamp-project:dspot-diff-test-selection:list <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-Dpath-dir-second-version<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;../tavern-refactor&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>eu.stamp-project:dspot-maven:amplify-unit-tests <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-Dpath-to-test-list-csv<span style="color:#f92672">=</span>testsThatExecuteTheChange.csv <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-Dverbose -Dtest-criterion<span style="color:#f92672">=</span>ChangeDetectorSelector <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-Dabsolute-path-to-second-version<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>pwd<span style="color:#e6db74">`</span>/../tavern-refactor <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-Damplifiers<span style="color:#f92672">=</span>NumberLiteralAmplifier -Diteration<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>
+</code></pre></div><p>This results in on the standard output:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">======= REPORT =======
+5 amplified test fails on the new versions.
+testlitNum18litNum149(fr.inria.stamp.MainTest): expected:&lt;Player{gold=[0, items=[Potion]]}&gt; but was:&lt;Player{gold=[2147483647, items=[]]}&gt;
+testlitNum14litNum132(fr.inria.stamp.MainTest): expected:&lt;...ayer{gold=0, items=[[Potion]]}&gt; but was:&lt;...ayer{gold=0, items=[[]]}&gt;
+testlitNum19litNum169(fr.inria.stamp.MainTest): expected:&lt;Player{gold=[0, items=[Potion]]}&gt; but was:&lt;Player{gold=[-2147483648, items=[]]}&gt;
+testlitNum12litNum179(fr.inria.stamp.MainTest): expected:&lt;Player{gold=[0, items=[Potion]]}&gt; but was:&lt;Player{gold=[2147483647, items=[]]}&gt;
+testlitNum13litNum197(fr.inria.stamp.MainTest): expected:&lt;Player{gold=[0, items=[Potion]]}&gt; but was:&lt;Player{gold=[-2147483648, items=[]]}&gt;
+</code></pre></div><p>This means that DSpot obtained 5 amplified test methods that detect the regression.</p>
+<p>Note: The <code>ChangeDetectorSelector</code> keeps amplified test methods that pass on one version of the program but fail on another one, <em>c.f.</em>  <code>DSpot</code>'s<a href="https://github.com/STAMP-project/dspot/blob/master/README.md"><code>README.md</code></a> for more information.</p>
+<h2 id="support-on-diff">Support on diff</h2>
+<p>On Linux, you can obtain a diff easily with:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">diff -ru folder1 folder2 &gt; patch.diff
+</code></pre></div><p><code>r</code> option to be run recursively
+<code>u</code> option to unified the diff</p>
+<p>You can get the <code>.diff</code> file from git by redirect the <code>stdout</code> of the <code>git diff</code> command</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git diff &gt; patch.diff
+</code></pre></div><p>To apply the <code>.diff</code> file run:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">patch -p1 &lt;patch.diff
+</code></pre></div><p>at the root of the diff (make sure by checking the path in the diff).</p>
+<p>Please, open an issue if you have any question / suggestion. Pull request are welcome! 😃</p>
+<h3 id="licence">Licence</h3>
+<p>Diff-Test-Selection is published under LGPL-3.0 (see <a href="https://github.com/STAMP-project/testrunner/blob/master/LICENSE">Licence.md</a> for further details).</p>
+<h3 id="funding">Funding</h3>
+<p>Diff-Test-Selection is funded by research project STAMP (European Commission - H2020)
+<img src="docs/logo_readme_md.png" alt="STAMP - European Commission - H2020"></p>
+</div>
+<div class="d-flex flex-row justify-content-around">
+  <h3 class="mb-1 mt-1 text-left mr-4">
+    
+    <a
+      href="/projects/post_3/"
+      title="DSpot"
+    >
+      <i class="nav-menu fas fa-chevron-circle-left"></i>
+    </a>
+    
+  </h3>
+  <h3 class="mb-1 mt-1 text-left ml-4">
+    
+    <a
+      href="/projects/post_1/"
+      title="AssertFixer"
+    >
+      <i class="nav-menu fas fa-chevron-circle-right"></i>
+    </a>
+    
+  </h3>
+</div>
+
+
+    </main>
+    
+    <footer class=" mt-2 mb-4 text-center ">
+  <span class="markdownify"></span>
+  <span style="font-size:0px;">
+    &middot;
+    <i>
+      <a href="https://github.com/darshanbaral/aafu">
+        aafu
+      </a>
+    </i>
+    by
+    <a href="https://www.darshanbaral.com/">
+      darshan
+    </a>
+  </span>
+</footer>
+
+    
+  </body>
+</html>

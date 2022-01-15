@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <link>https://danglotb.github.io/</link>
+    <description>Recent content on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 14 Jan 2022 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://danglotb.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>An Approach to Test Data Generation for Killing Multiple Mutants</title>
+      <link>https://danglotb.github.io/stoa/post_2/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/stoa/post_2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Constraint-Based Automatic Test Data Generation</title>
+      <link>https://danglotb.github.io/stoa/post_1/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/stoa/post_1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Evaluating the “Small Scope Hypothesis”</title>
+      <link>https://danglotb.github.io/stoa/post_6/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/stoa/post_6/</guid>
+      <description>Detecting near-duplicates for web crawling.</description>
+    </item>
+    
+    <item>
+      <title>Evaluating the “Small Scope Hypothesis”</title>
+      <link>https://danglotb.github.io/stoa/post_7/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/stoa/post_7/</guid>
+      <description>Detecting near-duplicates for web crawling.</description>
+    </item>
+    
+    <item>
+      <title>Saying ’Hi!’ Is Not Enough:Mining Inputs for Effective Test Generation</title>
+      <link>https://danglotb.github.io/stoa/post_4/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/stoa/post_4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Saying ’Hi!’ Is Not Enough:Mining Inputs for Effective Test Generation</title>
+      <link>https://danglotb.github.io/stoa/post_5/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/stoa/post_5/</guid>
+      <description>Detecting near-duplicates for web crawling.</description>
+    </item>
+    
+    <item>
+      <title>Shadow Symbolic Execution with Java PathFinder</title>
+      <link>https://danglotb.github.io/stoa/post_9/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/stoa/post_9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The care and feeding of wild-caught mutants</title>
+      <link>https://danglotb.github.io/stoa/post_3/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/stoa/post_3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Software Bot for Fault Localization</title>
+      <link>https://danglotb.github.io/publications/post_10/</link>
+      <pubDate>Mon, 13 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/publications/post_10/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>FLACOCO: Fault Localization for Java based on Industry-grade Coverage.</title>
+      <link>https://danglotb.github.io/publications/post_9/</link>
+      <pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/publications/post_9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Can We Spot Energy Regressions using Developers Tests?</title>
+      <link>https://danglotb.github.io/publications/post_8/</link>
+      <pubDate>Wed, 29 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/publications/post_8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WebServer Programming (JXT)</title>
+      <link>https://danglotb.github.io/teaching/post_5/</link>
+      <pubDate>Thu, 01 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/teaching/post_5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TLPC-sensor</title>
+      <link>https://danglotb.github.io/projects/post_6/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/projects/post_6/</guid>
+      <description>Time-Lapse Performance Counters (TLPC) Sensor TLPC-sensor aims at providing an API to measure various Performance Counters, such as the number of executed intructions and cycles, or energy consumption (with RAPL) in a time-lapse, designed by the call of the function start() and stop().
+Install You need to install libpfm4 Then, you can run:
+git clone http://github.com/davidson-consulting/tlpc-sensor.git cd tlpc-sensor &amp;amp;&amp;amp; mkdir build &amp;amp;&amp;amp; cd build cmake .. make ./tlpc-sensor You need sudo priviliege and run echo -1 &amp;gt; /proc/sys/kernel/perf_event_paranoid.</description>
+    </item>
+    
+    <item>
+      <title>Diff-JJoules</title>
+      <link>https://danglotb.github.io/projects/post_5/</link>
+      <pubDate>Sun, 22 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/projects/post_5/</guid>
+      <description>Diff-JJoules ·    diff-jjoules is a tool to be integrated in your continuous integration in order to
+ measure the impact of commits on the energy consumption of the program break the build in case of an energy regression has been detected.  Install To use Diff-JJoules, you need to install JJoules and JUnit-JJoules.
+Then, you can install diff-jjoules:
+mvn clean install -DskipTest Usage The easiest way to use diff-jjoules, you need to clone your project twice: one for the version before applying the commit, and one for the version after applying the commit.</description>
+    </item>
+    
+    <item>
+      <title>Skillful Network: Internships</title>
+      <link>https://danglotb.github.io/teaching/post_4/</link>
+      <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/teaching/post_4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Skillful Network: Bootcamp fullstack developers</title>
+      <link>https://danglotb.github.io/teaching/post_3/</link>
+      <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/teaching/post_3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>An approach and benchmark to detect behavioral changes of commits in continuous integration.</title>
+      <link>https://danglotb.github.io/publications/post_7/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/publications/post_7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DCI Web page</title>
+      <link>https://danglotb.github.io/misc/post_2/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/misc/post_2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A snowballing literature study on test amplification.</title>
+      <link>https://danglotb.github.io/publications/post_5/</link>
+      <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/publications/post_5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Suggestions on Test Suite Improvements with Automatic Infection and Propagation Analysis.</title>
+      <link>https://danglotb.github.io/publications/post_6/</link>
+      <pubDate>Tue, 10 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/publications/post_6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Automatic test improvement with DSpot: a study with ten mature open-source projects.</title>
+      <link>https://danglotb.github.io/publications/post_4/</link>
+      <pubDate>Wed, 24 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/publications/post_4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>[Talk] STAMP open workshop</title>
+      <link>https://danglotb.github.io/misc/post_6/</link>
+      <pubDate>Wed, 30 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/misc/post_6/</guid>
+      <description> STAMP open WorkShop Link to the hands-on.  </description>
+    </item>
+    
+    <item>
+      <title>A comprehensive study of pseudo-tested methods.</title>
+      <link>https://danglotb.github.io/publications/post_3/</link>
+      <pubDate>Wed, 19 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/publications/post_3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vestibulum vitae dictum aliqua phasellus magnis at</title>
+      <link>https://danglotb.github.io/blog/post_1/</link>
+      <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/blog/post_1/</guid>
+      <description>eu velit magna aliqua hendrerit Cursus non odio nam suspendisse mollis tempus tincidunt, cursus praesent facilisi elementum etiam rhoncus tempor. At penatibus ultrices nulla phasellus mi quis luctus felis ultricies. Urna tempus ac consequat sem sed curabitur justo, quam suspendisse cursus aenean integer tellus consectetur. Sed bibendum hendrerit volutpat fames libero nisl dui, nunc vivamus augue posuere luctus scelerisque ultrices. Do pretium consectetur vestibulum lacinia eget do semper, varius viverra scelerisque madssa semper venenatis cras.</description>
+    </item>
+    
+    <item>
+      <title>enim ultricies dolore metus ac eiusmod interdum</title>
+      <link>https://danglotb.github.io/blog/post_2/</link>
+      <pubDate>Fri, 18 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/blog/post_2/</guid>
+      <description>non tempor mauris elementum semper Interdum dolor sit etiam aenean ac fermentum auctor cursus nulla tellus purus justo. Ullamcorper elit do tincidunt auctor sit leo, pulvinar scelerisque do fringilla nisi porttitor fermentum. Tellus elit mauris lobortis iaculis mus morbi nunc lacus. Velit placerat facilisis varius odio purus sociis elementum morbi. Dignissim congue nulla diam aenean mi commodo quisque egestas amet mattis posuere lobortis. Tristique laoreet mus diam tellus vestibulum scelerisque ipsum, rhoncus mollis sed consequat natoque eget sem.</description>
+    </item>
+    
+    <item>
+      <title>Alleviating patch overfitting with automatic test generation: a study of feasibility and effectiveness for the nopol repair system.</title>
+      <link>https://danglotb.github.io/publications/post_1/</link>
+      <pubDate>Sat, 12 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/publications/post_1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>luctus enim ultricies auctor pulvinar nam etiam</title>
+      <link>https://danglotb.github.io/blog/post_3/</link>
+      <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/blog/post_3/</guid>
+      <description>donec lacinia eleifend sem a Pulvinar tempor ultrices amet praesent aliquet non magnis euismod elit venenatis. Aliqua consequat tristique erat nulla sit risus aliqua posuere. Potenti natoque augue proin accimsan risus scelerisque id integer curabitur mattis amet quisque. Aliquet porta sit sapien natoque sed fringilla, madssa suspendisse vivamus placerat sociis condimentum ridiculus. Natoque egestas non lectus pellentesque nunc mattis eu ridiculus pretium maecenas ligula. Gravida facilisis sem mollis sagittis aliquet ornare bibendum, leo nec morbi tortor diam maecenas tempor.</description>
+    </item>
+    
+    <item>
+      <title>Distributed Application</title>
+      <link>https://danglotb.github.io/teaching/post_2/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/teaching/post_2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Correctness attraction: a study of stability of software behavior under runtime perturbation.</title>
+      <link>https://danglotb.github.io/publications/post_2/</link>
+      <pubDate>Thu, 21 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/publications/post_2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Correctness Attraction: Live-Demo</title>
+      <link>https://danglotb.github.io/misc/post_1/</link>
+      <pubDate>Thu, 21 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/misc/post_1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>[Talk] STAMP open workshop</title>
+      <link>https://danglotb.github.io/misc/post_5/</link>
+      <pubDate>Thu, 14 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/misc/post_5/</guid>
+      <description> STAMP open WorkShop  </description>
+    </item>
+    
+    <item>
+      <title>[Talk] European Chaos Engineering Days</title>
+      <link>https://danglotb.github.io/misc/post_4/</link>
+      <pubDate>Wed, 06 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/misc/post_4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Oriented-object conception</title>
+      <link>https://danglotb.github.io/teaching/post_1/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/teaching/post_1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Test Runner</title>
+      <link>https://danglotb.github.io/projects/post_2/</link>
+      <pubDate>Sun, 02 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/projects/post_2/</guid>
+      <description>Test Runner   
+This project provides a framework to run JUnit tests in a new JVM. It allows to retrieve results using serialization / deserialization.
+Supported Features:  test: run JUnit test, the whole test class or specific test cases methods. coverage: run JaCoCo to compute the instruction coverage of the given test suite or by test methods. mutation score: run PIT to compute the mutation score of the test suite.</description>
+    </item>
+    
+    <item>
+      <title>[Talk] OW2Con&#39;17</title>
+      <link>https://danglotb.github.io/misc/post_3/</link>
+      <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/misc/post_3/</guid>
+      <description>OW2Con&amp;rsquo;17 and Community Award.</description>
+    </item>
+    
+    <item>
+      <title>AssertFixer</title>
+      <link>https://danglotb.github.io/projects/post_1/</link>
+      <pubDate>Thu, 25 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/projects/post_1/</guid>
+      <description>AssertFixer This project aims at fixing assertion. The program under test is used as specification to fix the test suite.
+See: Brett Daniel et al. for instance.
+CLI java -jar assert-fixer.jar (-c|--classpath) &amp;lt;classpath&amp;gt; (-t|--test-class) &amp;lt;testClass&amp;gt; (-m|--test-method) &amp;lt;testMethod&amp;gt; [(-s|--source-path) &amp;lt;sourcePath&amp;gt;] [(-p|--test-path) &amp;lt;testPath&amp;gt;] [--verbose] [(-o|--output) &amp;lt;output&amp;gt;] [--gen-try-catch] [-h|--help] (-c|--classpath) &amp;lt;classpath&amp;gt; [Mandatory] Use must specify a complete classpath to execute tests on your project. The classpath should be formatted according to the OS.</description>
+    </item>
+    
+    <item>
+      <title>Diff-test-selection</title>
+      <link>https://danglotb.github.io/projects/post_4/</link>
+      <pubDate>Sun, 07 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/projects/post_4/</guid>
+      <description>diff-test-selection ·   Diff-Test-Selection aims at selecting the subset of test classes and methods that execute the changed code between two versions of the same program. It relies on Clover and Maven to compute the coverage and returns this subset of tests.
+Diff-Test-Selection is implemented as a maven plugin that directly works from the command line, without modifying your pom.xml. See below for more details.
+Usage We advise you to use the maven plugin.</description>
+    </item>
+    
+    <item>
+      <title>DSpot</title>
+      <link>https://danglotb.github.io/projects/post_3/</link>
+      <pubDate>Sun, 07 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/projects/post_3/</guid>
+      <description>DSpot    DSpot is a tool that generates missing assertions in JUnit tests. DSpot takes as input a Java project with an existing test suite. DSpot generates new test cases from existing ones and write them on disk. DSpot supports Java projects built with Maven and Gradle (see the --automatic-builder option)
+DSpot ecosystem:
+ Jenkins plugin Eclipse plugin IntelliJ plugin  Getting started Demo site Meet our demonstration website at https://dspot-demo.</description>
+    </item>
+    
+  </channel>
+</rss>

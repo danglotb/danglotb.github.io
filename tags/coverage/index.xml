@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>coverage on </title>
+    <link>https://danglotb.github.io/tags/coverage/</link>
+    <description>Recent content in coverage on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 Feb 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://danglotb.github.io/tags/coverage/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Diff-test-selection</title>
+      <link>https://danglotb.github.io/projects/post_4/</link>
+      <pubDate>Sun, 07 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/projects/post_4/</guid>
+      <description>diff-test-selection ·   Diff-Test-Selection aims at selecting the subset of test classes and methods that execute the changed code between two versions of the same program. It relies on Clover and Maven to compute the coverage and returns this subset of tests.
+Diff-Test-Selection is implemented as a maven plugin that directly works from the command line, without modifying your pom.xml. See below for more details.
+Usage We advise you to use the maven plugin.</description>
+    </item>
+    
+    <item>
+      <title>DSpot</title>
+      <link>https://danglotb.github.io/projects/post_3/</link>
+      <pubDate>Sun, 07 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/projects/post_3/</guid>
+      <description>DSpot    DSpot is a tool that generates missing assertions in JUnit tests. DSpot takes as input a Java project with an existing test suite. DSpot generates new test cases from existing ones and write them on disk. DSpot supports Java projects built with Maven and Gradle (see the --automatic-builder option)
+DSpot ecosystem:
+ Jenkins plugin Eclipse plugin IntelliJ plugin  Getting started Demo site Meet our demonstration website at https://dspot-demo.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>test-repair on </title>
+    <link>https://danglotb.github.io/tags/test-repair/</link>
+    <description>Recent content in test-repair on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://danglotb.github.io/tags/test-repair/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AssertFixer</title>
+      <link>https://danglotb.github.io/projects/post_1/</link>
+      <pubDate>Thu, 25 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/projects/post_1/</guid>
+      <description>AssertFixer This project aims at fixing assertion. The program under test is used as specification to fix the test suite.
+See: Brett Daniel et al. for instance.
+CLI java -jar assert-fixer.jar (-c|--classpath) &amp;lt;classpath&amp;gt; (-t|--test-class) &amp;lt;testClass&amp;gt; (-m|--test-method) &amp;lt;testMethod&amp;gt; [(-s|--source-path) &amp;lt;sourcePath&amp;gt;] [(-p|--test-path) &amp;lt;testPath&amp;gt;] [--verbose] [(-o|--output) &amp;lt;output&amp;gt;] [--gen-try-catch] [-h|--help] (-c|--classpath) &amp;lt;classpath&amp;gt; [Mandatory] Use must specify a complete classpath to execute tests on your project. The classpath should be formatted according to the OS.</description>
+    </item>
+    
+  </channel>
+</rss>
