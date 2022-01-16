@@ -7,7 +7,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 <meta name="description" content="Personal Website" />
 <meta name="author" content="Dr Benjamin Danglot" />
-<meta name="generator" content="aafu theme by Darshan in Hugo 0.68.3" />
+<meta name="generator" content="aafu theme by Darshan in Hugo 0.66.0" />
 
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">        <link rel="manifest" href="/site.webmanifest">        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">        <link rel="shortcut icon" href="/favicon.ico">        
 
@@ -140,7 +140,7 @@
   <h3 class="d-flex flex-row align-items-start accordion mb-2 ">
     <span onclick="expandAccordion(this)" class="expand-metadata"></span>
     
-      <a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.63.9997">Evaluating the “Small Scope Hypothesis”</a>
+      <a href="http://dl.acm.org/citation.cfm?id=1242592">Detecting near-duplicates for web crawling</a>
     
   </h3>
   <div id="panel-item-2" class="panel metadata-panel overflow-hidden">
@@ -149,7 +149,7 @@
 <p class="mb-1"><span style="color: var(--secondaryLinks)">Publication date</span>: January 14, 2022</p>
 
 
-<p class="mb-1"><span style="color: var(--secondaryLinks)">Description</span>: Rather than testing fewer test inputs inside a large scope, the &#34;small scope hypothesis&#34; argues that testing exhaustively test input within a small scope would be more effective[12]. Andoni et al. evaluates this hypothesis using code coverage and mutation analysis on several benchmark in Java. If the hypothesis holds, it means that the generation of test inputs should be done exhaustively within a small scope rather than a large scope. In fact, enumerate all possible cases in a large scope is not practicable. They use the &#34;small scope hypothesis&#34; in the context of generating test input, for Java programs. In Java, test inputs are constructed from objects and literals, on which methods are invoked. Andoni et al. aim at generate all possible test inputs within a small, but sufficient, scope. To do this, they devise a tool names Korat. Korat is a technique that generate input from a given predicate and a bound for them. The predicate must be written developers, and describe acceptable inputs. In addition to this, developers must build a Finitization, which a specific (Java) object from Korat. In this object, the developer specify the size limit of each inputs, i.e. the number of objects for each classes that compose the test inputs. This Finitization creates the state space explorable by Korat, which is a &#34;small scope&#34;. This scope is defined by the class domain and the field domain, which are respectively the set of objects from one class and the set of values for each fields. Korat then generate test inputs as follow: it uses a vector of indices. Each index are index of values inside class domain and the field domain. This vector is initialized with all zeros. Then, it call the predicate using this first values. During, this call, Korat monitors access of values inside the vector. This allows to prune the exploration, by only change accessed values during the predicate call. They evaluated Korat by studying the impact of the size of the scope on the code coverage and the mutation score on 9 Java classes. The main cons of this technique is that require that developers write manually the predicate and the Finitization. </p>
+<p class="mb-1"><span style="color: var(--secondaryLinks)">Description</span>: Identification of near-duplicate document in web crawling is a very difficult problem. Such documents, near-duplicate, are similar in term of content but differ in a small portion such as advertisements. Such page should crawled only one time a crawler, because different information is no relevant for web search. The most import issue is to scale on billion web pages. Manku et al. propose to use the hash function simhash to identify near-duplicate web pages and a technique for solving the Hamming Distance Problem (see below for more information). Simhash maps large vectors to small fingerprints. It is applied as follows: split the web page into weighted features. These weighted features are a large vector, and it is convert into a small fingerprint by simhash. This conversion is done in three steps: First, it initializes all dimensions of a vector (of the size of the fingerprint) with zero; Second, it computes the hash of each features, unique to each feature; Third, for each hash, if the i-th bits is equals to one, it increments of the weight of the features, the i-th dimension of the vector, and decrement in case the i-th is equals to zero. The sign of each dimension determine the value of each bits of the fingerprint. Simhash has two main advantages: the fingerprint of a document is a hash of its features, and similar document have similar hash. The latter property lead to the Hamming Distance Problem. In fact, how to find in the set of computed hashes, crawled web page that differ, of 3 bits for instance, in their hash? There are two scenarios for the Hamming Distance Problem. In the online version, we have to find fingerprints that differ from the queried in milliseconds. In the batch version, we have a lot of queries, e.g. one million, and we have to solve them in one hundred seconds. In both case, they applied the same approach: They use a sorted table. Taking the d most significant bits, it brings the table a simple counter, and the less significant bits are just random. Now, take a d&#39; such that d&#39; - d is small. We know that the table is sorted, so a single probe is sufficient to find all fingerprints that match in d&#39; most significant bit-positions. For each of them, we can easily checks if they differs from the original fingerprint in at most k bit-positions.They experimented their approach on eight billions web pages. (Did not find explicit results about performance). </p>
 
 
 
@@ -224,38 +224,10 @@
   <h3 class="d-flex flex-row align-items-start accordion mb-2 ">
     <span onclick="expandAccordion(this)" class="expand-metadata"></span>
     
-      <a href="http://dl.acm.org/citation.cfm?id=1242592">Saying ’Hi!’ Is Not Enough:Mining Inputs for Effective Test Generation</a>
-    
-  </h3>
-  <div id="panel-item-5" class="panel metadata-panel overflow-hidden">
-    <div class="metadata">
-
-<p class="mb-1"><span style="color: var(--secondaryLinks)">Publication date</span>: January 14, 2022</p>
-
-
-<p class="mb-1"><span style="color: var(--secondaryLinks)">Description</span>: Identification of near-duplicate document in web crawling is a very difficult problem. Such documents, near-duplicate, are similar in term of content but differ in a small portion such as advertisements. Such page should crawled only one time a crawler, because different information is no relevant for web search. The most import issue is to scale on billion web pages. Manku et al. propose to use the hash function simhash to identify near-duplicate web pages and a technique for solving the Hamming Distance Problem (see below for more information). Simhash maps large vectors to small fingerprints. It is applied as follows: split the web page into weighted features. These weighted features are a large vector, and it is convert into a small fingerprint by simhash. This conversion is done in three steps: First, it initializes all dimensions of a vector (of the size of the fingerprint) with zero; Second, it computes the hash of each features, unique to each feature; Third, for each hash, if the i-th bits is equals to one, it increments of the weight of the features, the i-th dimension of the vector, and decrement in case the i-th is equals to zero. The sign of each dimension determine the value of each bits of the fingerprint. Simhash has two main advantages: the fingerprint of a document is a hash of its features, and similar document have similar hash. The latter property lead to the Hamming Distance Problem. In fact, how to find in the set of computed hashes, crawled web page that differ, of 3 bits for instance, in their hash? There are two scenarios for the Hamming Distance Problem. In the online version, we have to find fingerprints that differ from the queried in milliseconds. In the batch version, we have a lot of queries, e.g. one million, and we have to solve them in one hundred seconds. In both case, they applied the same approach: They use a sorted table. Taking the d most significant bits, it brings the table a simple counter, and the less significant bits are just random. Now, take a d&#39; such that d&#39; - d is small. We know that the table is sorted, so a single probe is sufficient to find all fingerprints that match in d&#39; most significant bit-positions. For each of them, we can easily checks if they differs from the original fingerprint in at most k bit-positions.They experimented their approach on eight billions web pages. (Did not find explicit results about performance). </p>
-
-
-
-
-
-
-
- 
-
-
-
-
-</div>
-  </div>
-
-  <h3 class="d-flex flex-row align-items-start accordion mb-2 ">
-    <span onclick="expandAccordion(this)" class="expand-metadata"></span>
-    
       <a href="https://dl.acm.org/citation.cfm?id=3149492">Shadow Symbolic Execution with Java PathFinder</a>
     
   </h3>
-  <div id="panel-item-6" class="panel metadata-panel overflow-hidden">
+  <div id="panel-item-5" class="panel metadata-panel overflow-hidden">
     <div class="metadata">
 
 <p class="mb-1"><span style="color: var(--secondaryLinks)">Publication date</span>: January 14, 2022</p>
@@ -283,7 +255,7 @@
       <a href="http://dl.acm.org/citation.cfm?doid=3106237.3106280">The care and feeding of wild-caught mutants</a>
     
   </h3>
-  <div id="panel-item-7" class="panel metadata-panel overflow-hidden">
+  <div id="panel-item-6" class="panel metadata-panel overflow-hidden">
     <div class="metadata">
 
 <p class="mb-1"><span style="color: var(--secondaryLinks)">Publication date</span>: January 14, 2022</p>
