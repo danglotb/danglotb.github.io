@@ -1,4 +1,4 @@
-baseURL = "https://github.com/danglotb/danglotb.github.io"
+baseURL = "https://danglotb.github.io/"
 languageCode = "en-us"
 theme = "aafu"
 
