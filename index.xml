@@ -224,7 +224,7 @@ mvn clean install -DskipTest Usage The easiest way to use diff-jjoules, you need
     </item>
     
     <item>
-      <title>[Recipe] Banana Bread</title>
+      <title>Banana Bread</title>
       <link>https://danglotb.github.io/recipes/post_1/</link>
       <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
       
@@ -233,7 +233,7 @@ mvn clean install -DskipTest Usage The easiest way to use diff-jjoules, you need
     </item>
     
     <item>
-      <title>[Recipe] Beef à la Strogonoff</title>
+      <title>Beef à la Strogonoff</title>
       <link>https://danglotb.github.io/recipes/post_2/</link>
       <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
       

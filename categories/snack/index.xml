@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Recipes on </title>
-    <link>https://danglotb.github.io/recipes/</link>
-    <description>Recent content in Recipes on </description>
+    <title>Snack on </title>
+    <link>https://danglotb.github.io/categories/snack/</link>
+    <description>Recent content in Snack on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 23 May 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://danglotb.github.io/recipes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://danglotb.github.io/categories/snack/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>https://danglotb.github.io/recipes/post_1/</guid>
       <description>Ingredients  3 ripe bananas 2 cups or 200g of ground almonds 4 eggs 1 tablespoon of ground cinnamon 1 teaspoon of bicarbonate of soda 1/3 cup dark chocolate chips  Recipes  Preheat your oven to 175C Mash 3 bananas in a large bowl and whisk in the eggs. Add the cinnamon, ground almonds, dark chocolate chips, and bicarbonate of soda. Combine well. Pour the mix into a greased cake tin lined with baking paper.</description>
-    </item>
-    
-    <item>
-      <title>Beef à la Strogonoff</title>
-      <link>https://danglotb.github.io/recipes/post_2/</link>
-      <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://danglotb.github.io/recipes/post_2/</guid>
-      <description>Ingredients  500g beef 500g mushrooms 2 onions 4 garlic cloves 3 tablespoons of a mix mustards 1 tablespoon of tomato purée 2 tablespoons of chopped parsley 1 teaspoon of sea salt 1/2 teaspoon of black pepper 1/2 teaspoon of ground nutmeg 1 tablespoon of olive oil 150ml of beef stock or water  Recipes  Slice the onions and mushrooms finely. Slice the beef in long strips. Peel the garlic.</description>
     </item>
     
   </channel>

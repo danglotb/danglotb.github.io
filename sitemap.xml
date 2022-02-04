@@ -337,6 +337,26 @@
   </url>
   
   <url>
+    <loc>https://danglotb.github.io/categories/</loc>
+    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danglotb.github.io/categories/dessert/</loc>
+    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danglotb.github.io/categories/dish/</loc>
+    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danglotb.github.io/categories/snack/</loc>
+    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danglotb.github.io/publications/post_1/</loc>
     <lastmod>2018-05-12T00:00:00+00:00</lastmod>
   </url>
@@ -509,10 +529,6 @@
   <url>
     <loc>https://danglotb.github.io/projects/post_3/</loc>
     <lastmod>2016-02-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danglotb.github.io/categories/</loc>
   </url>
   
 </urlset>

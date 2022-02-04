@@ -6,9 +6,37 @@
     <description>Recent content in Categories on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Wed, 23 May 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://danglotb.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Dessert</title>
+      <link>https://danglotb.github.io/categories/dessert/</link>
+      <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/categories/dessert/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dish</title>
+      <link>https://danglotb.github.io/categories/dish/</link>
+      <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/categories/dish/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Snack</title>
+      <link>https://danglotb.github.io/categories/snack/</link>
+      <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/categories/snack/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
