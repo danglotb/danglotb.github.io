@@ -1,5 +1,6 @@
 ---
-title: "[Recipe] Banana Bread"
+title: "Banana Bread"
+categories: ["Snack", "Dessert"]
 date: 2018-05-23
 ---
 

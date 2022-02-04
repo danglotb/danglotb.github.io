@@ -1,5 +1,6 @@
 ---
-title: "[Recipe] Beef à la Strogonoff"
+title: "Beef à la Strogonoff"
+categories: ["Dish"]
 date: 2018-05-23
 ---
 
