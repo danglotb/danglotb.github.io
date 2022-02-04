@@ -1,0 +1,8 @@
+---
+title: "Energy Efficiency across Programming Languages"
+date: 2022-01-17
+description: "Pereira et al study the runtime, memory usage, and energy consumption of 27
+programming languages. To perform this study, they selected 10 benchmarks from the Computer Language Benchmark Game (CLBG). For each programming language, they implemented the benchmark problems. They measure the runtime, memory usage, and energy consumption using state of the art library, based on RAPL. They focused their study to answer the following questions: RQ1 Is the faster language always the most energy-efficient? RQ2 How does memory usage relate to energy consumption? From their results, the answer to the first question is that for the top 3 languages, it seems to be true that the fastest languages are the most energy-efficient. This can be explained by the fact that they are heavily optimized and efficient for runtime. However, for the 10 next programming languages, it is true only for 4 of them: OCaml, Haskel, Racket, and Python that the runtime seems to be linked to energy consumption, since they keep the same rank. Also, the realized task seems to be a core factor in terms of energy consumption. Second, it seems that energy consumption is not correlated to the memory usage of programs. But, the memory usage measured is the peak memory usage, which might be misleading. Futur works should be done on continuous memory usage. Something bothers me, is that they exclude from benchmarks (for good reasons) the benchmarks problems that are multi-threaded. Actually, I think that multithread might have a large impact on runtime and power consumption."
+draft: false
+link: "https://greenlab.di.uminho.pt/wp-content/uploads/2017/09/paperSLE.pdf"
+---
