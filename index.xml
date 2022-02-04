@@ -6,10 +6,19 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 14 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 17 Jan 2022 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://danglotb.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Energy Efficiency across Programming Languages</title>
+      <link>https://danglotb.github.io/stoa/post_10/</link>
+      <pubDate>Mon, 17 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://danglotb.github.io/stoa/post_10/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>An Approach to Test Data Generation for Killing Multiple Mutants</title>
@@ -215,21 +224,21 @@ mvn clean install -DskipTest Usage The easiest way to use diff-jjoules, you need
     </item>
     
     <item>
-      <title>vestibulum vitae dictum aliqua phasellus magnis at</title>
-      <link>https://danglotb.github.io/blog/post_1/</link>
+      <title>[Recipe] Banana Bread</title>
+      <link>https://danglotb.github.io/recipes/post_1/</link>
       <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://danglotb.github.io/blog/post_1/</guid>
-      <description>eu velit magna aliqua hendrerit Cursus non odio nam suspendisse mollis tempus tincidunt, cursus praesent facilisi elementum etiam rhoncus tempor. At penatibus ultrices nulla phasellus mi quis luctus felis ultricies. Urna tempus ac consequat sem sed curabitur justo, quam suspendisse cursus aenean integer tellus consectetur. Sed bibendum hendrerit volutpat fames libero nisl dui, nunc vivamus augue posuere luctus scelerisque ultrices. Do pretium consectetur vestibulum lacinia eget do semper, varius viverra scelerisque madssa semper venenatis cras.</description>
+      <guid>https://danglotb.github.io/recipes/post_1/</guid>
+      <description>Ingredients  3 ripe bananas 2 cups or 200g of ground almonds 4 eggs 1 tablespoon of ground cinnamon 1 teaspoon of bicarbonate of soda 1/3 cup dark chocolate chips  Recipes  Preheat your oven to 175C Mash 3 bananas in a large bowl and whisk in the eggs. Add the cinnamon, ground almonds, dark chocolate chips, and bicarbonate of soda. Combine well. Pour the mix into a greased cake tin lined with baking paper.</description>
     </item>
     
     <item>
-      <title>enim ultricies dolore metus ac eiusmod interdum</title>
-      <link>https://danglotb.github.io/blog/post_2/</link>
-      <pubDate>Fri, 18 May 2018 00:00:00 +0000</pubDate>
+      <title>[Recipe] Beef à la Strogonoff</title>
+      <link>https://danglotb.github.io/recipes/post_2/</link>
+      <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://danglotb.github.io/blog/post_2/</guid>
-      <description>non tempor mauris elementum semper Interdum dolor sit etiam aenean ac fermentum auctor cursus nulla tellus purus justo. Ullamcorper elit do tincidunt auctor sit leo, pulvinar scelerisque do fringilla nisi porttitor fermentum. Tellus elit mauris lobortis iaculis mus morbi nunc lacus. Velit placerat facilisis varius odio purus sociis elementum morbi. Dignissim congue nulla diam aenean mi commodo quisque egestas amet mattis posuere lobortis. Tristique laoreet mus diam tellus vestibulum scelerisque ipsum, rhoncus mollis sed consequat natoque eget sem.</description>
+      <guid>https://danglotb.github.io/recipes/post_2/</guid>
+      <description>Ingredients  500g beef 500g mushrooms 2 onions 4 garlic cloves 3 tablespoons of a mix mustards 1 tablespoon of tomato purée 2 tablespoons of chopped parsley 1 teaspoon of sea salt 1/2 teaspoon of black pepper 1/2 teaspoon of ground nutmeg 1 tablespoon of olive oil 150ml of beef stock or water  Recipes  Slice the onions and mushrooms finely. Slice the beef in long strips. Peel the garlic.</description>
     </item>
     
     <item>
@@ -239,15 +248,6 @@ mvn clean install -DskipTest Usage The easiest way to use diff-jjoules, you need
       
       <guid>https://danglotb.github.io/publications/post_1/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>luctus enim ultricies auctor pulvinar nam etiam</title>
-      <link>https://danglotb.github.io/blog/post_3/</link>
-      <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://danglotb.github.io/blog/post_3/</guid>
-      <description>donec lacinia eleifend sem a Pulvinar tempor ultrices amet praesent aliquet non magnis euismod elit venenatis. Aliqua consequat tristique erat nulla sit risus aliqua posuere. Potenti natoque augue proin accimsan risus scelerisque id integer curabitur mattis amet quisque. Aliquet porta sit sapien natoque sed fringilla, madssa suspendisse vivamus placerat sociis condimentum ridiculus. Natoque egestas non lectus pellentesque nunc mattis eu ridiculus pretium maecenas ligula. Gravida facilisis sem mollis sagittis aliquet ornare bibendum, leo nec morbi tortor diam maecenas tempor.</description>
     </item>
     
     <item>
