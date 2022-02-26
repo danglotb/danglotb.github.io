@@ -17,6 +17,8 @@ jobs:
         extended: true
     - name: Build website
       run: hugo
+    - name: Copy Ressources
+      run: cp -r resources/ public/resources
     - name: Deploy website
       uses: peaceiris/actions-gh-pages@v3
       with:
