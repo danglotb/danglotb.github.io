@@ -30,7 +30,7 @@ theme = "aafu"
     [params.profile]
         name = "Dr Benjamin Danglot"
         tagline = "PhD from University of Lille"
-        location = "Davidson consulting, Rennes, France"
+        location = "Finsit, Wolters Kluwer"
         photo = "profile.jpg"
 
     # Section for links to social websites
@@ -81,12 +81,18 @@ theme = "aafu"
     [params.aboutme]
         title = "About Me"
         icon = "fas fa-user"
-        description = "Tools development to measure the energy consumption (in joules) within the CI/CD. The goal is to identify practices and/or libraries that consume more energy, and propose to developers a new way of coding to reduce this energy consumption."
+        description = "Software development at Finsit, a part of Wolters Kluwer group. Finsit is a web solution for automating and revealing the elegantness of accouting."
 
     # Experience section
     [params.experience]
         title = "Experiences"
         icon = "fas fa-briefcase"
+
+        [[params.experience.list]]
+            position = "Research Engineer"
+            dates = "September 2020 - August 2022"
+            company = "Davidson consulting"
+            details = "Tools development to measure the energy consumption (in joules) within the CI/CD. The goal is to identify practices and/or libraries that consume more energy, and propose to developers a new way of coding to reduce this energy consumption."
 
         [[params.experience.list]]
             position = "Research Engineer"
