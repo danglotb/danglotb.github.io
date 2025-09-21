@@ -81,7 +81,7 @@ theme = "aafu"
     [params.aboutme]
         title = "About Me"
         icon = "fas fa-user"
-        description = "Lead frontend developer at Kyte, an innovative and powerful e-voicing solution."
+        description = "Kyte: an innovative and powerful e-voicing solution."
 
     # Experience section
     [params.experience]
