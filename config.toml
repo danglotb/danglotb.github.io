@@ -30,7 +30,7 @@ theme = "aafu"
     [params.profile]
         name = "Dr Benjamin Danglot"
         tagline = "PhD from University of Lille"
-        location = "Finsit, Wolters Kluwer"
+        location = "Kyte, Wolters Kluwer"
         photo = "profile.jpg"
 
     # Section for links to social websites
@@ -81,13 +81,19 @@ theme = "aafu"
     [params.aboutme]
         title = "About Me"
         icon = "fas fa-user"
-        description = "Software development at Finsit, a part of Wolters Kluwer group. Finsit is a web solution for automating and revealing the elegantness of accouting."
+        description = "Lead frontend developer at Kyte, an innovative and powerful e-voicing solution."
 
     # Experience section
     [params.experience]
         title = "Experiences"
         icon = "fas fa-briefcase"
 
+		[[params.experience.list]]
+            position = "Fullstack developer"
+            dates = "September 2022 - December 2024"
+            company = "finsit, Wolters Kluwer"
+            details = "Software development at finsit, a part of Wolters Kluwer group. Finsit is a web solution for automating and revealing the elegantness of accounting."
+       
         [[params.experience.list]]
             position = "Research Engineer"
             dates = "September 2020 - August 2022"
